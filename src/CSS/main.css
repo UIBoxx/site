@@ -5,6 +5,7 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: "Chakra Petch", sans-serif;
 }
 
 :root {
@@ -275,6 +276,7 @@ nav {
   color: #fff;
   text-align: center;
   font-size: 1.5em;
+  font-family: "Pacifico", cursive;
 }
 
 .container .card:hover .face.face2 {
@@ -300,100 +302,6 @@ nav {
   }
 }
 
-/* Profile */
-.profile-body {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  min-height: 90vh;
-  background-color: var(--mainColor);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-card {
-  height: 300px;
-  width: 320px;
-  background-color: rgba(142, 101, 120, 0.232);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  position: relative;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 8px;
-  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
-  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
-  font-family: "Lato", sans-serif;
-}
-.card-img {
-  height: 120px;
-  width: 120px;
-  background-color: var(--mainColor);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px auto 20px auto;
-}
-.card-img img {
-  height: 86%;
-  border-radius: 50%;
-  margin-top: 25%;
-  border: 2px solid var(--textColor);
-  padding: 2px;
-}
-h6 {
-  margin: 0;
-}
-.desc {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  top: 160px;
-}
-.primary-text {
-  color: var(--textColor);
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.7px;
-  margin: 5px 0;
-}
-.secondary-text {
-  color: var(--secondaryColor);
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 1px;
-  margin: 5px 0;
-}
-.profile-card button {
-  background-color: rgba(255, 255, 255, 0.06);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border: none;
-}
-
-.profile-card button {
-  width: 80%;
-  padding: 8px 0;
-  position: absolute;
-  left: 10%;
-  top: 220px;
-  border-radius: 5px;
-  outline: none;
-}
-
-.profile-card button a {
-  text-decoration: none;
-  color: var(--textColor);
-}
-
-.profile-card button:hover {
-  background-color: var(--secondaryColor);
-}
 
 /* Projects */
 .projects-body {
@@ -724,4 +632,87 @@ h6 {
 .code-block{
   height: 45%;
   overflow: scroll;
+}
+
+.contact-body{
+  display: flex;
+  min-height: 80vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--mainColor);
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.contact-body .contact-wrapper{
+  width: 50vw;
+}
+
+.contact-body h1{
+  color: var(--textColor);
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.contact-body h1 span{
+  color: var(--secondaryColor);
+  font-family: "Pacifico", cursive;
+}
+
+.contact-body h1 #in{
+  font-size: 1.5rem;
+  color: var(--textColor);
+}
+
+.contact-body .contact-para p{
+  color: var(--textColor);
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.contact-body .contact-para #end-line{
+  color: var(--secondaryColor);
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+}
+
+
+.contact-body .profile-card {
+  height: 150px;
+  width: 100%;
+  background-color: rgba(53, 46, 50, 0.232);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 8px;
+  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.profile-card button {
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  width: 200px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  color: var(--textColor);
+  border-radius: 4px;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.profile-card button:hover {
+  background-color: var(--secondaryColor);
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-body .contact-wrapper{
+    width: 90vw;
+  }
 }

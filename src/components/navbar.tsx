@@ -7,7 +7,7 @@ import "../CSS/main.css";
 
 function Navbar() {
 
-	let navItems=['Home','Web-Designs','App-Designs','Projects',]
+	let navItems=['Home','Web-Designs','App-Designs','Contact',]
 	const [selectedIndex, setSelectedIndex] = useState(-1);
 
 	const navRef = useRef<HTMLDivElement>(null);
