@@ -42,7 +42,6 @@ function Navbar() {
 				onClick={showNavBar}>
 				<FontAwesomeIcon icon={faBarsStaggered}  />
 			</button>
-			{/* <p>+977-9869908380</p> */}
 		</header>
 	);
 }
