@@ -96,6 +96,7 @@ function CSSDesigns() {
       {isLoading ? (
         <div className="loading-icon">
           <img src={Loading} alt="" />
+          <p>Please wait while we load the designs for you. This may take a few moments depending on your internet connection speed.</p>
         </div>
       ) : currentPageDesigns.length === 0 ? (
         <p className="no-results-message">No available</p>

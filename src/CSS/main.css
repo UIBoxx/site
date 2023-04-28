@@ -507,9 +507,20 @@ nav {
 	color: var(--secondaryColor);
 }
 
+.loading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .loading-icon img{
 	width: 50px;
 	filter: grayscale(1);
+}
+
+.loading-icon p{
+  color: var(--textColor);
 }
 
 .sub-title {
