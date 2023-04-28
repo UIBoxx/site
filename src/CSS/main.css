@@ -521,6 +521,7 @@ nav {
 
 .loading-icon p{
   color: var(--textColor);
+  margin: 5px 20px;
 }
 
 .sub-title {
