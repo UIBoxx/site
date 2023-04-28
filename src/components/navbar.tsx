@@ -29,7 +29,7 @@ function Navbar() {
 				{navItems.map((items,index)=>(
 					<li className={selectedIndex === index ? "active" : ""} onClick={() => {
 						setSelectedIndex(index);
-					  }} key={items}><a href={items}>{items}</a></li>
+					  }} key={items}><a href={items=='Home'?'/':items}>{items}</a></li>
 				))}
 				<button
 					className="nav-btn nav-close-btn"

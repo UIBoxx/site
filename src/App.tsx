@@ -23,14 +23,6 @@ function App() {
                 </>
               }
             />
-            <Route
-              path="Home"
-              element={
-                <>
-                  <Services />
-                </>
-              }
-            />
             <Route path="App-Designs" element={<FlutterDesigns />} />
             <Route path="Web-Designs" element={<CSSDesigns />} />
             {/* <Route path="Projects" element={<MyProjects />} /> */}
