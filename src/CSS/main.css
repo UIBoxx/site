@@ -684,7 +684,7 @@ nav {
 
 .contact-body .contact-para p{
   color: var(--textColor);
-  text-align: justify;
+  text-align: start;
   font-size: 1rem;
 }
 
