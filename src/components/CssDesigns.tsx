@@ -70,12 +70,17 @@ function CSSDesigns() {
   const itemsPerPage = 3;
   const filteredDesigns = designs.filter((design) =>
     design.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-  const pageCount = Math.ceil(filteredDesigns.length / itemsPerPage);
-  const currentPageDesigns = filteredDesigns.slice(
+);
+
+// Reverse the array of filtered designs
+const reversedDesigns = filteredDesigns.reverse();
+
+const pageCount = Math.ceil(reversedDesigns.length / itemsPerPage);
+const currentPageDesigns = reversedDesigns.slice(
     (currentPage - 1) * itemsPerPage,
     (currentPage - 1) * itemsPerPage + itemsPerPage
-  );
+);
+
 
   const handleCodeButtonClick = (design: Design) => {
     setSelectedDesign(design);

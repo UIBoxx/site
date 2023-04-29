@@ -622,7 +622,7 @@ nav {
 
 .code-blocks{
   height: 90vh;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .code-block .copy-btn{
@@ -646,7 +646,7 @@ nav {
 }
 
 .code-block{
-  max-height: 45%;
+  max-height: 40%;
   overflow: scroll;
 }
 

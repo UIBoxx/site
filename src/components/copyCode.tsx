@@ -1,11 +1,10 @@
 import { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import prettier from "prettier/standalone";
 import parserHtml from "prettier/parser-html";
 import parserCss from "prettier/parser-postcss";
-import parserBabel from "prettier/parser-babel";
 import Clipboard from "clipboard";
-import * as prettier from "prettier";
 
 import "../CSS/main.css";
 
@@ -30,28 +29,18 @@ function CodeBlock({ language, code }: CodeBlockProps) {
     });
   };
 
-  let plugins: prettier.Plugin[] = [];
-
-  if (language === "html") {
-    plugins = [parserHtml];
-  } else if (language === "css") {
-    plugins = [parserCss];
-  } else if (language === "javascript" || language === "jsx") {
-    plugins = [parserBabel];
-  }
-
   return (
     <div className="code-block">
       <div className="copy-btn-container">
-        <span></span>
-        <button className="copy-btn" onClick={handleCopy}>
-          {copied ? "Copied!" : "Copy"}
-        </button>
+      <span></span>
+      <button className="copy-btn" onClick={handleCopy}>
+        {copied ? "Copied!" : "Copy"}
+      </button>
       </div>
       <SyntaxHighlighter language={language} style={atomDark}>
         {prettier.format(code, {
           parser: language,
-          plugins: plugins,
+          plugins: language === "html" ? [parserHtml] : [parserCss],
         })}
       </SyntaxHighlighter>
     </div>
@@ -59,7 +48,7 @@ function CodeBlock({ language, code }: CodeBlockProps) {
 }
 
 interface ExampleComponentProps {
-  selectedDesign: { htmlcode: string; csscode: string; jscode: string };
+  selectedDesign: { htmlcode: string; csscode: string,jscode: string };
 }
 
 function ExampleComponent({ selectedDesign }: ExampleComponentProps) {
@@ -69,13 +58,10 @@ function ExampleComponent({ selectedDesign }: ExampleComponentProps) {
       <CodeBlock language="html" code={selectedDesign.htmlcode} />
       <h2>CSS</h2>
       <CodeBlock language="css" code={selectedDesign.csscode} />
-      {/* {selectedDesign.jscode ? ( */}
-        
-          <h2>JS</h2>
-          <CodeBlock language="javascript" code={selectedDesign.jscode} />
-        
-      ) 
-      {/* : null} */}
+      {selectedDesign.jscode?<>
+       <h2>JS</h2>
+      <CodeBlock language="html" code={selectedDesign.jscode} />
+      </>:null}
     </div>
   );
 }
