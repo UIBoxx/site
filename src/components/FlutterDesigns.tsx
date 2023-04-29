@@ -19,6 +19,9 @@ function FlutterDesigns() {
   const [currentPage, setCurrentPage] = useState(1);
   const [designs, setDesigns] = useState<FlutterDesign[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  
+  const [data, setData] = useState(null);
+
 
   // Find the design with the specified title
   const designToUpdate = designs.find(design => design.title === "Design Title");
@@ -29,16 +32,22 @@ function FlutterDesigns() {
     setDesigns([...designs]); // Call setDesigns with the updated array
   }
 
+
   useEffect(() => {
+    const cachedData = localStorage.getItem('appdesigns');
+    if (cachedData) {
+      setDesigns(JSON.parse(cachedData));
+      setIsLoading(false);
+    } else {
       const fetchData = async () => {
         setIsLoading(true);
         try {
           // Add a 0.1 second delay
           await new Promise(resolve => setTimeout(resolve, 100));
-
           const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/appdata");
           const data = await response.json();
           setDesigns(data);
+          localStorage.setItem('appdesigns', JSON.stringify(data)); // Cache the data
           setIsLoading(false);
         } catch (error) {
           console.error(error);
@@ -46,7 +55,8 @@ function FlutterDesigns() {
         }
       };
       fetchData();
-    }, []);
+    }
+  }, []);
 
 
   const handlePageChange = (page: number) => {
