@@ -30,7 +30,7 @@ function MyProfile() {
           We're always adding new components and designs to our collection, so
           be sure to check back often. And if you have any suggestions or
           requests, we'd love to hear from you! Just drop us a line using the
-          contact form on our website.
+          contact mail on our website.
         </p>
       </div>
       <div className="contact-para">

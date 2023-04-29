@@ -14,7 +14,7 @@ function Services() {
   return (
     <div className="div">
       <h2>
-        Transform Your Ideas into <span>Beautiful Designs</span> with Our
+        Transform Your Ideas into <span>Beautiful Designs</span> with Our UI
         Components
       </h2>
       <div className="container">
