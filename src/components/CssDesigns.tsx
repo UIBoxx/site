@@ -22,6 +22,7 @@ interface Design {
   likes: string;
   htmlcode: string;
   csscode: string;
+  jscode: string;
 }
 
 

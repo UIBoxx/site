@@ -158,7 +158,6 @@ nav {
     padding: 0.5rem 1rem;
     width: 100%;
     text-align: center;
-
   }
 
   nav a:hover {
@@ -647,7 +646,7 @@ nav {
 }
 
 .code-block{
-  height: 45%;
+  max-height: 45%;
   overflow: scroll;
 }
 
@@ -684,7 +683,7 @@ nav {
 
 .contact-body .contact-para p{
   color: var(--textColor);
-  text-align: justify;
+  text-align: start;
   font-size: 1rem;
 }
 
