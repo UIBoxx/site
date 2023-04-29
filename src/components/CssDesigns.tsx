@@ -43,7 +43,7 @@ function CSSDesigns() {
         // Add a 0.1 second delay
         await new Promise((resolve) => setTimeout(resolve, 100));
 
-        const response = await fetch("https://heypro.onrender.com/webdesigns");
+        const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/webdata");
         const data = await response.json();
         setDesigns(data);
         setIsLoading(false);
