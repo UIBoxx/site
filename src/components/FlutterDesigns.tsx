@@ -36,7 +36,7 @@ function FlutterDesigns() {
           // Add a 0.1 second delay
           await new Promise(resolve => setTimeout(resolve, 100));
 
-          const response = await fetch("https://heypro.onrender.com//appdesigns");
+          const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/appdata");
           const data = await response.json();
           setDesigns(data);
           setIsLoading(false);
