@@ -7,6 +7,7 @@ import MyProjects from "./components/projects";
 import Designs from "./components/Designs";
 import FlutterDesigns from "./components/FlutterDesigns";
 import CSSDesigns from "./components/CssDesigns";
+import SubscribeForm from "./components/subscribe";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               element={
                 <>
                   <Services />
+                  < SubscribeForm/>
                 </>
               }
             />

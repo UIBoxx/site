@@ -732,3 +732,66 @@ nav {
     width: 90vw;
   }
 }
+
+.sub-form{
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--mainColor);
+  padding: 20px 0;
+}
+
+.sub-form form{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #343a3a31;
+  border-radius: 0.5rem;
+}
+
+.sub-form .sub-msg{
+  color: var(--textColor);
+  padding: 0 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  
+}
+
+.sub-form form  p{
+  margin-top: 5px;
+  color: var(--secondaryColor);
+}
+
+.sub-form form input{
+  margin-top: 1.5rem;
+  height: 35px;
+  width: 280px;
+  padding: 0 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  background-color: #2b2f2fbc;
+  color: var(--textColor);
+}
+
+.sub-form button{
+  margin-top: 1.5rem;
+  height: 40px;
+  width: 280px;
+  font-size: 2rem;
+  border-radius: 8px;
+  background-color: #b15f5fc1;
+  color: var(--textColor);
+  border: none;
+}
+
+.sub-form button:hover{
+  background-color: var(--secondaryColor);
+}
