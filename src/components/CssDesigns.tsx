@@ -33,7 +33,6 @@ function CSSDesigns() {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedDesign, setSelectedDesign] = useState<Design | null>(null);
 
-  const [showModalArray, setShowModalArray] = useState<boolean[]>([]);
 
   const [showModal, setShowModal] = useState(false);
 
