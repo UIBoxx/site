@@ -37,37 +37,40 @@ function CSSDesigns() {
   const [showModal, setShowModal] = useState(false);
 
 
-  useEffect(() => {
-    const cachedData = localStorage.getItem('webdesigns');
-    if (cachedData) {
-      setDesigns(JSON.parse(cachedData));
-      setIsLoading(false);
-    } else {
-      const fetchData = async () => {
-        setIsLoading(true);
-        try {
-          // Add a 0.1 second delay
-          await new Promise(resolve => setTimeout(resolve, 100));
-          const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/webdata");
-          const data = await response.json();
-          setDesigns(data);
-          localStorage.setItem('webdesigns', JSON.stringify(data)); // Cache the data
-  
-          // Delete the cached data after 2 minutes
-          setTimeout(() => {
-            localStorage.removeItem('webdesigns');
-            console.log('web deleted');
-          }, 10000);
-  
-          setIsLoading(false);
-        } catch (error) {
-          console.error(error);
-          setIsLoading(false);
-        }
-      };
-      fetchData();
-    }
-  }, []);
+ useEffect(() => {
+  const cachedData = localStorage.getItem('webdesigns');
+  if (cachedData) {
+    setDesigns(JSON.parse(cachedData));
+    setIsLoading(false);
+  } else {
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        // Add a 0.1 second delay
+        await new Promise(resolve => setTimeout(resolve, 100));
+        const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/webdata");
+        const data = await response.json();
+        setDesigns(data);
+        localStorage.setItem('webdesigns', JSON.stringify(data)); // Cache the data
+        
+        // Delete all cached data for this site
+        Object.keys(localStorage).forEach(key => {
+          if (key.startsWith('webdesigns')) {
+            localStorage.removeItem(key);
+            console.log('delete web')
+          }
+        });
+
+        setIsLoading(false);
+      } catch (error) {
+        console.error(error);
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }
+}, []);
+
   
 
   const handlePageChange = (page: number) => {

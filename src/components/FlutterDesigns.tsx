@@ -49,7 +49,7 @@ function FlutterDesigns() {
           setDesigns(data);
           localStorage.setItem('appdesigns', JSON.stringify(data)); // Cache the data
   
-          // Delete the cached data after 2 minutes
+          // Delete the cached data after 10 sec
           setTimeout(() => {
             localStorage.removeItem('appdesigns');
             console.log('app deleted');
