@@ -34,36 +34,24 @@ function FlutterDesigns() {
 
 
   useEffect(() => {
-    const cachedData = localStorage.getItem('appdesigns');
-    if (cachedData) {
-      setDesigns(JSON.parse(cachedData));
-      setIsLoading(false);
-    } else {
-      const fetchData = async () => {
-        setIsLoading(true);
-        try {
-          // Add a 0.1 second delay
-          await new Promise(resolve => setTimeout(resolve, 100));
-          const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/appdata");
-          const data = await response.json();
-          setDesigns(data);
-          localStorage.setItem('appdesigns', JSON.stringify(data)); // Cache the data
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/appdata");
+        const data = await response.json();
+        setDesigns(data);
+        localStorage.setItem('appdesigns', JSON.stringify(data));
+      } catch (error) {
+        console.error(error);
+      }
+    };
   
-          // Delete the cached data after 10 sec
-          setTimeout(() => {
-            localStorage.removeItem('appdesigns');
-            console.log('app deleted');
-          }, 10000);
-  
-          setIsLoading(false);
-        } catch (error) {
-          console.error(error);
-          setIsLoading(false);
-        }
-      };
+    const intervalId = setInterval(() => {
       fetchData();
-    }
+    }, 10000); // Fetch data every 5 minutes
+  
+    return () => clearInterval(intervalId);
   }, []);
+  
   
 
 

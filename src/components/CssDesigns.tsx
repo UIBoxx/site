@@ -55,12 +55,9 @@ function CSSDesigns() {
         
         // Delete all cached data for this site after 2 minutes
         setTimeout(() => {
-          Object.keys(localStorage).forEach(key => {
-            if (key.startsWith('webdesigns')) {
-              localStorage.removeItem(key);
-            }
-          });
-        }, 10000); // 2 minutes in milliseconds
+            localStorage.removeItem('webdesigns');
+            console.log('app deleted');
+          }, 10000);// 2 minutes in milliseconds
 
         setIsLoading(false);
       } catch (error) {
