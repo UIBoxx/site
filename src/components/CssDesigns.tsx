@@ -56,7 +56,7 @@ function CSSDesigns() {
           // Delete the cached data after 2 minutes
           setTimeout(() => {
             localStorage.removeItem('webdesigns');
-          }, 2000);
+          }, 10000);
   
           setIsLoading(false);
         } catch (error) {
