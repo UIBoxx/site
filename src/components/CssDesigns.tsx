@@ -56,7 +56,7 @@ function CSSDesigns() {
         // Delete all cached data for this site after 2 minutes
         setTimeout(() => {
           Object.keys(localStorage).forEach(key => {
-            if (key.startsWith('webdesigns_')) {
+            if (key.startsWith('webdesigns')) {
               localStorage.removeItem(key);
             }
           });
