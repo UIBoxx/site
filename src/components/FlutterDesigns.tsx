@@ -52,6 +52,7 @@ function FlutterDesigns() {
           // Delete the cached data after 2 minutes
           setTimeout(() => {
             localStorage.removeItem('appdesigns');
+            console.log('app deleted');
           }, 10000);
   
           setIsLoading(false);

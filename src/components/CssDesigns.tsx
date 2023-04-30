@@ -56,6 +56,7 @@ function CSSDesigns() {
           // Delete the cached data after 2 minutes
           setTimeout(() => {
             localStorage.removeItem('webdesigns');
+            console.log('web deleted');
           }, 10000);
   
           setIsLoading(false);
