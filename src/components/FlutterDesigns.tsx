@@ -47,7 +47,13 @@ function FlutterDesigns() {
           const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/appdata");
           const data = await response.json();
           setDesigns(data);
-          localStorage.setItem('appdesigns', JSON.stringify(data)); // Cache the data
+          localStorage.setItem('webdesigns', JSON.stringify(data)); // Cache the data
+  
+          // Delete the cached data after 2 minutes
+          setTimeout(() => {
+            localStorage.removeItem('webdesigns');
+          }, 12000);
+  
           setIsLoading(false);
         } catch (error) {
           console.error(error);
@@ -57,6 +63,7 @@ function FlutterDesigns() {
       fetchData();
     }
   }, []);
+  
 
 
   const handlePageChange = (page: number) => {

@@ -52,6 +52,12 @@ function CSSDesigns() {
           const data = await response.json();
           setDesigns(data);
           localStorage.setItem('webdesigns', JSON.stringify(data)); // Cache the data
+  
+          // Delete the cached data after 2 minutes
+          setTimeout(() => {
+            localStorage.removeItem('webdesigns');
+          }, 2000);
+  
           setIsLoading(false);
         } catch (error) {
           console.error(error);
@@ -61,7 +67,7 @@ function CSSDesigns() {
       fetchData();
     }
   }, []);
-
+  
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
