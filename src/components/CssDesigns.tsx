@@ -53,13 +53,14 @@ function CSSDesigns() {
         setDesigns(data);
         localStorage.setItem('webdesigns', JSON.stringify(data)); // Cache the data
         
-        // Delete all cached data for this site
-        Object.keys(localStorage).forEach(key => {
-          if (key.startsWith('webdesigns')) {
-            localStorage.removeItem(key);
-            console.log('delete web')
-          }
-        });
+        // Delete all cached data for this site after 2 minutes
+        setTimeout(() => {
+          Object.keys(localStorage).forEach(key => {
+            if (key.startsWith('webdesigns_')) {
+              localStorage.removeItem(key);
+            }
+          });
+        }, 10000); // 2 minutes in milliseconds
 
         setIsLoading(false);
       } catch (error) {
