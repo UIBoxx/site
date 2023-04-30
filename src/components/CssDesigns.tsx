@@ -68,7 +68,7 @@ function CSSDesigns() {
     setCurrentPage(1); // Reset to first page on search query change
   };
 
-  const itemsPerPage = 6;
+  const itemsPerPage = 3;
   const filteredDesigns = designs.filter((design) =>
     design.title.toLowerCase().includes(searchQuery.toLowerCase())
 );
