@@ -55,7 +55,6 @@ function CSSDesigns() {
     fetchData();
 }, []);
 
-  
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
