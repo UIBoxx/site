@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import "../CSS/main.css";
 
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import prettier from "prettier/standalone";
-import parserHtml from "prettier/parser-html";
-
-import parserCss from "prettier/parser-postcss";
 import ExampleComponent from "../components/copyCode";
 import Loading from "../assets/loading.gif";
 

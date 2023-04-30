@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import FlutterDesigns from "./components/FlutterDesigns";
 import CSSDesigns from "./components/CssDesigns";
 import SubscribeForm from "./components/subscribe";
+import DesignTemplates from "./components/Designs";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               element={
                 <>
                   <Services />
+                  <DesignTemplates/>
                   < SubscribeForm/>
                 </>
               }
