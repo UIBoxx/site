@@ -824,7 +824,7 @@ nav {
   font-size: 1rem;
   padding: 10px 50px;
   border-radius: 5px;
-  background-color: #99a2a262;
+  background-color: var(--secondaryColor);
   color: var(--textColor);
   border: none;
   margin: 5px 20px;
