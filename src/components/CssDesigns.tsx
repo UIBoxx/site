@@ -37,12 +37,7 @@ function CSSDesigns() {
   const [showModal, setShowModal] = useState(false);
 
 
- useEffect(() => {
-  const cachedData = localStorage.getItem('webdesigns');
-  if (cachedData) {
-    setDesigns(JSON.parse(cachedData));
-    setIsLoading(false);
-  } else {
+  useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
@@ -50,15 +45,7 @@ function CSSDesigns() {
         await new Promise(resolve => setTimeout(resolve, 100));
         const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/webdata");
         const data = await response.json();
-        setDesigns(data);
-        localStorage.setItem('webdesigns', JSON.stringify(data)); // Cache the data
-        
-        // Delete all cached data for this site after 2 minutes
-        setTimeout(() => {
-            localStorage.removeItem('webdesigns');
-            console.log('app deleted');
-          }, 10000);// 2 minutes in milliseconds
-
+        setDesigns(data);  
         setIsLoading(false);
       } catch (error) {
         console.error(error);
@@ -66,7 +53,6 @@ function CSSDesigns() {
       }
     };
     fetchData();
-  }
 }, []);
 
   

@@ -34,24 +34,22 @@ function FlutterDesigns() {
 
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/appdata");
-        const data = await response.json();
-        setDesigns(data);
-        localStorage.setItem('appdesigns', JSON.stringify(data));
-      } catch (error) {
-        console.error(error);
-      }
-    };
-  
-    const intervalId = setInterval(() => {
+      const fetchData = async () => {
+        setIsLoading(true);
+        try {
+          // Add a 0.1 second delay
+          await new Promise(resolve => setTimeout(resolve, 100));
+          const response = await fetch("https://uiboxxapi.netlify.app/.netlify/functions/api/appdata");
+          const data = await response.json();
+          setDesigns(data);  
+          setIsLoading(false);
+        } catch (error) {
+          console.error(error);
+          setIsLoading(false);
+        }
+      };
       fetchData();
-    }, 10000); // Fetch data every 5 minutes
-  
-    return () => clearInterval(intervalId);
   }, []);
-  
   
 
 
