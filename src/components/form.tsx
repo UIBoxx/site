@@ -100,90 +100,49 @@ function SubForm() {
     setAuthorname("");
   };
 
-  // const Designs = async (
-  //   title: string,
-  //   image: string,
-  //   type: string,
-  //   language: string,
-  //   textarea1: string,
-  //   textarea2: string,
-  //   textarea3: string,
-  //   link: string,
-  //   authorname: string,
-  // ) => {
-  //   try {
-  //     const response = await fetch(
-  //       "https://uiboxxapi.netlify.app/.netlify/functions/api/uploaddata",
-  //       {
-  //         method: "POST",
-  //         headers: { "Content-Type": "application/json" },
-  //         body: JSON.stringify({
-      //       title: title,
-      //       image: image,
-      //       type: type,
-      //       language: language,
-      //       textarea1: textarea1,
-      //       textarea2: textarea2,
-      //       textarea3: textarea3,
-      //       link: link,
-      //       authorname: authorname,
-      //     }),
-      //   }
-      // );
-      // const result = await response.json();
-      // console.log("API response:", result);
-      // if (response.ok) {
-      //   console.log("added successfully!");
-      // } else {
-      //   console.log("Failed to add.");
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
-
   const Designs = async (
-    title: string | Blob,
-    image: string | Blob,
-    type: string | Blob,
-    language: string | Blob,
-    textarea1: string | Blob,
-    textarea2: string | Blob,
-    textarea3: string | Blob,
-    link: string | Blob,
-    authorname: string | Blob,
+    title: string,
+    image: string,
+    type: string,
+    language: string,
+    textarea1: string,
+    textarea2: string,
+    textarea3: string,
+    link: string,
+    authorname: string,
   ) => {
     try {
-      const formData = new FormData();
-      formData.append('title', title);
-      formData.append('image', image);
-      formData.append('type', type);
-      formData.append('language', language);
-      formData.append('textarea1', textarea1);
-      formData.append('textarea2', textarea2);
-      formData.append('textarea3', textarea3);
-      formData.append('link', link);
-      formData.append('authorname', authorname);
-  
       const response = await fetch(
-        'https://uiboxxapi.netlify.app/.netlify/functions/api/uploaddata',
+        "https://uiboxxapi.netlify.app/.netlify/functions/api/uploaddata",
         {
-          method: 'POST',
-          body: formData,
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title: title,
+            image: image,
+            type: type,
+            language: language,
+            textarea1: textarea1,
+            textarea2: textarea2,
+            textarea3: textarea3,
+            link: link,
+            authorname: authorname,
+          }),
         }
       );
       const result = await response.json();
-      console.log('API response:', result);
+      console.log("API response:", result);
       if (response.ok) {
-        console.log('added successfully!');
+        console.log("added successfully!");
       } else {
-        console.log('Failed to add.');
+        console.log("Failed to add.");
       }
     } catch (error) {
       console.error(error);
     }
   };
-  
+
+
 
   return (
     <div className="form-container">
