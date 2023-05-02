@@ -143,6 +143,7 @@ function UploadForm() {
                 type="text"
                 name="link"
                 id="link"
+                required
                 onChange={(event) =>
                   setFormState({ ...formState, link: event.target.value })
                 }
