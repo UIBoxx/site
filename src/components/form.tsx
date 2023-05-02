@@ -131,7 +131,7 @@ function SubForm() {
   ) => {
     try {
       const response = await fetch(
-        "https://uiboxxapi.netlify.app/.netlify/functions/api/upload",
+        "https://uiboxxapi.netlify.app/.netlify/functions/api/uploaddata",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
