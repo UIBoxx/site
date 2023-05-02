@@ -114,7 +114,7 @@ function UploadForm() {
               ></textarea>
             </div>
             <div className="htmlForm-content">
-              <label htmlFor="textarea3">JS:</label>
+              <label htmlFor="textarea3">JavaScript:</label>
               <textarea
                 id="textarea3"
                 name="textarea3"
@@ -126,7 +126,7 @@ function UploadForm() {
             <div className="link-part">
               <h2>OR</h2>
               <div className="htmlForm-content">
-                <label htmlFor="link">Link:</label>
+                <label htmlFor="link">Link to code:</label>
                 <input
                   type="text"
                   name="link"
