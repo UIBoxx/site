@@ -25,24 +25,11 @@ function UploadForm() {
       .post("https://uiboxxapi.netlify.app/.netlify/functions/api/upload", formState)
       .then((response) => {
         console.log(response.data);
-        setFormState({
-          title: "",
-          image: "",
-          type: "",
-          language: "",
-          textarea1: "",
-          textarea2: "",
-          textarea3: "",
-          link: "",
-          authorname: "",
-          authorPic: "",
-        });
       })
       .catch((error) => {
         console.error(error);
       });
   };
-  
   
 
   return (
