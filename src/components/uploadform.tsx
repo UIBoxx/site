@@ -19,25 +19,10 @@ function UploadForm() {
     setFormState({ ...formState, type: event.target.value });
   };
 
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  const file = event.target.files ? event.target.files[0] : null;
-  if (file) {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onloadend = () => {
-      setFormState({ ...formState, image: reader.result as string });
-    };
-  }
-};
-
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     axios
-      .post(
-        "https://uiboxxapi.netlify.app/.netlify/functions/api/upload",
-        formState
-      )
+      .post("https://uiboxxapi.netlify.app/.netlify/functions/api/upload", formState)
       .then((response) => {
         console.log(response.data);
       })
@@ -45,7 +30,6 @@ function UploadForm() {
         console.error(error);
       });
   };
-
   
 
   return (
@@ -74,7 +58,9 @@ function UploadForm() {
               id="image"
               name="image"
               required
-              onChange={handleImageChange}
+              onChange={(event) =>
+                setFormState({ ...formState, image: event.target.value })
+              }
             />
           </div>
 
