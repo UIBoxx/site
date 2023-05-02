@@ -87,6 +87,18 @@ nav li {
   /* display: none; */
 }
 
+nav .upload-btn{
+  color: var(--textColor);
+  padding: 8px 30px;
+  border-radius: 20px;
+  background-color: var(--secondaryColor);
+  text-decoration: none;
+}
+
+nav .upload-btn:hover{
+  background-color: #0eb132;
+}
+
 nav li a {
   margin: 0 1rem;
   color: var(--textColor);
@@ -836,4 +848,87 @@ nav {
 
 .design-images .explore-btn:hover{
   background-color: var(--secondaryColor);
+}
+
+
+/* upload form */
+
+.form-container{
+  background-color: var(--mainColor);
+}
+.upload-form{
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  min-height: 90vh;
+  padding: 20px;
+}
+
+
+.upload-form h2 {
+  margin-top: 0;
+  color: #fff;
+}
+.upload-form label {
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#type-select{
+  color: var(--secondaryColor);
+}
+
+.upload-form input[type="text"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  color: #fff;
+  background-color: #2b292944;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+}
+
+.upload-form select{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 20px;
+  color: #fff;
+  border-radius: 2px;
+  background-color: #474444;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+}
+.upload-form input[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: var(--secondaryColor);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Tablet and Desktop Styles */
+@media only screen and (min-width: 768px) {
+  .upload-form {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .upload-form .form-head-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .upload-form .form-content {
+    width: calc(50% - 10px);
+  }
 }

@@ -36,6 +36,7 @@ function Navbar() {
 					onClick={showNavBar}>
 					<FontAwesomeIcon icon={faTimes} />
 				</button>
+				<a className="upload-btn" href="/upload">Upload</a>
 			</nav>
 			<button
 				className="nav-btn"

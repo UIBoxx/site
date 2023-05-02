@@ -7,6 +7,7 @@ import FlutterDesigns from "./components/FlutterDesigns";
 import CSSDesigns from "./components/CssDesigns";
 import SubscribeForm from "./components/subscribe";
 import DesignTemplates from "./components/Designs";
+import UploadForm from "./components/uploadform";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="App-Designs" element={<FlutterDesigns />} />
             <Route path="Web-Designs" element={<CSSDesigns />} />
             <Route path="Contact" element={<MyProfile />} />
+            <Route path="upload" element={<UploadForm />} />
           </Routes>
         </body>
         <Footer />
