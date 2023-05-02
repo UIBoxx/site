@@ -1,56 +1,8 @@
-// import { useState } from "react";
-// import axios from "axios";
-
-// function UploadForm() {
-//   const [formState, setFormState] = useState({
-//     title: "",
-//     image: "",
-//     type: "",
-//     language: "",
-//     textarea1: "",
-//     textarea2: "",
-//     textarea3: "",
-//     link: "",
-//     authorname: "",
-//     authorPic: "",
-//   });
-
-//   const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-//     setFormState({ ...formState, type: event.target.value });
-//   };
-
-//   const initialFormState = {
-//     title: "",
-//     image: "",
-//     type: "",
-//     language: "",
-//     textarea1: "",
-//     textarea2: "",
-//     textarea3: "",
-//     link: "",
-//     authorname: "",
-//     authorPic: "",
-//   };
-  
-//   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
-//     event.preventDefault();
-//     axios
-//       .post("https://uiboxxapi.netlify.app/.netlify/functions/api/upload", formState)
-//       .then((response) => {
-//         console.log(response.data);
-//         // Reset form fields to initial values after successful submission
-//         setFormState(initialFormState);
-//       })
-//       .catch((error) => {
-//         console.error(error);
-//       });
-//   };
-
 import { useState } from "react";
 import axios from "axios";
 
 function UploadForm() {
-  const initialFormState = {
+  const [formState, setFormState] = useState({
     title: "",
     image: "",
     type: "",
@@ -61,30 +13,26 @@ function UploadForm() {
     link: "",
     authorname: "",
     authorPic: "",
-  };
-
-  const [formState, setFormState] = useState(initialFormState);
+  });
 
   const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setFormState({ ...formState, type: event.target.value });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     axios
       .post("https://uiboxxapi.netlify.app/.netlify/functions/api/upload", formState)
       .then((response) => {
         console.log(response.data);
-        resetForm();
       })
       .catch((error) => {
         console.error(error);
       });
   };
 
-  const resetForm = () => {
-    setFormState(initialFormState);
-  };
+
 
   return (
     <div className="form-container">
