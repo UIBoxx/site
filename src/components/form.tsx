@@ -11,7 +11,6 @@ function SubForm() {
   const [textarea3, setTextarea3] = useState("");
   const [link, setLink] = useState("");
   const [authorname, setAuthorname] = useState("");
-  const [authorPic, setAuthorPic] = useState("");
 
   const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
@@ -28,19 +27,6 @@ function SubForm() {
     }
   };
   
-  const handleauthorPicChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setAuthorPic(reader.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-  
-
-
   const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setType(event.target.value);
   };
@@ -91,7 +77,6 @@ function SubForm() {
       language,
       link,
       authorname,
-      authorPic
     );
     await Designs(
       title,
@@ -103,7 +88,6 @@ function SubForm() {
       textarea3,
       link,
       authorname,
-      authorPic
     );
     setTitle("");
     setImage("");
@@ -114,7 +98,6 @@ function SubForm() {
     setTextarea3("");
     setLink("");
     setAuthorname("");
-    setAuthorPic("");
   };
 
   const Designs = async (
@@ -127,7 +110,6 @@ function SubForm() {
     textarea3: string,
     link: string,
     authorname: string,
-    authorPic: string
   ) => {
     try {
       const response = await fetch(
@@ -145,7 +127,6 @@ function SubForm() {
             textarea3: textarea3,
             link: link,
             authorname: authorname,
-            authorPic: authorPic,
           }),
         }
       );
@@ -272,19 +253,6 @@ function SubForm() {
             onChange={handleauthorNameChange}
           />
         </div>
-
-        <div className="form-content">
-            <label htmlFor="authorpic">Author:</label>
-            <input
-              type="file"
-              id="authorPic"
-              name="authorPic"
-              required
-              onChange={handleauthorPicChange}
-            />
-          </div>
-
-
         <button type="submit" onClick={handleFormClick}>
           {"Upload"}
         </button>
