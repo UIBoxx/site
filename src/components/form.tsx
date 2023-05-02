@@ -208,7 +208,6 @@ function SubForm() {
               type="file"
               id="image"
               name="image"
-              required
               onChange={handleImageChange}
             />
           </div>
