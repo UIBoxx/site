@@ -919,7 +919,7 @@ input[type="file"] {
   resize: none;
   outline: none;
 }
-.upload-form input[type="submit"] {
+.upload-form button {
   display: block;
   width: 100%;
   background-color: var(--secondaryColor);

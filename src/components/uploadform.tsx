@@ -26,6 +26,7 @@ function UploadForm() {
       .post("https://uiboxxapi.netlify.app/.netlify/functions/api/upload", formState)
       .then((response) => {
         console.log(response.data);
+        console.log(formState);
         window.location.reload();
       })
       .catch((error) => {
