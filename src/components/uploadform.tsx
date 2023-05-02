@@ -142,7 +142,7 @@ function UploadForm() {
         ) : formState.type === "app" ? (
           <div className="link-part">
             <div className="htmlForm-content">
-              <label htmlFor="link">Link:</label>
+              <label htmlFor="link">Link to code:</label>
               <input
                 type="text"
                 name="link"
