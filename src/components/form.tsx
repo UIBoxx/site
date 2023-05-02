@@ -152,9 +152,9 @@ function SubForm() {
       const result = await response.json();
       console.log("API response:", result);
       if (response.ok) {
-        console.log("User subscribed successfully!");
+        console.log("added successfully!");
       } else {
-        console.log("Failed to subscribe user.");
+        console.log("Failed to add.");
       }
     } catch (error) {
       console.error(error);
