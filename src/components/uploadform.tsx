@@ -19,17 +19,33 @@ function UploadForm() {
     setFormState({ ...formState, type: event.target.value });
   };
 
+  const initialFormState = {
+    title: "",
+    image: "",
+    type: "",
+    language: "",
+    textarea1: "",
+    textarea2: "",
+    textarea3: "",
+    link: "",
+    authorname: "",
+    authorPic: "",
+  };
+  
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
     axios
       .post("https://uiboxxapi.netlify.app/.netlify/functions/api/upload", formState)
       .then((response) => {
         console.log(response.data);
+        // Reset form fields to initial values after successful submission
+        setFormState(initialFormState);
       })
       .catch((error) => {
         console.error(error);
       });
   };
+  
   
 
   return (
@@ -152,9 +168,7 @@ function UploadForm() {
               />
             </div>
           </div>
-        ) : (
-          <p id="type-select">Select type first</p>
-        )}
+        ):null}
 
         <div className="form-content">
           <label htmlFor="authorname">Your Name:</label>
