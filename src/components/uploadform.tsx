@@ -128,6 +128,7 @@ function UploadForm() {
                   type="text"
                   name="link"
                   id="link"
+                  placeholder="github,..."
                   onChange={(event) =>
                     setFormState({ ...formState, link: event.target.value })
                   }
@@ -143,6 +144,7 @@ function UploadForm() {
                 type="text"
                 name="link"
                 id="link"
+                placeholder="github,..."
                 required
                 onChange={(event) =>
                   setFormState({ ...formState, link: event.target.value })
