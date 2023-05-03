@@ -167,8 +167,10 @@ function SubForm() {
               type="file"
               id="image"
               name="image"
+              required
               onChange={handleImageChange}
             />
+            <p style={{ color: "green" }}>Image should be less than 750kb.</p>
           </div>
 
           <div className="htmlForm-content">
