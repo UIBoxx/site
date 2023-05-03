@@ -147,7 +147,7 @@ function SubForm() {
   return (
     <div className="form-container">
       <form className="upload-form">
-        <h2>Upload Design</h2>
+        <h1>Upload Design</h1>
         <div className="form-head-container">
           <div className="form-content">
             <label htmlFor="title">Title:</label>
@@ -198,13 +198,13 @@ function SubForm() {
             />
           </div>
         </div>
-        <div>
+       {
+        (type === 'web') ? <div>
           <div className="htmlForm-content">
             <label htmlFor="textarea1">HTML:</label>
             <textarea
               id="textarea1"
               name="textarea1"
-              required
               value={textarea1}
               onChange={handletextarea1Change}
             ></textarea>
@@ -214,7 +214,6 @@ function SubForm() {
             <textarea
               id="textarea2"
               name="textarea2"
-              required
               value={textarea2}
               onChange={handletextarea2Change}
             ></textarea>
@@ -242,7 +241,18 @@ function SubForm() {
               />
             </div>
           </div>
-        </div>
+        </div>: <div className="htmlForm-content">
+              <label htmlFor="link">Link to code:</label>
+              <input
+                type="text"
+                name="link"
+                id="link"
+                placeholder="github,..."
+                value={link}
+                onChange={handleLinkChange}
+              />
+            </div>
+       }
         <div className="form-content">
           <label htmlFor="authorname">Author Name:</label>
           <input

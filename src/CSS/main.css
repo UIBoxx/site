@@ -863,9 +863,16 @@ nav {
 }
 
 
+.upload-form h1 {
+  margin-top: 5px;
+  color: var(--textColor);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .upload-form h2 {
-  margin-top: 0;
-  color: #fff;
+  margin: 5px 0;
+  color: var(--textColor);
 }
 .upload-form label {
   display: block;
