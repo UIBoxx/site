@@ -19,8 +19,8 @@ function App() {
               path="/"
               element={
                 <>
-                  <Services />
                   <CSSDesigns />
+                  <Services />
                 </>
               }
             />
