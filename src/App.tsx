@@ -6,8 +6,6 @@ import Footer from "./components/Footer";
 import FlutterDesigns from "./components/FlutterDesigns";
 import CSSDesigns from "./components/CssDesigns";
 import SubscribeForm from "./components/subscribe";
-import DesignTemplates from "./components/Designs";
-import UploadForm from "./components/uploadform";
 import SubForm from "./components/form";
 
 function App() {
@@ -22,14 +20,12 @@ function App() {
               element={
                 <>
                   <Services />
-                  <DesignTemplates/>
-                  < SubscribeForm/>
+                  <CSSDesigns />
                 </>
               }
             />
             <Route path="App-Designs" element={<FlutterDesigns />} />
-            <Route path="Web-Designs" element={<CSSDesigns />} />
-            <Route path="Contact" element={<MyProfile />} />
+            <Route path="Contact" element={<><MyProfile /> < SubscribeForm/></>} />
             <Route path="upload" element={<SubForm />} />
           </Routes>
         </body>
