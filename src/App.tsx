@@ -20,7 +20,7 @@ function App() {
               element={
                 <>
                   <CSSDesigns />
-                  <Services />
+                  {/* <Services /> */}
                 </>
               }
             />
