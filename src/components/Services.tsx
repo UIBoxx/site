@@ -2,7 +2,6 @@ import "../CSS/main.css";
 import BrainCktImg from "../assets/brainCkt.png";
 import DesignImg from "../assets/design.jpg";
 import CodeImg from "../assets/code.png";
-import { useState } from "react";
 
 const services = [
   { title: "Think", imgSrc: BrainCktImg },

@@ -84,10 +84,7 @@ const currentPageDesigns = reversedDesigns.slice(
   return (
     <div className="Design-body" style={{ overflow: showModal ? "hidden" : "auto" }}>
       <div className="div">
-      <h2>
-        Transform Your Ideas into <span>Beautiful Designs</span> with Our UI
-        Components
-      </h2>
+      <h2>Unleash Your Creativity and <span>Elevate Your Designs</span> with Our Exceptional UI Components, Turning Your Ideas into Stunning Visual Experiences.</h2>
       </div>
       <div className="search-box">
         <input
