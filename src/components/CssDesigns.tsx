@@ -64,10 +64,16 @@ function CSSDesigns() {
   );
 
   // Reverse the array of filtered designs
-  const reversedDesigns = filteredDesigns.reverse();
+  // const reversedDesigns = filteredDesigns.reverse();
 
-  const pageCount = Math.ceil(reversedDesigns.length / itemsPerPage);
-  const currentPageDesigns = reversedDesigns.slice(
+  // const pageCount = Math.ceil(reversedDesigns.length / itemsPerPage);
+  // const currentPageDesigns = reversedDesigns.slice(
+  //   (currentPage - 1) * itemsPerPage,
+  //   (currentPage - 1) * itemsPerPage + itemsPerPage
+  // );
+
+    const pageCount = Math.ceil(filteredDesigns.length / itemsPerPage);
+  const currentPageDesigns = filteredDesigns.slice(
     (currentPage - 1) * itemsPerPage,
     (currentPage - 1) * itemsPerPage + itemsPerPage
   );
