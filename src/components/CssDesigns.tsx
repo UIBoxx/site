@@ -178,7 +178,7 @@ function CSSDesigns() {
           Next
         </button>
       </div>
-      <p style={{ color: "white", margin: '20px' }}> 
+      <p style={{ color: "white", margin: '20px', fontSize: '10px' , textAlign: 'justify'}}> 
         <span style={{ color: "red"}}>UIBoxx.in</span>, the ultimate destination for free UI
         components that will take your web and app design to the next level. Our
         website is designed to provide developers and designers with the tools
@@ -190,7 +190,7 @@ function CSSDesigns() {
         element, you can find it on our website.
         
       </p>
-      <p style={{ color: "white", margin: '20px' }}>
+      <p style={{ color: "white", margin: '20px', fontSize: '10px', textAlign: 'justify'}}>
       Our team of experienced
         designers and developers has carefully crafted each component to ensure
         that it meets the highest standards of design and functionality. We
