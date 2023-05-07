@@ -178,8 +178,9 @@ function CSSDesigns() {
           Next
         </button>
       </div>
-      <p style={{ color: "white", margin: '20px', fontSize: '10px' , textAlign: 'justify'}}> 
-        <span style={{ color: "red"}}>UIBoxx.in</span>, the ultimate destination for free UI
+      <div className="desc">
+      <p> 
+        <span>UIBoxx.in</span>, the ultimate destination for free UI
         components that will take your web and app design to the next level. Our
         website is designed to provide developers and designers with the tools
         they need to create stunning user interfaces that are both intuitive and
@@ -190,7 +191,7 @@ function CSSDesigns() {
         element, you can find it on our website.
         
       </p>
-      <p style={{ color: "white", margin: '20px', fontSize: '10px', textAlign: 'justify'}}>
+      <p>
       Our team of experienced
         designers and developers has carefully crafted each component to ensure
         that it meets the highest standards of design and functionality. We
@@ -200,12 +201,13 @@ function CSSDesigns() {
         design resources, regardless of their budget or experience level. That's
         why all our UI components are completely free to download and use in
         your personal or commercial projects. Our licensing terms are also
-        flexible, so you can use our components with confidence. At <span  style={{ color: "red"}}>UIBoxx.in</span>, we're committed to helping you create exceptional user
+        flexible, so you can use our components with confidence. At <span>UIBoxx.in</span>, we're committed to helping you create exceptional user
         experiences. Whether you're a seasoned designer or just starting out,
         our UI components will empower you to bring your ideas to life. Browse
          us today and transform your web and app designs with our free
         UI components.
       </p>
+      </div>
     </div>
   );
 }

@@ -207,11 +207,12 @@ nav {
 .div {
   background-color: var(--mainColor);
   font-family: "Pacifico", cursive;
-  min-height: 50vh;
+  min-height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .div h2 {
@@ -220,13 +221,34 @@ nav {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Lato", sans-serif;
 }
 
 .div h2 span {
   color: var(--secondaryColor);
-  font-size: 4rem;
+  font-size: 3rem;
+  font-family: "Pacifico", cursive;
+}
+
+.desc{
+  background-color: #7136038f;
+ display: flex; 
+ align-items: center;
+ justify-content: space-evenly;
+ flex-direction: row;
+ min-height: 25vh;
+}
+
+.desc p{
+  color: rgb(163, 158, 158);
+  margin: 20px;
+  font-size: 10px;
+  text-align: justify;
+}
+
+.desc p span{
+  color: var(--secondaryColor);
   font-family: "Pacifico", cursive;
 }
 
@@ -315,6 +337,10 @@ nav {
 
   .container .card .face {
     width: 180px;
+  }
+
+  .desc{
+   flex-direction: column;
   }
 }
 
