@@ -7,6 +7,11 @@ function Tutorials() {
       description: "Working of Binary Search with Visualization",
       link: '/binary-search-tutorial'
     },
+    {
+        title: "Linear Search",
+        description: "Linear Search with Visualization",
+        link: '/linear-search-tutorial'
+      },
   ];
 
   return (

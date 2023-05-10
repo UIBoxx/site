@@ -9,6 +9,7 @@ import SubscribeForm from "./components/subscribe";
 import SubForm from "./components/form";
 import Tutorials from "./components/tutorial";
 import BinarySearchTutorialsDetails from "./components/binarysearchTutorial";
+import LinearSearchTutorialsDetails from "./components/linearSearchTutorial";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="upload" element={<SubForm />} />
             <Route path="Tutorials" element={<Tutorials/>} />
             <Route path="binary-search-tutorial" element={<BinarySearchTutorialsDetails/>} />
+            <Route path="linear-search-tutorial" element={<LinearSearchTutorialsDetails/>} />
           </Routes>
         </body>
         <Footer />

@@ -90,7 +90,7 @@ function BinarySearchTutorialsDetails() {
 
       <div className="algorithm">
         <h1>Binary Search Algorithm</h1>
-        <div id="binary-search-steps">
+        <div id="search-steps">
           <ol>
             <li>Initialization: Start with a sorted array and define the target value you want to search for.</li>
             <li>Set boundaries: Initialize two variables, <code>left</code> and <code>right</code>, to represent the leftmost and rightmost indices of the search space. Initially, <code>left = 0</code> and <code>right = length of array - 1</code>.</li>

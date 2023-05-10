@@ -104,7 +104,7 @@
   flex-direction: column;
   margin: 50px 0;
 }
-#binary-search-steps {
+#search-steps {
   text-align: start;
   width: 350px;
   color: var(--textColor);
@@ -138,7 +138,7 @@
 .algorithm {
   min-width: 300px;
   /* border: 1px solid white; */
-  min-height: 50vh;
+  min-height: 20vh;
   margin: 40px 0;
 }
 
@@ -174,13 +174,13 @@
   outline: none;
 }
 
-.found {
+.numbers .found {
   background-color: green;
 }
-.left {
+.numbers .left {
   background-color: orange;
 }
-.right {
+.numbers .right {
   background-color: blue;
 }
 #result {
