@@ -154,14 +154,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #144c46;
+  background-color: #144c4685;
   padding: 10px 0;
 }
 .action button {
   width: 100px;
   height: 25px;
   margin: 10px;
-  background-color: #43c396;
+  background-color: var(--secondaryColor);
   border: none;
   border-radius: 5px;
   font-size: 16px;
