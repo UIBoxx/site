@@ -72,7 +72,7 @@ function CSSDesigns() {
   //   (currentPage - 1) * itemsPerPage + itemsPerPage
   // );
 
-    const pageCount = Math.ceil(filteredDesigns.length / itemsPerPage);
+  const pageCount = Math.ceil(filteredDesigns.length / itemsPerPage);
   const currentPageDesigns = filteredDesigns.slice(
     (currentPage - 1) * itemsPerPage,
     (currentPage - 1) * itemsPerPage + itemsPerPage
@@ -185,34 +185,34 @@ function CSSDesigns() {
         </button>
       </div>
       <div className="desc">
-      <p> 
-        <span>UIBoxx.in</span>, the ultimate destination for free UI
-        components that will take your web and app design to the next level. Our
-        website is designed to provide developers and designers with the tools
-        they need to create stunning user interfaces that are both intuitive and
-        visually appealing. Our extensive library of UI components is tailored
-        to suit the needs of various industries and design preferences, ensuring
-        that you have access to the best resources to build your website or app.
-        Whether you're looking for buttons, forms, icons, menus, or any other UI
-        element, you can find it on our website.
-        
-      </p>
-      <p>
-      Our team of experienced
-        designers and developers has carefully crafted each component to ensure
-        that it meets the highest standards of design and functionality. We
-        understand that every project is unique, and that's why we offer a
-        diverse range of components that can be customized to match your
-        specific needs. We believe that everyone should have access to great
-        design resources, regardless of their budget or experience level. That's
-        why all our UI components are completely free to download and use in
-        your personal or commercial projects. Our licensing terms are also
-        flexible, so you can use our components with confidence. At <span>UIBoxx.in</span>, we're committed to helping you create exceptional user
-        experiences. Whether you're a seasoned designer or just starting out,
-        our UI components will empower you to bring your ideas to life. Browse
-         us today and transform your web and app designs with our free
-        UI components.
-      </p>
+        <p>
+          <span>UIBoxx.in</span>, the ultimate destination for free UI
+          components that will take your web and app design to the next level.
+          Our website is designed to provide developers and designers with the
+          tools they need to create stunning user interfaces that are both
+          intuitive and visually appealing. Our extensive library of UI
+          components is tailored to suit the needs of various industries and
+          design preferences, ensuring that you have access to the best
+          resources to build your website or app. Whether you're looking for
+          buttons, forms, icons, menus, or any other UI element, you can find it
+          on our website.
+        </p>
+        <p>
+          Our team of experienced designers and developers has carefully crafted
+          each component to ensure that it meets the highest standards of design
+          and functionality. We understand that every project is unique, and
+          that's why we offer a diverse range of components that can be
+          customized to match your specific needs. We believe that everyone
+          should have access to great design resources, regardless of their
+          budget or experience level. That's why all our UI components are
+          completely free to download and use in your personal or commercial
+          projects. Our licensing terms are also flexible, so you can use our
+          components with confidence. At <span>UIBoxx.in</span>, we're committed
+          to helping you create exceptional user experiences. Whether you're a
+          seasoned designer or just starting out, our UI components will empower
+          you to bring your ideas to life. Browse us today and transform your
+          web and app designs with our free UI components.
+        </p>
       </div>
     </div>
   );

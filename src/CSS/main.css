@@ -346,6 +346,8 @@ nav {
 }
 
 
+
+
 /* Projects */
 .projects-body {
   min-height: 90vh;
@@ -582,11 +584,11 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(69, 66, 66, 0.895);
+  background-color: rgba(81, 72, 72, 0.895);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .Design-body .codePrinter .modal-content {

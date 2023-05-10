@@ -7,6 +7,8 @@ import FlutterDesigns from "./components/FlutterDesigns";
 import CSSDesigns from "./components/CssDesigns";
 import SubscribeForm from "./components/subscribe";
 import SubForm from "./components/form";
+import Tutorials from "./components/tutorial";
+import BinarySearchTutorialsDetails from "./components/binarysearchTutorial";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="App-Designs" element={<FlutterDesigns />} />
             <Route path="Contact" element={<><MyProfile /> < SubscribeForm/></>} />
             <Route path="upload" element={<SubForm />} />
+            <Route path="Tutorials" element={<Tutorials/>} />
+            <Route path="binary-search-tutorial" element={<BinarySearchTutorialsDetails/>} />
           </Routes>
         </body>
         <Footer />
