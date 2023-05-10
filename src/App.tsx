@@ -29,7 +29,7 @@ function App() {
             />
             <Route path="App-Designs" element={<FlutterDesigns />} />
             <Route path="Contact" element={<><MyProfile /> < SubscribeForm/></>} />
-            <Route path="upload" element={<SubForm />} />
+            {/* <Route path="upload" element={<SubForm />} /> */}
             <Route path="Tutorials" element={<Tutorials/>} />
             <Route path="binary-search-tutorial" element={<BinarySearchTutorialsDetails/>} />
             <Route path="linear-search-tutorial" element={<LinearSearchTutorialsDetails/>} />
