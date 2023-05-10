@@ -36,7 +36,7 @@
 }
 
 .image-demo {
-  background-color: rgba(63, 182, 122, 0.518);
+  background-color: rgba(96, 116, 106, 0.518);
   height: 150px;
   color: var(--textColor);
   width: 250px;
@@ -52,7 +52,7 @@
 }
 .title-head {
   background-color: #252523bb;
-  min-height: 80px;
+  min-height: 125px;
   width: 250px;
   padding: 5px 10px;
   display: flex;
@@ -112,8 +112,15 @@
 }
 
 .demo-search-card h1 {
-  margin-bottom: 20px;
-  color: var(--secondaryColor);
+    color: var(--secondaryColor);
+  margin-bottom: 10px;
+}
+
+.demo-search-card p{
+    width: 350px;
+    color: var(--textColor);
+    margin-bottom: 10px;
+    text-align: justify;
 }
 
 .demo-search-card .numbers {

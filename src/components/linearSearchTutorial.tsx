@@ -44,7 +44,7 @@ function LinearSearchTutorialsDetails() {
     <div className="search-tutorial-body">
       <div className="demo-search-card">
         <h1>How Linear Search Works?</h1>
-
+        <p>Linear search is a simple searching algorithm that sequentially checks each element in a list or array until it finds the target value or reaches the end of the list. It starts from the beginning and compares each element with the target value. If a match is found, the search is successful, and the index of the matching element is returned. If the target value is not found after checking all elements, the search is considered unsuccessful. Linear search is straightforward but may not be efficient for large datasets as it has a time complexity of O(n), where n is the number of elements in the list.</p>
         <div className="numbers">
           {[...Array(40)].map((_, index) => (
             <div key={index + 1} className="number">

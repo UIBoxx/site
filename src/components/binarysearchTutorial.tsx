@@ -73,6 +73,7 @@ function BinarySearchTutorialsDetails() {
     <div className="search-tutorial-body">
       <div className="demo-search-card">
         <h1>How Binary Search Works?</h1>
+        <p>Binary search is a search algorithm that operates on a sorted array by repeatedly dividing the search interval in half. It starts by comparing the target value with the middle element of the array. If they are equal, the search is successful. If the target value is less than the middle element, the search continues on the left half of the array. If the target value is greater, the search continues on the right half. By dividing the search interval in half at each step, binary search efficiently narrows down the search space until the target value is found or the search interval becomes empty, indicating that the target is not present in the array. The time complexity of binary search is logarithmic, making it a highly efficient search algorithm for large sorted arrays.</p>
 
         <div className="numbers">
           {[...Array(40)].map((_, index) => (
