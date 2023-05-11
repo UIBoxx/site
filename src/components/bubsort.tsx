@@ -91,7 +91,6 @@ function BubbleSortTutorialsDetails() {
         <div id="result">{result}</div>
       </div>
       <div className="sort-container-body">
-        <div className="row-2">
           <p>
             Bubble Sort is a simple comparison-based sorting algorithm that
             repeatedly steps through the list of elements to be sorted. It
@@ -100,7 +99,7 @@ function BubbleSortTutorialsDetails() {
             "bubble" to the top of the list in each iteration. This process
             continues until the entire list is sorted. Bubble Sort is easy to
             understand and implement, but it is not very efficient for large
-            lists. The working of Bubble Sort involves iterating through the
+            lists.<br></br> The working of Bubble Sort involves iterating through the
             list multiple times. In each iteration, adjacent elements are
             compared and swapped if necessary to bring the larger element
             towards the end of the list. This process is repeated until the list
@@ -114,8 +113,6 @@ function BubbleSortTutorialsDetails() {
             useful for small lists or as an educational tool to understand the
             basics of sorting algorithms.
           </p>
-        </div>
-        <div className="row-2"></div>
       </div>
     </div>
   );

@@ -138,14 +138,13 @@ function HeapSortTutorialsDetails() {
         <div id="result">{result}</div>
       </div>
       <div className="sort-container-body">
-        <div className="row-2">
           <p>
             Heap sort is a comparison-based sorting algorithm that utilizes the
             concept of a binary heap data structure. It works by first building
             a max heap from the given array and then repeatedly extracting the
             maximum element from the heap and placing it at the end of the
             sorted portion of the array. The process continues until the entire
-            array is sorted. The key idea behind heap sort is that the largest
+            array is sorted. <br></br> The key idea behind heap sort is that the largest
             element of the unsorted portion of the array is always at the root
             of the heap. By swapping it with the last element of the unsorted
             portion and reducing the heap size, we gradually build the sorted
@@ -154,8 +153,6 @@ function HeapSortTutorialsDetails() {
             element is always selected. Heap sort has a time complexity of O(n
             log n) in all cases, making it efficient for large data sets.
           </p>
-        </div>
-        <div className="row-2"></div>
       </div>
     </div>
   );
