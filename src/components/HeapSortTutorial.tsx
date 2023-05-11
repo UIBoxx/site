@@ -95,7 +95,7 @@ function HeapSortTutorialsDetails() {
     const numberElements = document.getElementsByClassName("number");
     for (let i = 0; i < numberElements.length; i++) {
       const element = numberElements[i] as HTMLElement;
-      element.style.backgroundColor = "green";
+      element.style.backgroundColor = "orange";
     }
   };
 

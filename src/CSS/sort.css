@@ -19,14 +19,22 @@
 
 .sort-container{
     background-color: var(--mainColor);
-    min-height: 120vh;
+    min-height: 80vh;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .container-head{
     min-height: 150px;
+    min-width: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #57515233;
+    border-radius: 10px;
     
 }
 .container-head h1{
@@ -35,7 +43,7 @@
 }
 
 .container-head input{
-    width: 250px;
+    width: 200px;
     height: 30px;
     border: none;
     background-color: var(--textColor);
@@ -64,10 +72,11 @@
    }
    
    .number {
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     display: flex;
+    box-shadow: 2px 2px 4px #dcf1f1;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -76,13 +85,14 @@
    }
 
    .sort-container-body{
+    /* width: 350px; */
+    max-width: 600px;
     background-color: var(--mainColor);
     padding: 20px 0;
-    min-height: 60vh;
+    min-height: 20vh;
    }
 
    .sort-container-body .row-2 p{
     color: var(--textColor);
-    padding: 20px;
     text-align: justify;
    }
