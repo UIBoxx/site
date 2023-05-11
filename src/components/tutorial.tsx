@@ -12,6 +12,16 @@ function Tutorials() {
         description: "Linear Search with Visualization",
         link: '/linear-search-tutorial'
       },
+      {
+        title: "Bubble Sort",
+        description: "Bubble Sort Visualization",
+        link: '/bubble-sort-tutorial'
+      },
+      {
+        title: "Heap Sort",
+        description: "Heap Sort Visualization",
+        link: '/heap-sort-tutorial'
+      },
   ];
 
   return (

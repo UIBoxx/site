@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&family=Lato:wght@400;700&family=Pacifico&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+:root {
+  --mainColor: #141b1b;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #db2b39;
+  --textColor: #c1d3d3;
+  --cardColor: rgba(241, 119, 92, 0.532);
+  --line: #7a7171ab;
+}
+
+.sort-container{
+    min-height: 80vh;
+}
+.container-head{
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--mainColor);
+}
+.container-head h1{
+    color: var(--secondaryColor);
+    margin: 20px 0;
+}
+
+.container-head input{
+    width: 250px;
+    height: 30px;
+    border: none;
+    background-color: var(--textColor);
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.container-head button{
+    height: 30px;
+    margin: 0 5px;
+    width: 80px;
+    border: none;
+    background-color: var(--secondaryColor);
+    border-radius: 0 5px;
+}
+.container-head button:hover{
+    background-color: green;
+}
+.numbers {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+   }
+   
+   .number {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 5px;
+    transition: transform 0.3s;
+   }
+
+   .sort-container-body{
+    min-height: 60vh;
+    background-color: var(--mainColor);
+   }
+
+   .sort-container-body p{
+    color: var(--textColor);
+    padding: 20px;
+    text-align: justify;
+   }

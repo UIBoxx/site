@@ -6,10 +6,11 @@ import Footer from "./components/Footer";
 import FlutterDesigns from "./components/FlutterDesigns";
 import CSSDesigns from "./components/CssDesigns";
 import SubscribeForm from "./components/subscribe";
-import SubForm from "./components/form";
 import Tutorials from "./components/tutorial";
 import BinarySearchTutorialsDetails from "./components/binarysearchTutorial";
 import LinearSearchTutorialsDetails from "./components/linearSearchTutorial";
+import BubbleSortTutorialsDetails from "./components/bubsort";
+import HeapSortTutorialsDetails from "./components/HeapSortTutorial";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
             <Route path="Tutorials" element={<Tutorials/>} />
             <Route path="binary-search-tutorial" element={<BinarySearchTutorialsDetails/>} />
             <Route path="linear-search-tutorial" element={<LinearSearchTutorialsDetails/>} />
+            <Route path="bubble-sort-tutorial" element={<BubbleSortTutorialsDetails/>}/>
+            <Route path="heap-sort-tutorial" element={<HeapSortTutorialsDetails/>}/>
           </Routes>
         </body>
         <Footer />
