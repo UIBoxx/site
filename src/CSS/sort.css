@@ -18,7 +18,8 @@
 }
 
 .sort-container{
-    min-height: 80vh;
+    background-color: var(--mainColor);
+    min-height: 120vh;
 }
 .container-head{
     min-height: 150px;
@@ -26,7 +27,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--mainColor);
+    
 }
 .container-head h1{
     color: var(--secondaryColor);
@@ -75,11 +76,12 @@
    }
 
    .sort-container-body{
-    min-height: 60vh;
     background-color: var(--mainColor);
+    padding: 20px 0;
+    min-height: 60vh;
    }
 
-   .sort-container-body p{
+   .sort-container-body .row-2 p{
     color: var(--textColor);
     padding: 20px;
     text-align: justify;
