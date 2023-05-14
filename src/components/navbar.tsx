@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered, faTimes } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/transparent.png";
 import "../CSS/main.css";
 
 function Navbar() {

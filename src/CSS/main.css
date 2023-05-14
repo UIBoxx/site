@@ -12,11 +12,12 @@
   --mainColor: #eaf1f1;
   /* --mainColor: #171616; */
   --mainColorLight: #5767aa;
-  --secondaryColor: #db2b39;
+  /* --secondaryColor: #db2b39; */
+  --secondaryColor: #2fca8f;
   --textColor: #585b5b;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
-  --headcolor: #fff;
+  --headcolor: #58f4b8;
   --subcolor:#fff;
 }
 
@@ -32,8 +33,8 @@ header {
   z-index: 999;
   top: 0;
   position: sticky;
-  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
-  box-shadow: 20px 10px 22px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 20px 20px 22px rgba(221, 93, 93, 0.2);
+  box-shadow: 20px 10px 22px rgba(150, 179, 172, 0.2);
 }
 
 header .logo {
@@ -53,13 +54,13 @@ header .logo img{
 
 footer {
   height: 100px;
-  background-color: var(--mainColor);
+  background-color: var(--headcolor);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 10px 20px 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 20px 20px 22px rgba(221, 93, 93, 0.2);
+  box-shadow: 20px 10px 22px rgba(150, 179, 172, 0.2);
  
 }
 
@@ -92,7 +93,7 @@ nav .upload-btn:hover{
 
 nav li a {
   margin: 0 1rem;
-  color: var(--secondaryColor);
+  color: var(--subcolor);
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -143,7 +144,7 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: var(--mainColor);
+    background-color: var(--headcolor);
     transition: 1s;
     z-index: 100;
   }
@@ -223,7 +224,7 @@ nav {
 }
 
 .desc{
-  /* background-color: var(--subcolor); */
+  background-color: var(--headcolor);
  display: flex; 
  align-items: center;
  justify-content: space-evenly;
@@ -477,7 +478,7 @@ nav {
 
 
 .card-desc{
-  height: 100px;
+  height: 125px;
   width: 250px;
   background-color: var(--subcolor);
   display: flex;
@@ -487,7 +488,8 @@ nav {
   padding: 5px;
   position: relative;
   top: -30px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;  
+  text-overflow: ellipsis;
 }
 
 .card-desc h3 {
@@ -764,7 +766,7 @@ nav {
   border-radius: 8px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   
 }
 
