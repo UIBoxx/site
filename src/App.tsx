@@ -24,12 +24,16 @@ function App() {
               element={
                 <>
                   <CSSDesigns />
+                  <FlutterDesigns />
                   {/* <Services /> */}
                 </>
               }
             />
-            <Route path="App-Designs" element={<FlutterDesigns />} />
-            <Route path="Contact" element={<><MyProfile /> < SubscribeForm/></>} />
+            <Route path="UI-Library" element={<>
+                  <CSSDesigns />
+                  <FlutterDesigns />
+                </>} />
+            <Route path="Contact" element={<><MyProfile /> </>} />
             {/* <Route path="upload" element={<SubForm />} /> */}
             <Route path="Tutorials" element={<Tutorials/>} />
             <Route path="binary-search-tutorial" element={<BinarySearchTutorialsDetails/>} />

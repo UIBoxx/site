@@ -63,7 +63,7 @@ function SubscribeForm() {
         <input type="text" name="name" value={name} onChange={handleNameChange} placeholder="Name" required/>
         <input type="email" name="email" value={email} onChange={handleEmailChange} placeholder="E-mail" required/>
         {isValid ? null : <p>Please enter a valid name and email.</p>}
-        <button type="submit" onClick={handleSubscribeClick}>{subscribed && isValid ? 'Subscribed' : 'Subscribe'}</button>
+        <button type="submit" onClick={handleSubscribeClick}>{subscribed && isValid ? 'Sent' : 'Send'}</button>
       </form>
     </div>
   );

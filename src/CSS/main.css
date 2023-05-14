@@ -9,13 +9,15 @@
 }
 
 :root {
-  --mainColor: #141b1b;
+  --mainColor: #eaf1f1;
   /* --mainColor: #171616; */
   --mainColorLight: #5767aa;
   --secondaryColor: #db2b39;
-  --textColor: #c1d3d3;
+  --textColor: #585b5b;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
+  --headcolor: #fff;
+  --subcolor:#fff;
 }
 
 header {
@@ -24,8 +26,8 @@ header {
   justify-content: space-around;
   height: 80px;
   padding: 0 2rem;
-  background-color: var(--mainColor);
-  color: var(--textColor);
+  background-color: var(--headcolor);
+  color: var(--secondaryColor);
   font-family: "Lato", sans-serif;
   z-index: 999;
   top: 0;
@@ -35,31 +37,19 @@ header {
 }
 
 header .logo {
-  /* background-color: greenyellow; */
-  height: 50px;
+  height: 80px;
   display: flex;
   align-items: end;
   justify-content: center;
   flex-direction: column;
 }
 
-header .logo h3 {
-  font-size: 2rem;
-  font-weight: bolder;
-  color: var(--secondaryColor);
-  font-family: "Pacifico", cursive;
+header .logo img{
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
 }
 
-header .logo h3 span {
-  color: var(--secondaryColor);
-  font-family: "Pacifico", cursive;
-}
-
-header .logo h4 {
-  font-size: 1rem;
-  color: var(--textColor);
-  font-family: "Pacifico", cursive;
-}
 
 footer {
   height: 100px;
@@ -102,7 +92,7 @@ nav .upload-btn:hover{
 
 nav li a {
   margin: 0 1rem;
-  color: var(--textColor);
+  color: var(--secondaryColor);
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -233,7 +223,7 @@ nav {
 }
 
 .desc{
-  background-color: #7136038f;
+  /* background-color: var(--subcolor); */
  display: flex; 
  align-items: center;
  justify-content: space-evenly;
@@ -376,7 +366,7 @@ nav {
   border: none;
   font-size: 1.5rem;
   color: var(--textColor);
-  background-color: #e4dddd1f;
+  background-color: var(--subcolor);
   outline: none;
 }
 .project-cards {
@@ -450,55 +440,70 @@ nav {
   /* border: 2px solid red; */
 }
 .Design-card {
-  min-height: 300px;
-  max-height: 600px;
+  height:300px;
   width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  background: #a43e3e1f;
+  /* border: 1px solid var(--line); */
   padding: 10px;
-  margin: 5rem 10px;
+  margin: 2rem -10px -0.5rem -10px;
   border-radius: 5px;
 }
 
 .Design-image {
   width: 250px;
-  min-height: 250px;
-  max-height: 600px;
+  height: 250px;
   display: flex;
-  border: 1px solid var(--line);
+  /* border: 1px solid var(--line); */
+  background-color: var(--subcolor); 
   align-items: center;
   justify-content: center;
   position: relative;
   top: -3rem;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   overflow: hidden;
   cursor: pointer;
-  background-position: center;
-  background-size: contain;
 }
 
 .Design-image img {
-  padding: 20px;
-  width: 300px;
+  padding: 10px;
+  width: 200px;
+  height: 250px;
+  object-fit: contain;
   border-radius: 5px;
 }
 
-.Design-card h3 {
-  color: var(--textColor);
-  text-align: center;
+
+.card-desc{
+  height: 100px;
+  width: 250px;
+  background-color: var(--subcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  position: relative;
+  top: -30px;
+  border-radius: 0 0 10px 10px;
 }
 
-.Design-card p {
+.card-desc h3 {
+  color: var(--textColor);
+  text-align: start;
+  font-size: 1rem;
+}
+
+.card-desc p {
   color: var(--textColor);
   text-align: center;
   margin: 5px 0;
   font-size: 0.8rem;
 }
 
-.Design-card p span {
+.card-desc p span {
   color: var(--secondaryColor);
   margin: 0 20px;
   font-size: 0.8rem;
@@ -506,13 +511,18 @@ nav {
 
 .Design-card a {
   text-decoration: none;
-  background-color: #8883833b;
+  background-color: var(--secondaryColor);
   padding: 2px 20px;
   margin: 2px;
   font-size: 1.2rem;
-  color: var(--textColor);
+  color: var(--subcolor);
   border-radius: 5px;
   font-family: "Pacifico", cursive;
+}
+
+.Design-card a:hover{
+  background-color: var(--subcolor);
+  color: var(--secondaryColor);
 }
 
 .pagination {
@@ -573,10 +583,21 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: var(--textColor);
-  padding: 10px 0;
+  justify-content: start;
+  color: var(--secondaryColor);
+  font-weight: bolder;
+  padding: 2px 20px;
+  position: relative;
+  text-decoration: none;
 }
+
+.underline{
+  width: 100%;
+  margin: 0 20px;
+  height: 1px;
+  background-color: var(--line);
+}
+
 
 .Design-body .codePrinter .modal {
   position: fixed;
@@ -632,16 +653,16 @@ nav {
 
 .Design-body .codePrinter .button{
   margin: 5px 0;
-  background-color: var(--textColor);
+  background-color: var(--secondaryColor);
   padding: 3px 5px;
   border-radius: 5px;
-  color: var(--secondaryColor);
+  color: var(--subcolor);
   border: none;
 }
 
 .Design-body .codePrinter .button:hover{
-  background-color: var(--secondaryColor);
-  color: var(--textColor);
+  background-color: var(--subcolor);
+  color: var(--secondaryColor);
 }
 
 .Design-body .codePrinter .modal-close{
@@ -667,18 +688,18 @@ nav {
 }
 
 .code-block .copy-btn{
-  background-color: #ceb9b96a;
+  background-color: var(--secondaryColor);
   padding: 3px 20px;
   border-radius: 5px;
   color: 
-  var(--textColor);
+  var(--subcolor);
   position: relative;
   top: 20px;
   border: none;
 }
 
 .code-block .copy-btn:hover{
-  background-color: var(--secondaryColor);
+  background-color: green;
 }
 
 .code-block .copy-btn-container{
@@ -735,23 +756,20 @@ nav {
 }
 
 
-.contact-body .profile-card {
+.contact-body .email-card {
   height: 150px;
   width: 100%;
-  background-color: rgba(53, 46, 50, 0.232);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-radius: 8px;
-  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
-  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   
 }
 
-.profile-card button {
-  background-color: rgba(255, 255, 255, 0.06);
+.email-card button {
+  background-color: var(--subcolor);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   width: 200px;
@@ -764,14 +782,19 @@ nav {
   font-size: 1.5rem;
 }
 
-.profile-card button:hover {
+.email-card button:hover {
   background-color: var(--secondaryColor);
+  color: var(--subcolor);
 }
 
 @media only screen and (max-width: 500px) {
   .contact-body .contact-wrapper{
     width: 90vw;
   }
+  .sub-title{
+    justify-content: center;
+  }
+
 }
 
 .sub-form{

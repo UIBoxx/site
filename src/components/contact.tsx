@@ -39,9 +39,9 @@ function MyProfile() {
           create!
         </p>
       </div>
-        <div className="profile-card">
+        <div className="email-card">
           <a href="mailto: contact@uiboxx.in">
-            <button>Contact</button>
+            <button>E-mail</button>
           </a>
         </div>
       </div>

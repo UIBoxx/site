@@ -2,12 +2,12 @@ import { useRef, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered, faTimes } from "@fortawesome/free-solid-svg-icons";
-
+import logo from "../assets/logo.jpg";
 import "../CSS/main.css";
 
 function Navbar() {
 
-	let navItems=['Home','App-Designs','Tutorials','Contact']
+	let navItems=['Home','UI-Library','Tutorials','Contact']
 	const [selectedIndex, setSelectedIndex] = useState(-1);
 
 	const navRef = useRef<HTMLDivElement>(null);
@@ -22,8 +22,7 @@ function Navbar() {
 	return (
 		<header>
 			<div className="logo">
-				<h3>UIBoxx<span></span></h3>
-				<h4>.in</h4>
+				<img src={logo} alt="Loading" />
 			</div>
 			<nav ref={navRef}>
 				{navItems.map((items,index)=>(
