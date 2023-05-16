@@ -11,13 +11,13 @@
 :root {
   --mainColor: #eaf1f1;
   /* --mainColor: #171616; */
-  --mainColorLight: #5767aa;
+  --mainColorLight: #84899b;
   /* --secondaryColor: #db2b39; */
-  --secondaryColor: #2fca8f;
-  --textColor: #585b5b;
+  --secondaryColor: #308162;
+  --textColor: #2f3030;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
-  --headcolor: #58f4b8;
+  --headcolor: #21d28e;
   --subcolor:#fff;
 }
 
@@ -233,7 +233,7 @@ nav {
 }
 
 .desc p{
-  color: rgb(163, 158, 158);
+  color: var(--textColor);
   margin: 20px;
   font-size: 10px;
   text-align: justify;
