@@ -34,7 +34,6 @@ function Navbar() {
 						
 						items}>{items}</a></li>
 				))}
-				<li><a href="">UI-LIB</a></li>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavBar}>
