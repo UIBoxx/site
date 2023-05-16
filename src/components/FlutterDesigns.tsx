@@ -23,14 +23,6 @@ function FlutterDesigns() {
   const [data, setData] = useState(null);
 
 
-  // Find the design with the specified title
-  const designToUpdate = designs.find(design => design.title === "Design Title");
-
-  // Update the likes of the design
-  if (designToUpdate) {
-    designToUpdate.likes = "10";
-    setDesigns([...designs]); // Call setDesigns with the updated array
-  }
 
 
   useEffect(() => {

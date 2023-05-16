@@ -8,64 +8,85 @@
   font-family: "Chakra Petch", sans-serif;
 }
 
-/* :root {
-  --mainColor: #141b1b;
-  --mainColorLight: #5767aa;
-  --secondaryColor: #db2b39;
-  --textColor: #c1d3d3;
+:root {
+  --mainColor: #eaf1f1;
+  --mainColorLight: #84899b;
+  --secondaryColor: #308162;
+  --textColor: #2f3030;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
-} */
+  --headcolor: #21d28e;
+  --subcolor:#fff;
+}
+
 .tutorial-body {
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  min-height: 80vh;
-  background-color: var(--mainColor);
   padding: 40px 0;
+  background-color: var(--mainColor);
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.tutorial-cards {
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 25px;
+  padding: 20px 5px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff;
+  /* border: 2px solid red; */
 }
 
 .content-card {
-  width: 250px;
+  width: 320px;
+  height: 150px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  z-index: 0;
+  justify-content: center;
+  background-color: var(--subcolor);
   margin: 10px;
   border-radius: 10px;
+  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
+
 }
 
 .image-demo {
-  background-color: #1031317f;
-  height: 200px;
+  background-color: var(--subcolor);
+  height: 80px;
+  width: 100px;
   color: var(--textColor);
-  width: 250px;
-  border-radius: 5px 5px 0 0;
+  transition: 0.4s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.4s ease-in-out;
 }
 .image-demo h1 {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 .title-head {
-  background-color: #497146bb;
-  min-height: 125px;
-  width: 250px;
+  background-color: var(--textColor);
+  height: 120px;
+  width: 200px;
   padding: 5px 10px;
+  border-radius: 5px;
   display: flex;
-  align-items: start;
-  flex-direction: column;
+  align-items: end;
   justify-content: center;
-  border-radius: 0 0 5px 5px;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .title-head h2 {
   margin: 5px 0;
-  color: #decbcb;
+  font-size: 1rem;
+  color: var(--mainColor);
 }
 .title-head .action-area {
   margin-bottom: 5px;
