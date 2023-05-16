@@ -2,13 +2,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import MyProfile from "./components/contact";
 import Footer from "./components/Footer";
-import FlutterDesigns from "./components/FlutterDesigns";
 import CSSDesigns from "./components/CssDesigns";
 import Tutorials from "./components/tutorial";
 import BinarySearchTutorialsDetails from "./components/binarysearchTutorial";
 import LinearSearchTutorialsDetails from "./components/linearSearchTutorial";
 import BubbleSortTutorialsDetails from "./components/bubsort";
 import HeapSortTutorialsDetails from "./components/HeapSortTutorial";
+import ContactForm from "./components/contactForm";
 
 function App() {
   return (
@@ -38,7 +38,8 @@ function App() {
               path="Contact"
               element={
                 <>
-                  <MyProfile />{" "}
+                  <MyProfile />
+                  <ContactForm />
                 </>
               }
             />

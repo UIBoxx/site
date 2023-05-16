@@ -719,7 +719,7 @@ nav {
 
 .contact-body{
   display: flex;
-  min-height: 80vh;
+  min-height: 50vh;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -760,7 +760,7 @@ nav {
   font-size: 1.5rem;
 }
 
-
+/* 
 .contact-body .email-card {
   height: 150px;
   width: 100%;
@@ -785,12 +785,12 @@ nav {
   border-radius: 4px;
   letter-spacing: 2px;
   font-size: 1.5rem;
-}
+} 
 
 .email-card button:hover {
   background-color: var(--secondaryColor);
   color: var(--subcolor);
-}
+} */
 
 @media only screen and (max-width: 500px) {
   .contact-body .contact-wrapper{
@@ -803,66 +803,105 @@ nav {
 }
 
 .sub-form{
-  min-height: 400px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--mainColor);
   padding: 20px 0;
+  background-color: var(--mainColor);
+  /* border: 1px solid red; */
+
+}
+.form-wrapper{
+  width: 50vw;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  /* border: 1px solid red; */
+
 }
 
 .sub-form form{
   display: flex;
   flex-direction: column;
-  height: 200px;
-  width: 90vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #343a3a31;
   border-radius: 0.5rem;
 }
 
 .sub-form .sub-msg{
   color: var(--textColor);
-  padding: 0 20px;
   font-size: 1.2rem;
   text-align: center;
   
 }
 
-.sub-form form  p{
-  margin-top: 5px;
-  color: var(--secondaryColor);
-}
-
 .sub-form form input{
   margin-top: 1.5rem;
   height: 35px;
-  width: 280px;
+  width: 450px;
   padding: 0 20px;
   border-radius: 5px;
   border: none;
   outline: none;
   font-size: 1.2rem;
-  background-color: #2b2f2fbc;
+  background-color: var(--subcolor);
   color: var(--textColor);
+  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
+
 }
+
+.sub-form form textarea{
+  margin-top: 1.5rem;
+  height: 100px;
+  width: 450px;
+  padding: 0 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  background-color: var(--subcolor);
+  color: var(--textColor);
+  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
+
+}
+
 
 .sub-form button{
   margin-top: 1.5rem;
   height: 40px;
-  width: 280px;
+  width: 450px;
   font-size: 1.2rem;
   border-radius: 8px;
-  background-color: #b15f5fc1;
+  background-color: var(--secondaryColor);
   color: var(--textColor);
   border: none;
 }
 
 .sub-form button:hover{
   background-color: var(--secondaryColor);
+}
+
+@media only screen and (max-width: 500px) {
+  .form-wrapper{
+    width: 95vw;
+  }
+  .sub-form form{
+    margin: 20px;
+  }
+  .sub-form form input{
+    width: 300px;
+  }
+  .sub-form form textarea{
+    width: 300px;
+  }
+  .sub-form form button{
+    width: 300px;
+  }
+
 }
 
 .design-images {

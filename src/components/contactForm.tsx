@@ -1,10 +1,11 @@
 import "../CSS/main.css";
 import { useState } from 'react';
 
-function SubscribeForm() {
+function contactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
+  const [message, setMessage] = useState('');
+  const [sent, setSent] = useState(false);
   const [isValid, setIsValid] = useState(true);
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,17 +18,22 @@ function SubscribeForm() {
     setIsValid(true);
   };
 
-  const handleSubscribeClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(event.target.value);
+  };
+
+  const handleSendClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     if (!validateInputs()) {
       setIsValid(false);
       return;
     }
-    console.log('Submitting form with name:', name, 'and email:', email);
-    await subscribeUser(name, email);
-    setSubscribed(true);
+    console.log('Submitting form with name:', name, 'email:', email, 'and message:', message);
+    await subscribeUser(name, email, message);
+    setSent(true);
     setName('');
     setEmail('');
+    setMessage('');
   };
 
   const validateInputs = () => {
@@ -36,18 +42,18 @@ function SubscribeForm() {
     return nameRegex.test(name.trim()) && emailRegex.test(email.trim());
   };
 
-  const subscribeUser = async (name: string, email: string) => {
+  const subscribeUser = async (name: string, email: string, message: string) => {
     try {
-      const response = await fetch('https://uiboxxapi.netlify.app/.netlify/functions/api/adduser', {
+      const response = await fetch('https://uiboxxapi.netlify.app/.netlify/functions/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name, email: email}),
+        body: JSON.stringify({ name: name, email: email, message: message }),
       });
       const result = await response.json();
       console.log('API response:', result);
       if (response.ok) {
         console.log('User subscribed successfully!');
-        console.log('Name:', name, 'Email:', email);
+        console.log('Name:', name, 'Email:', email, 'Message:', message);
       } else {
         console.log('Failed to subscribe user.');
       }
@@ -58,15 +64,18 @@ function SubscribeForm() {
 
   return (
     <div className="sub-form">
-        <div className="sub-msg"><p>Stay up-to-date with our latest design releases! </p><p>Subscribe to our website and receive notifications when new designs are uploaded. Don't miss out on our newest and most innovative designs. Join our community of design enthusiasts today!</p></div>
+      <div className="form-wrapper">
+      <div className="sub-msg"><h2>Contact Form</h2></div>
       <form>
         <input type="text" name="name" value={name} onChange={handleNameChange} placeholder="Name" required/>
         <input type="email" name="email" value={email} onChange={handleEmailChange} placeholder="E-mail" required/>
+        <textarea name="message" value={message} onChange={handleMessageChange} placeholder="Message" required></textarea>
         {isValid ? null : <p>Please enter a valid name and email.</p>}
-        <button type="submit" onClick={handleSubscribeClick}>{subscribed && isValid ? 'Sent' : 'Send'}</button>
+        <button type="submit" onClick={handleSendClick}>{sent && isValid ? 'Sent' : 'Send'}</button>
       </form>
+      </div>
     </div>
   );
 }
 
-export default SubscribeForm;
+export default contactForm;
