@@ -360,15 +360,16 @@ nav {
 
 .search-box input {
   width: 500px;
-  height: 40px;
   padding: 0 10px;
-  margin-top: 20px;
-  border-radius: 5px;
+  margin-bottom: 20px;
   border: none;
   font-size: 1.5rem;
   color: var(--textColor);
   background-color: var(--subcolor);
   outline: none;
+  border-radius: 20px;
+  height: 45px;
+  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
 }
 .project-cards {
   min-height: 400px;
@@ -415,7 +416,7 @@ nav {
     margin: 2rem 0;
   }
   .search-box input {
-    width: 300px;
+    width: 320px;
   }
 }
 
@@ -438,6 +439,11 @@ nav {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 25px;
+  padding: 20px 5px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff;
+
   /* border: 2px solid red; */
 }
 .Design-card {
@@ -461,8 +467,6 @@ nav {
   background-color: var(--subcolor); 
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: -3rem;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   cursor: pointer;
@@ -486,10 +490,9 @@ nav {
   justify-content: center;
   flex-direction: column;
   padding: 5px;
-  position: relative;
-  top: -30px;
   border-radius: 0 0 10px 10px;  
-  text-overflow: ellipsis;
+  /* border: 1px solid var(--line); */
+
 }
 
 .card-desc h3 {
@@ -595,7 +598,7 @@ nav {
 
 .underline{
   width: 100%;
-  margin: 0 20px;
+  margin: 15px 20px;
   height: 1px;
   background-color: var(--line);
 }

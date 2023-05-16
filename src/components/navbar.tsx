@@ -28,14 +28,18 @@ function Navbar() {
 				{navItems.map((items,index)=>(
 					<li className={selectedIndex === index ? "active" : ""} onClick={() => {
 						setSelectedIndex(index);
-					  }} key={items}><a href={items=='Home'?'/':items}>{items}</a></li>
+					  }} key={items}><a href={
+						
+						items=='Home'?'/':
+						
+						items}>{items}</a></li>
 				))}
+				<li><a href="">UI-LIB</a></li>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavBar}>
 					<FontAwesomeIcon icon={faTimes} />
 				</button>
-				{/* <a className="upload-btn" href="/upload">Upload</a> */}
 			</nav>
 			<button
 				className="nav-btn"
