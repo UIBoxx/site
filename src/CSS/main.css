@@ -1275,7 +1275,7 @@ input[type="file"] {
 
   .hero-left{
     width: 300px;
-    height: 300px;
+    height: 350px;
     align-items: center;
     position: relative;
     left: 0;
@@ -1283,7 +1283,7 @@ input[type="file"] {
   }
   .hero-right{
     width: 300px;
-    height: 300px;
+    height: 350px;
     align-items: center;
     position: relative;
     left: 0;
