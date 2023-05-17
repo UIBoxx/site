@@ -92,26 +92,7 @@ function BubbleSortTutorialsDetails() {
       </div>
       <div className="sort-container-body">
           <p>
-            Bubble Sort is a simple comparison-based sorting algorithm that
-            repeatedly steps through the list of elements to be sorted. It
-            compares adjacent elements and swaps them if they are in the wrong
-            order. The algorithm gets its name from the way smaller elements
-            "bubble" to the top of the list in each iteration. This process
-            continues until the entire list is sorted. Bubble Sort is easy to
-            understand and implement, but it is not very efficient for large
-            lists. The working of Bubble Sort involves iterating through the
-            list multiple times. In each iteration, adjacent elements are
-            compared and swapped if necessary to bring the larger element
-            towards the end of the list. This process is repeated until the list
-            is fully sorted, and no more swaps are required. The algorithm
-            ensures that after each pass, the largest unsorted element "bubbles"
-            up to its correct position. The number of iterations required is
-            equal to the number of elements in the list minus one. Bubble Sort
-            has a time complexity of O(n^2) in the average and worst cases,
-            making it less efficient compared to more advanced sorting
-            algorithms such as Quick Sort or Merge Sort. However, it is still
-            useful for small lists or as an educational tool to understand the
-            basics of sorting algorithms.
+          Bubble Sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if they are in the wrong order. It gets its name from how smaller elements "bubble" to the top of the list. This process continues until the entire list is sorted. While easy to understand and implement, Bubble Sort is not efficient for large lists. It involves multiple iterations, comparing and swapping adjacent elements to move the larger elements towards the end. This continues until the list is fully sorted. Bubble Sort has a time complexity of O(n^2), making it less efficient than more advanced algorithms like Quick Sort or Merge Sort. However, it can still be useful for small lists or as an educational tool to learn about sorting algorithms.
           </p>
       </div>
     </div>
