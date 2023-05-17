@@ -24,7 +24,7 @@ function BubbleSortTutorialsDetails() {
           numbers[i + 1] = currentNumber;
 
           const numberElements = document.getElementsByClassName(
-            "number"
+            "sortnumber"
           ) as HTMLCollectionOf<HTMLElement>;
           const currentNumberElement = numberElements[i];
           const nextNumberElement = numberElements[i + 1];
@@ -58,13 +58,13 @@ function BubbleSortTutorialsDetails() {
     ).value;
     const numbers = inputNumbers.split(",").map(Number);
 
-    const numbersContainer = document.getElementById("numbers");
+    const numbersContainer = document.getElementById("sortnumbers");
     if (numbersContainer) {
       numbersContainer.innerHTML = "";
 
       numbers.forEach((number) => {
         const numberElement = document.createElement("div");
-        numberElement.classList.add("number");
+        numberElement.classList.add("sortnumber");
         numberElement.innerText = String(number);
         numbersContainer.appendChild(numberElement);
       });
@@ -77,7 +77,7 @@ function BubbleSortTutorialsDetails() {
     <div className="sort-container">
       <div className="container-head">
         <h1>Bubble Sort Demo</h1>
-        <div className="numbers" id="numbers">
+        <div className="sortnumbers" id="sortnumbers">
           {/* Numbers will be dynamically added here */}
         </div>
         <div>
@@ -99,7 +99,7 @@ function BubbleSortTutorialsDetails() {
             "bubble" to the top of the list in each iteration. This process
             continues until the entire list is sorted. Bubble Sort is easy to
             understand and implement, but it is not very efficient for large
-            lists.<br></br> The working of Bubble Sort involves iterating through the
+            lists. The working of Bubble Sort involves iterating through the
             list multiple times. In each iteration, adjacent elements are
             compared and swapped if necessary to bring the larger element
             towards the end of the list. This process is repeated until the list

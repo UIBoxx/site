@@ -30,9 +30,6 @@ header {
   background-color: var(--headcolor);
   color: var(--secondaryColor);
   font-family: "Lato", sans-serif;
-  z-index: 999;
-  top: 0;
-  position: sticky;
   -webkit-box-shadow: 20px 20px 22px rgba(221, 93, 93, 0.2);
   box-shadow: 20px 10px 22px rgba(150, 179, 172, 0.2);
 }

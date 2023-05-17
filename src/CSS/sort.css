@@ -20,7 +20,6 @@
 
 .sort-container {
   background-color: var(--mainColor);
-  min-height: 80vh;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -61,7 +60,7 @@
 .container-head button:hover {
   background-color: green;
 }
-.numbers {
+.sortnumbers {
   min-height: 100px;
   display: flex;
   align-items: center;
@@ -70,23 +69,22 @@
   margin: 10px;
 }
 
-.number {
+.sortnumber {
   height: 35px;
   width: 35px;
   border-radius: 50%;
   display: flex;
-  box-shadow: 2px 2px 4px #dcf1f1;
+  box-shadow: 2px 2px 4px var(--textColor);
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--subcolor);
   margin: 5px;
   transition: transform 0.3s;
 }
 
 .sort-container-body {
-  min-height: 30vh;
   max-width: 90vw;
-  padding: 20px;
+  padding: 10px;
 }
 
 .sort-container-body p {
@@ -96,6 +94,6 @@
 
 @media only screen and (max-width: 700px) {
     .sort-container {
-        min-height: 100vh;
+        min-height: 120vh;
     }
 }

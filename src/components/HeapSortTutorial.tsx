@@ -27,7 +27,7 @@ function HeapSortTutorialsDetails() {
       arr[largest] = temp;
 
       const numberElements = document.getElementsByClassName(
-        "number"
+        "sortnumber"
       ) as HTMLCollectionOf<HTMLElement>;
       const currentNumberElement = numberElements[i];
       const largestNumberElement = numberElements[largest];
@@ -67,7 +67,7 @@ function HeapSortTutorialsDetails() {
       arr[i] = temp;
 
       const numberElements = document.getElementsByClassName(
-        "number"
+        "sortnumber"
       ) as HTMLCollectionOf<HTMLElement>;
       const firstNumberElement = numberElements[0];
       const ithNumberElement = numberElements[i];
@@ -92,7 +92,7 @@ function HeapSortTutorialsDetails() {
 
       await heapify(arr, i, 0);
     }
-    const numberElements = document.getElementsByClassName("number");
+    const numberElements = document.getElementsByClassName("sortnumber");
     for (let i = 0; i < numberElements.length; i++) {
       const element = numberElements[i] as HTMLElement;
       element.style.backgroundColor = "orange";
@@ -105,13 +105,13 @@ function HeapSortTutorialsDetails() {
     ).value;
     const numbers = inputNumbers.split(",").map(Number);
 
-    const numbersContainer = document.getElementById("numbers");
+    const numbersContainer = document.getElementById("sortnumbers");
     if (numbersContainer) {
       numbersContainer.innerHTML = "";
 
       numbers.forEach((number) => {
         const numberElement = document.createElement("div");
-        numberElement.classList.add("number");
+        numberElement.classList.add("sortnumber");
         numberElement.innerText = String(number);
         numbersContainer.appendChild(numberElement);
       });
@@ -124,7 +124,7 @@ function HeapSortTutorialsDetails() {
     <div className="sort-container">
       <div className="container-head">
         <h1>Heap Sort Demo</h1>
-        <div className="numbers" id="numbers">
+        <div className="sortnumbers" id="sortnumbers">
           {/* Numbers will be dynamically added here */}
         </div>
         <div>
