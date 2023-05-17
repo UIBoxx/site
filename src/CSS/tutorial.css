@@ -32,12 +32,12 @@
 
 .tutorial-cards {
   min-height: 400px;
-  width: 100%;
+  width: 96%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 25px;
+  margin: 25px 0;
   padding: 20px 5px;
   border-radius: 10px;
   box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff;
@@ -55,6 +55,14 @@
   border-radius: 10px;
   box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
 
+}
+
+@media only screen and (max-width: 700px) {
+
+  .content-card {
+    width: 350px;
+    margin: 25px 10px;
+  }
 }
 
 .image-demo {
@@ -119,8 +127,7 @@
 
 .demo-search-card {
   min-width: 300px;
-  /* border: 1px solid white; */
-  min-height: 50vh;
+  min-height: 25vh;
   margin-right: 10px;
   display: flex;
   align-items: center;
@@ -128,9 +135,14 @@
   flex-direction: column;
   margin: 50px 0;
 }
+
+.demo-search-card p{
+  margin: 20px;
+}
+
 #search-steps {
   text-align: start;
-  width: 350px;
+  width: 90vw;
   color: var(--textColor);
 }
 
@@ -139,38 +151,152 @@
   margin-bottom: 10px;
 }
 
-.demo-search-card p{
-    width: 350px;
-    color: var(--textColor);
-    margin-bottom: 10px;
-    text-align: justify;
+
+
+#target {
+  margin-top: 10px;
+}
+.numbers {
+  position: relative; 
+  min-height: 100px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.demo-search-card .numbers {
-  background-color: #3a424243;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 350px;
-  border-radius: 5px 5px 0 0;
-  min-height: 200px;
+#binNum{
+  bottom: 60px;
+  width: 380px;
+}
+
+#binaction{
+  position: relative;
+  top: 50px;
 }
 
 .number {
-  height: 30px;
+  font-size: 16px;
+  display: inline-block;
   width: 30px;
-  background-color: #fff;
-  border-radius: 50%;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
   margin: 5px;
+  border-radius: 50%;
+  color: #272323;
+  background-color: #f3ebeb;
+  box-shadow: 2px 2px 4px var(--textColor);
+  transition: background-color 0.5s ease;
 }
 
+.found {
+  background-color: rgb(9, 151, 9);
+  color: #fff;
+}
+.left {
+  background-color: rgb(236, 243, 36);
+  color: #fff;
+}
+.right {
+  background-color: rgb(242, 51, 131);
+  color: #fff;
+}
+#result {
+position: relative;
+top: 20px; 
+font-weight: bold;
+  color: green;
+}
+#binary-search-steps {
+  text-align: start;
+  width: 350px;
+}
+
+
+#n8 {
+  position: absolute;
+  top: 40px;
+  left: 170px;
+}
+#n4 {
+  position: absolute;
+  top: 80px;
+  left: 90px;
+}
+#n12 {
+  position: absolute;
+  top: 80px;
+  left: 250px;
+}
+#n2 {
+  position: absolute;
+  top: 120px;
+  left: 50px;
+}
+#n6 {
+  position: absolute;
+  top: 120px;
+  left: 130px;
+}
+#n10 {
+  position: absolute;
+  top: 120px;
+  left: 210px;
+}
+#n14 {
+  position: absolute;
+  top: 120px;
+  left: 290px;
+}
+#n1 {
+  position: absolute;
+  top: 160px;
+  left: 30px;
+}
+#n3 {
+  position: absolute;
+  top: 160px;
+  left: 70px;
+}
+#n5 {
+  position: absolute;
+  top: 160px;
+  left: 110px;
+}
+#n7 {
+  position: absolute;
+  top: 160px;
+  left: 150px;
+}
+#n9 {
+  position: absolute;
+  top: 160px;
+  left: 190px;
+}
+#n11 {
+  position: absolute;
+  top: 160px;
+  left: 230px;
+}
+#n13 {
+  position: absolute;
+  top: 160px;
+  left: 270px;
+}
+#n15 {
+  position: absolute;
+  top: 160px;
+  left: 310px;
+}
+
+
+
 .algorithm {
-  min-width: 300px;
-  /* border: 1px solid white; */
+  width: 90vw;
   min-height: 20vh;
-  margin: 40px 0;
+  margin: 10px 0;
 }
 
 .algorithm h1 {
@@ -178,13 +304,12 @@
 }
 
 .action {
-  height: 150px;
+  height: 100px;
   width: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #144c4685;
   padding: 10px 0;
 }
 .action button {
@@ -201,6 +326,7 @@
   width: 80%;
   height: 25px;
   border: none;
+  padding: 0 20px;
   border-radius: 5px;
   outline: none;
 }
@@ -215,7 +341,7 @@
   background-color: blue;
 }
 #result {
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: bold;
   font-size: 2rem;
   color: green;
@@ -247,4 +373,10 @@
   align-items: center;
   margin: 5px;
   transition: transform 0.3s;
+ }
+
+ @media only screen and (max-width: 700px) {
+  .numbers {
+    width: 380px;
+  }
  }

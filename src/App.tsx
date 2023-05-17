@@ -9,6 +9,7 @@ import LinearSearchTutorialsDetails from "./components/linearSearchTutorial";
 import BubbleSortTutorialsDetails from "./components/bubsort";
 import HeapSortTutorialsDetails from "./components/HeapSortTutorial";
 import ContactForm from "./components/contactForm";
+import LandingPage from "./components/landingPage";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
               path="/"
               element={
                 <>
-                  <CSSDesigns />
+                  <LandingPage />
                   {/* <FlutterDesigns /> */}
                 </>
               }
