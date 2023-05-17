@@ -17,56 +17,45 @@
   --headcolor: #21d28e;
   --subcolor:#fff;
 }
-
-.sort-container {
-  background-color: var(--mainColor);
-  padding: 10px;
+.sort-body{
+  min-height: 90vh;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
+  background-color: var(--mainColor);
+  font-family: "Chakra Petch", sans-serif;
 }
-.container-head {
-  min-width: 350px;
+.sort-box {
+  min-height: 400px;
+  width: 96%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 25px 0;
+  padding: 20px 5px;
   border-radius: 10px;
-}
-.container-head h1 {
-  color: var(--secondaryColor);
-  margin: 20px 0;
+  /* background-color: #21d28e; */
+  /* box-shadow: 8px 8px 16px #885252, -8px -8px 16px #c97c7c; */
+
 }
 
-.container-head input {
-  width: 200px;
-  height: 30px;
-  border: none;
-  background-color: var(--subcolor);
-  padding: 0 10px;
-  outline: none;
-  border-radius: 5px 0 0 5px;
+.sort-box .sort-container{
+  min-width: 400px;
+  height: 300px;
+  margin: 10px;
+  /* background-color: #6dd2d2; */
 }
 
-.container-head button {
-  height: 30px;
-  margin: 0 5px;
-  width: 80px;
-  border: none;
-  background-color: var(--secondaryColor);
-  border-radius: 0 5px;
-}
-.container-head button:hover {
-  background-color: green;
-}
-.sortnumbers {
-  min-height: 100px;
+.sortnumbers{
+  min-width: 400px;
+  min-height: 200px;
+  /* background-color: #2f3030; */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  margin: 10px;
 }
 
 .sortnumber {
@@ -82,18 +71,59 @@
   transition: transform 0.3s;
 }
 
-.sort-container-body {
-  max-width: 90vw;
-  padding: 10px;
+.sort-action{
+  min-width: 400px;
+  height: 100px;
+  /* background-color: #84899b; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.sort-container-body p {
-  color: var(--textColor);
-  text-align: justify;
+.sort-box h1{
+  color: var(--secondaryColor);
+  font-size: 2rem;
 }
+
+.sort-box input {
+  width: 200px;
+  height: 30px;
+  border: none;
+  background-color: var(--subcolor);
+  padding: 0 10px;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.sort-box button{
+  height: 30px;
+  margin: 0 5px;
+  width: 80px;
+  border: none;
+  background-color: var(--secondaryColor);
+  border-radius: 0 5px;
+}
+
+.sort-desc{
+  min-height: 100px;
+  background-color: #eaf1f1;
+  padding: 20px;
+}
+
 
 @media only screen and (max-width: 700px) {
-    .sort-container {
-        min-height: 120vh;
-    }
+  
+  .sort-box .sort-container{
+    width: 350px;
+    min-height: 300px;
+    background-color: #eaf1f1;
+    margin: 10px;
+  }
+  .sortnumbers{
+    width: 350px;
+  }
+
+  .sort-action{
+    width: 350px;
+  }
 }
