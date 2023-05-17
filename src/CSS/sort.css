@@ -84,9 +84,9 @@
 }
 
 .sort-container-body {
-  min-height: 50vh;
-  max-width: 600px;
-  padding: 20px 0;
+  min-height: 30vh;
+  max-width: 90vw;
+  padding: 20px;
 }
 
 .sort-container-body p {
@@ -96,6 +96,6 @@
 
 @media only screen and (max-width: 700px) {
     .sort-container {
-        min-height: 120vh;
+        min-height: 100vh;
     }
 }
