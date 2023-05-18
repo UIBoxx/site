@@ -10,6 +10,8 @@ import BubbleSortTutorialsDetails from "./components/bubsort";
 import HeapSortTutorialsDetails from "./components/HeapSortTutorial";
 import ContactForm from "./components/contactForm";
 import LandingPage from "./components/landingPage";
+import StackTutorial from "./components/stackTutorial";
+import QueueTutorial from "./components/QueueTutorial"
 
 function App() {
   return (
@@ -61,6 +63,14 @@ function App() {
             <Route
               path="heap-sort-tutorial"
               element={<HeapSortTutorialsDetails />}
+            />
+            <Route
+              path="stack"
+              element={<StackTutorial />}
+            />
+            <Route
+              path="queue"
+              element={<QueueTutorial />}
             />
           </Routes>
         </body>

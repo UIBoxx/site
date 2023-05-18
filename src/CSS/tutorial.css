@@ -125,7 +125,7 @@
   background-color: var(--mainColor);
 }
 
-.search-tutorial-body summary{
+summary{
   font-size: 2rem;
   color: var(--secondaryColor);
   font-family: "Lato", sans-serif;
@@ -398,3 +398,166 @@ font-weight: bold;
     width: 380px;
   }
  }
+
+ /* ----------stack----------- */
+ .stack-body{
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  background-color: var(--mainColor);
+  font-family: "Chakra Petch", sans-serif;
+ }
+
+ .stack-card{
+  min-height: 400px;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 25px 0;
+  padding: 20px 5px;
+  border-radius: 10px;
+  /* box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff; */
+  /* border: 2px solid red; */
+ }
+
+ .stack-card h1{
+  color: var(--secondaryColor);
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+ }
+
+ .stack-demo{
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 10px;
+ }
+
+ .stack-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 60px;
+  height: 250px;
+  overflow-y: scroll;
+  border: 1px solid black;
+  border-top: none;
+  background-color: var(--subcolor);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+.stack-item {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 2px;
+  background-color: #ce6c6c;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  transition: transform 0.3s ease-out;
+  transform: translateY(-100%);
+}
+.stack-card button{
+  border: none;
+  padding: 5px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--secondaryColor);
+  color: var(--subcolor);
+}
+
+
+/* ------Queue--------- */
+
+.queue-body{
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  background-color: var(--mainColor);
+  font-family: "Chakra Petch", sans-serif;
+ }
+
+ .queue-card{
+  min-height: 400px;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 25px 0;
+  padding: 20px 5px;
+  border-radius: 10px;
+  /* box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff; */
+  /* border: 2px solid red; */
+ }
+ .queue-demo{
+  width: 350px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 10px;
+ }
+
+ .queue-card h1{
+  color: var(--secondaryColor);
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+ }
+
+ .queue-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+  min-height: 50px;
+  background-color: var(--subcolor);
+  border-top: 1px solid var(--secondaryColor);
+  border-bottom: 1px solid var(--secondaryColor);
+}
+.queue-item {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 2px;
+  background-color: #ce6c6c;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  transition: transform 0.3s ease-out;
+  transform: translateX(-100%);
+}
+.queue-card button{
+  border: none;
+  padding: 5px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--secondaryColor);
+  color: var(--subcolor);
+}
+
+
+

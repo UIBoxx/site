@@ -26,16 +26,16 @@ function Tutorials() {
       description: "Heap Sort Visualization",
       link: "/heap-sort-tutorial"
     },
-    // {
-    //   title: "Stack",
-    //   description: "What is Stack?",
-    //   link: "/stack"
-    // },
-    // {
-    //   title: "Queue",
-    //   description: "What is Queue?",
-    //   link: "/queue"
-    // }
+    {
+      title: "Stack",
+      description: "What is Stack?",
+      link: "/stack"
+    },
+    {
+      title: "Queue",
+      description: "What is Queue?",
+      link: "/queue"
+    }
 
   ];
 
