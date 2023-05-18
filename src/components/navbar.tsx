@@ -22,7 +22,7 @@ function Navbar() {
 	return (
 		<header>
 			<div className="logo">
-				<img src={logo} alt="Loading" />
+				<a href="/"><img src={logo} alt="Loading" /></a>
 			</div>
 			<nav ref={navRef}>
 				{navItems.map((items,index)=>(
