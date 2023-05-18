@@ -125,6 +125,13 @@
   background-color: var(--mainColor);
 }
 
+.search-tutorial-body summary{
+  font-size: 2rem;
+  color: var(--secondaryColor);
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+}
+
 .demo-search-card {
   min-width: 300px;
   min-height: 25vh;
@@ -149,8 +156,9 @@
 .demo-search-card h1 {
     color: var(--secondaryColor);
   margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
 }
-
 
 
 #target {
@@ -160,6 +168,9 @@
   position: relative; 
   min-height: 100px;
   width: 800px;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 10px;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,13 +178,16 @@
 }
 
 #binNum{
-  bottom: 60px;
+  bottom: 0px;
   width: 380px;
+  height: 250px;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 10px;
 }
 
 #binaction{
   position: relative;
-  top: 50px;
+  top: 10px;
 }
 
 .number {
@@ -295,8 +309,12 @@ font-weight: bold;
 
 .algorithm {
   width: 90vw;
-  min-height: 20vh;
-  margin: 10px 0;
+  margin: 5px 0;
+}
+
+.intro{
+  width: 90vw;
+  margin: 5px 0;
 }
 
 .algorithm h1 {
@@ -324,7 +342,7 @@ font-weight: bold;
 }
 .action input {
   width: 80%;
-  height: 25px;
+  height: 30px;
   border: none;
   padding: 0 20px;
   border-radius: 5px;

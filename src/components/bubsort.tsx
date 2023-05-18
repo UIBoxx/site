@@ -89,7 +89,10 @@ function BubbleSortTutorialsDetails() {
           </div>
         </div>
         <div className="sort-desc">
-          <p>Bubble Sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if they are in the wrong order. It gets its name from how smaller elements "bubble" to the top of the list. This process continues until the entire list is sorted. While easy to understand and implement, Bubble Sort is not efficient for large lists. It involves multiple iterations, comparing and swapping adjacent elements to move the larger elements towards the end. This continues until the list is fully sorted. Bubble Sort has a time complexity of O(n^2), making it less efficient than more advanced algorithms like Quick Sort or Merge Sort. However, it can still be useful for small lists or as an educational tool to learn about sorting algorithms.</p>
+          <details>
+            <summary>Introduction</summary>
+            <p>Bubble Sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if they are in the wrong order. It gets its name from how smaller elements "bubble" to the top of the list. This process continues until the entire list is sorted. While easy to understand and implement, Bubble Sort is not efficient for large lists. It involves multiple iterations, comparing and swapping adjacent elements to move the larger elements towards the end. This continues until the list is fully sorted. Bubble Sort has a time complexity of O(n^2), making it less efficient than more advanced algorithms like Quick Sort or Merge Sort. However, it can still be useful for small lists or as an educational tool to learn about sorting algorithms.</p>
+          </details>
         </div>
       </div>
     </div>
