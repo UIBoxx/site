@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../CSS/sort.css";
+import { Helmet } from "react-helmet";
+
 
 function BubbleSortTutorialsDetails() {
   const [result, setResult] = useState("");
@@ -75,6 +77,19 @@ function BubbleSortTutorialsDetails() {
 
   return (
     <div className="sort-body">
+      <Helmet>
+        <title>
+        Bubble Sort Algorithm Tutorial with Visualization and Demo | UIBoxx.in
+        </title>
+        <meta
+          name="description"
+          content="Learn Bubble Sort algorithm with our tutorial. Explore the concepts and implementation of Bubble Sort through interactive visualizations and demos. Improve your understanding of sorting algorithms and enhance your problem-solving skills."
+        />
+        <meta
+          name="keywords"
+          content="Bubble Sort algorithm, Bubble Sort tutorial, Bubble Sort visualization, Bubble Sort demo, sorting algorithm, algorithm tutorial, algorithm visualization, algorithm demo, data structures and algorithms, problem-solving"
+        />
+      </Helmet>
       <div className="sort-box">
         <h1>Bubble Sort Demo</h1>
         <div className="sort-container">

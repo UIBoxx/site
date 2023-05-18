@@ -1,4 +1,6 @@
 import "../CSS/tutorial.css";
+import { Helmet } from "react-helmet";
+
 
 import React, { useRef, useState } from 'react';
 
@@ -41,6 +43,19 @@ function QueueTutorial() {
 
   return (
     <div className="queue-body">
+      <Helmet>
+        <title>
+        Queue Concept in DSA Tutorial with Visualization and Demo | UIBoxx.in
+        </title>
+        <meta
+          name="description"
+          content="Learn about the Queue concept in DSA with our tutorial. Explore the fundamentals of Queue data structure and its operations through interactive visualizations and demos. Enhance your problem-solving skills and algorithmic understanding."
+        />
+        <meta
+          name="keywords"
+          content="Queue concept in DSA, Queue data structure, Queue tutorial, Queue visualization, Queue demo, algorithm tutorial, data structures and algorithms, problem-solving, algorithmic understanding"
+        />
+      </Helmet>
       <div className="queue-card">
         <h1>Queue Visual Representation</h1>
         <div className="queue-demo">

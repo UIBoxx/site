@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../CSS/tutorial.css";
+import { Helmet } from "react-helmet";
 
 function Tutorials() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -9,34 +10,33 @@ function Tutorials() {
     {
       title: "Binary Search",
       description: "Working of Binary Search with Visualization",
-      link: "/binary-search-tutorial"
+      link: "/binary-search-tutorial",
     },
     {
       title: "Linear Search",
       description: "Linear Search with Visualization",
-      link: "/linear-search-tutorial"
+      link: "/linear-search-tutorial",
     },
     {
       title: "Bubble Sort",
       description: "Bubble Sort Visualization",
-      link: "/bubble-sort-tutorial"
+      link: "/bubble-sort-tutorial",
     },
     {
       title: "Heap Sort",
       description: "Heap Sort Visualization",
-      link: "/heap-sort-tutorial"
+      link: "/heap-sort-tutorial",
     },
     {
       title: "Stack",
       description: "What is Stack?",
-      link: "/stack"
+      link: "/stack",
     },
     {
       title: "Queue",
       description: "What is Queue?",
-      link: "/queue"
-    }
-
+      link: "/queue",
+    },
   ];
 
   const handleSearchInputChange = (
@@ -52,6 +52,19 @@ function Tutorials() {
 
   return (
     <div className="tutorial-body">
+      <Helmet>
+        <title>
+          Free Programming & DSA Algorithm Tutorials with Visualization and Demo | UIBoxx.in
+        </title>
+        <meta
+          name="description"
+          content="Master Data Structures and Algorithms with our free tutorials. Learn various algorithms in DSA through interactive visualizations and demos. Get hands-on experience and improve your problem-solving skills today."
+        />
+        <meta
+          name="keywords"
+          content="DSA algorithms, algorithm tutorials, algorithm visualizations, algorithm demos, DSA visualization, DSA tutorial, algorithmic concepts, data structures and algorithms, free tutorials, interactive learning"
+        />
+      </Helmet>
       <div className="search-box">
         <input
           type="text"

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
+
 import "../CSS/main.css";
 
 import ExampleComponent from "../components/copyCode";
@@ -87,6 +89,19 @@ function CSSDesigns() {
       className="Design-body"
       style={{ overflow: showModal ? "hidden" : "auto" }}
     >
+      <Helmet>
+        <title>
+          Free Designs and Components for App and Web Design | UIBoxx.in
+        </title>
+        <meta
+          name="description"
+          content="Get free designs and components for your app and web design projects. Our website offers high-quality, customizable designs that will help you save time and create beautiful designs."
+        />
+        <meta
+          name="keywords"
+          content="app design, web design, free designs, components, customizable designs"
+        />
+      </Helmet>
       <div className="div">
         <h2>
           Unleash Your Creativity and <span>Elevate Your Designs</span> with Our
@@ -94,7 +109,7 @@ function CSSDesigns() {
           Experiences.
         </h2>
       </div>
-      
+
       <div className="search-box">
         <input
           type="text"
@@ -127,34 +142,34 @@ function CSSDesigns() {
                 <img src={`data:image/png;base64, ${design.image}`} alt="" />
               </div>
               <div className="card-desc">
-              <h3>{design.title}</h3>
-              <div className="codePrinter">
-                <button
-                  className="button"
-                  onClick={() => handleCodeButtonClick(design)}
-                >
-                  {design.action}
-                </button>
-                {showModal && selectedDesign === design && (
-                  <div className="modal">
-                    <div className="modal-content">
-                      <div className="modal-header">
-                        <h2></h2>
-                        <span
-                          className="modal-close"
-                          onClick={() => setShowModal(false)}
-                        >
-                          x
-                        </span>
+                <h3>{design.title}</h3>
+                <div className="codePrinter">
+                  <button
+                    className="button"
+                    onClick={() => handleCodeButtonClick(design)}
+                  >
+                    {design.action}
+                  </button>
+                  {showModal && selectedDesign === design && (
+                    <div className="modal">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h2></h2>
+                          <span
+                            className="modal-close"
+                            onClick={() => setShowModal(false)}
+                          >
+                            x
+                          </span>
+                        </div>
+                        <ExampleComponent selectedDesign={selectedDesign} />
                       </div>
-                      <ExampleComponent selectedDesign={selectedDesign} />
                     </div>
-                  </div>
-                )}
-              </div>
-              <p>
-                {design.date} <span>{design.language}</span>
-              </p>
+                  )}
+                </div>
+                <p>
+                  {design.date} <span>{design.language}</span>
+                </p>
               </div>
             </div>
           ))}

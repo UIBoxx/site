@@ -1,10 +1,21 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../CSS/main.css";
-import { faDiagramProject } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
+
 
 function LandingPage() {
   return (
     <div className="landingPage">
+       <Helmet>
+        <meta
+          name="description"
+          content="Explore free tutorials on different algorithms in DSA with visualization and demos. Master Data Structures and Algorithms, improve problem-solving skills, and enhance algorithmic understanding And Discover our collection of free UI components featuring various interactive elements, visualizations, and demos. Enhance your website's user experience with our easy-to-use and customizable UI components."
+        />
+        <meta
+          name="keywords"
+          content="free UI components, UI component features, interactive elements, visualizations, demos, user experience, customizable UI components,DSA algorithms, algorithm tutorials, algorithm visualizations, algorithm demos, DSA visualization, DSA tutorial, algorithmic concepts, data structures and algorithms, free tutorials, interactive learning"
+        />
+        <title>Home | UIBoxx.in</title>
+      </Helmet>
       <div className="landingpage-head"><h2>Unlock <span>Your Potential</span></h2></div>
       <section className="hero-container">
         <div className="hero-left">

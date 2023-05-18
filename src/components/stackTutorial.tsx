@@ -1,4 +1,6 @@
 import "../CSS/tutorial.css";
+import { Helmet } from "react-helmet";
+
 
 import React, { useRef, useState } from "react";
 
@@ -43,6 +45,19 @@ function StackTutorial() {
   }
   return (
     <div className="stack-body">
+      <Helmet>
+        <title>
+        Stack Concept in DSA Tutorial with Visualization and Demo | UIBoxx.in
+        </title>
+        <meta
+          name="description"
+          content="Learn about the Stack concept in DSA with our tutorial. Understand the fundamentals of Stack data structure and its operations through interactive visualizations and demos. Enhance your problem-solving skills and algorithmic understanding."
+        />
+        <meta
+          name="keywords"
+          content="Stack concept in DSA, Stack data structure, Stack tutorial, Stack visualization, Stack demo, algorithm tutorial, data structures and algorithms, problem-solving, algorithmic understanding"
+        />
+      </Helmet>
       <div className="stack-card">
         <h1>Stack Visual Representation</h1>
         <div className="stack-demo">

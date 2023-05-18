@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import "../CSS/tutorial.css";
 
 function delay(ms: number) {
@@ -42,6 +43,19 @@ function LinearSearchTutorialsDetails() {
 
   return (
     <div className="search-tutorial-body">
+      <Helmet>
+        <title>
+        Linear Search Algorithm Tutorial with Visualization and Demo | UIBoxx.in
+        </title>
+        <meta
+          name="description"
+          content="Learn Linear Search algorithm with our tutorial. Explore the concepts and implementation of Linear Search through interactive visualizations and demos. Enhance your problem-solving skills and understand the basics of searching algorithms."
+        />
+        <meta
+          name="keywords"
+          content="Linear Search algorithm, Linear Search tutorial, Linear Search visualization, Linear Search demo, algorithm tutorial, algorithm visualization, algorithm demo, data structures and algorithms, searching algorithms, problem-solving"
+        />
+      </Helmet>
       <div className="demo-search-card">
         <h1>How Linear Search Works?</h1>
         

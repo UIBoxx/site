@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../CSS/tutorial.css";
+import { Helmet } from "react-helmet";
+
 
 function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -70,6 +72,19 @@ function BinarySearchTutorialsDetails() {
 
   return (
     <div className="search-tutorial-body">
+      <Helmet>
+        <title>
+        Binary Search Algorithm Tutorial with Visualization and Demo | UIBoxx.in
+        </title>
+        <meta
+          name="description"
+          content="Learn Binary Search algorithm with our tutorial. Understand the concepts and implementation of Binary Search through interactive visualizations and demos. Improve your problem-solving skills and algorithmic thinking."
+        />
+        <meta
+          name="keywords"
+          content="Binary Search algorithm, Binary Search tutorial, Binary Search visualization, Binary Search demo, algorithm tutorial, algorithm visualization, algorithm demo, data structures and algorithms, problem-solving, algorithmic thinking"
+        />
+      </Helmet>
       <div className="demo-search-card">
         <h1>How Binary Search Works?</h1>
        

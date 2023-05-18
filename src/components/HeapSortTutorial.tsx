@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/sort.css";
+import { Helmet } from "react-helmet";
+
 
 function HeapSortTutorialsDetails() {
   const [result, setResult] = useState("");
@@ -122,6 +124,19 @@ function HeapSortTutorialsDetails() {
 
   return (
       <div className="sort-body">
+        <Helmet>
+        <title>
+        Heap Sort Algorithm Tutorial with Visualization and Demo | UIBoxx.in
+        </title>
+        <meta
+          name="description"
+          content="Learn Heap Sort algorithm with our tutorial. Gain a comprehensive understanding of Heap Sort and its implementation through interactive visualizations and demos. Enhance your sorting algorithm knowledge and problem-solving skills."
+        />
+        <meta
+          name="keywords"
+          content="Heap Sort algorithm, Heap Sort tutorial, Heap Sort visualization, Heap Sort demo, sorting algorithm, algorithm tutorial, algorithm visualization, algorithm demo, data structures and algorithms, problem-solving"
+        />
+      </Helmet>
       <div className="sort-box">
         <h1>Heap Sort Demo</h1>
         <div className="sort-container">
