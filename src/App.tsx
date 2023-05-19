@@ -11,7 +11,8 @@ import HeapSortTutorialsDetails from "./components/HeapSortTutorial";
 import ContactForm from "./components/contactForm";
 import LandingPage from "./components/landingPage";
 import StackTutorial from "./components/stackTutorial";
-import QueueTutorial from "./components/QueueTutorial"
+import QueueTutorial from "./components/QueueTutorial";
+import DijkstraVisualization from "./components/DijkstraVisualization";
 
 function App() {
   return (
@@ -71,6 +72,10 @@ function App() {
             <Route
               path="queue"
               element={<QueueTutorial />}
+            />
+             <Route
+              path="dijkstra"
+              element={<DijkstraVisualization />}
             />
           </Routes>
         </body>

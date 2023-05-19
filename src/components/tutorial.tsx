@@ -37,6 +37,13 @@ function Tutorials() {
       description: "What is Queue?",
       link: "/queue",
     },
+    {
+      title: "Dijkstra's Algorithm",
+      description: "What is Dijkstra's Algorithm with demo",
+      link: "/dijkstra",
+    },
+
+    
   ];
 
   const handleSearchInputChange = (

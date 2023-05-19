@@ -317,6 +317,10 @@ font-weight: bold;
   margin: 5px 0;
 }
 
+.intro h2{
+  color: var(--secondaryColor);
+}
+
 .algorithm h1 {
   color: var(--secondaryColor);
 }
@@ -561,3 +565,197 @@ font-weight: bold;
 
 
 
+/* dijkstra algorithm */
+.dijkstra-body{
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  background-color: var(--mainColor);
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.dijkstra-cards {
+  min-height: 400px;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 25px 0;
+  padding: 20px 5px;
+  border-radius: 10px;
+  /* box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff; */
+}
+
+.dijkstra-card{
+  min-height: 400px;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 25px 0;
+  padding: 20px 5px;
+  /* background-color: #21d28e; */
+  border-radius: 10px;
+}
+
+.dijkstra-cards h1{
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  color: var(--secondaryColor);
+  font-size: 2rem;
+}
+
+.dijkstra-cards button{
+  background-color: var(--secondaryColor);
+  color: var(--subcolor);
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.dj-graph {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  height: 300px;
+  width: 360px;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+
+.dj-graph #A {
+  position: relative;
+  top: 50%;
+}
+
+.dj-graph #A::after {
+  content: "(4)";
+  width: 2px;
+  height: 70px;
+  position: relative;
+  left: 30px;
+  bottom: 45px;
+  background-color: #333;
+  transform: rotate(225deg);
+}
+
+.dj-graph #A::before {
+  content: "(2)";
+  width: 2px;
+  height: 70px;
+  position: relative;
+  left: 35px;
+  top: 45px;
+  background-color: #333;
+  transform: rotate(-45deg);
+}
+
+.dj-graph #B {
+  position: relative;
+  top: 20%;
+}
+.dj-graph #B::before {
+  content: "(5)";
+  width: 2px;
+  height: 70px;
+  position: relative;
+  left: 40px;
+  top: 45px;
+  background-color: #333;
+  transform: rotate(-45deg);
+}
+
+.dj-graph #B::after {
+  content: "(1)";
+  width: 2px;
+  height: 130px;
+  position: relative;
+  left: -5px;
+  top: 90px;
+  background-color: #333;
+  transform: rotate(0deg);
+}
+.dj-graph #C {
+  position: relative;
+  top: 80%;
+  left: -20%;
+}
+.dj-graph #C::after {
+  content: "(8)";
+  width: 2px;
+  height: 70px;
+  position: relative;
+  left: 30px;
+  bottom: 45px;
+  background-color: #333;
+  transform: rotate(225deg);
+}
+.dj-graph #C::before {
+  content: "(8)";
+  width: 2px;
+  height: 150px;
+  position: relative;
+  left: 95px;
+  bottom: 40px;
+  background-color: #333;
+  transform: rotate(245deg);
+}
+.dj-graph #D {
+  position: relative;
+  top: 50%;
+  left: -20%;
+}
+.dj-graph #D::after {
+  content: "(2)";
+  width: 2px;
+  height: 70px;
+  position: relative;
+  left: 55px;
+  bottom: 0px;
+  background-color: #333;
+  transform: rotate(270deg);
+}
+.dj-graph #E {
+  position: relative;
+  top: 50%;
+  left: -10%;
+}
+
+.dj-node {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: var(--subcolor);
+  z-index: 1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dj-node:hover {
+  background-color: var(--secondaryColor);
+}
+
+
+.dj-result {
+  padding: 5px 10px;
+  font-weight: bold;
+  border: 1px solid var(--secondaryColor);
+  height: 150px;
+  width: 350px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
