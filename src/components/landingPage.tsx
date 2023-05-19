@@ -31,7 +31,7 @@ function LandingPage() {
             <h3>Users</h3>
         </div>
       </section> */}
-      <section className="service" id="service">
+      <div className="service" id="service">
         <div className="services">
           <div className="service-type" id="ai">
             <h3>Free UI</h3>
@@ -44,7 +44,7 @@ function LandingPage() {
             <a href="/Tutorials">Get Started</a>
           </div>
         </div>
-      </section>
+      </div>
       <section className="features-container">
         <div className="feature-card">
                    <h2>Free User Interfaces</h2>

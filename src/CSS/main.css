@@ -1150,6 +1150,14 @@ input[type="file"] {
 
 /* services or features */
 
+/* .service{
+  min-height: 25vh;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
 .services {
   border-radius: 20px;
   min-height: 300px;
@@ -1170,9 +1178,7 @@ input[type="file"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-wrap: wrap; */
   flex-direction: column;
-  opacity: 0;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -1233,7 +1239,7 @@ input[type="file"] {
   z-index: 10;
 }
 
-@keyframes slide-in-left {
+/* @keyframes slide-in-left {
   0% {
     transform: translateX(-100%);
     opacity: 0;
@@ -1250,9 +1256,9 @@ input[type="file"] {
     transform: translateX(100%);
     opacity: 0;
   }
-}
+} */
 
-@keyframes slide-in-right {
+/* @keyframes slide-in-right {
   0% {
     transform: translateX(100%);
     opacity: 0;
@@ -1269,7 +1275,7 @@ input[type="file"] {
     transform: translateX(-100%);
     opacity: 0;
   }
-}
+} */
 
 .service-type img{
   width: 100px;
