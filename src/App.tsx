@@ -13,6 +13,8 @@ import LandingPage from "./components/landingPage";
 import StackTutorial from "./components/stackTutorial";
 import QueueTutorial from "./components/QueueTutorial";
 import DijkstraVisualization from "./components/DijkstraVisualization";
+import TutorialBannerSlider from "./components/BannerTutorialSlider";
+import SelectionSortTutorialsDetails from "./components/selectionsort";
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
               element={
                 <>
                   <LandingPage />
+                  <TutorialBannerSlider/>
                   {/* <FlutterDesigns /> */}
                 </>
               }

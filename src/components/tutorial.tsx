@@ -42,8 +42,6 @@ function Tutorials() {
       description: "What is Dijkstra's Algorithm with demo",
       link: "/dijkstra",
     },
-
-    
   ];
 
   const handleSearchInputChange = (

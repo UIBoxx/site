@@ -114,6 +114,50 @@
   cursor: pointer;
 }
 
+.tutorial-banner {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--mainColor);
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.banner-tutorial-cards {
+  height: 230px;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin: 20px 0;
+  padding: 20px 5px;
+  border-radius: 10px;
+  /* box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff; */
+}
+
+.tutorial-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-title{
+  width: 96vw;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-title h1{
+  color: var(--secondaryColor);
+}
+
+.banner-title a{
+  text-decoration: none;
+  color: var(--textColor);
+}
 /*  search tutorial*/
 
 .search-tutorial-body {
@@ -234,6 +278,7 @@ font-weight: bold;
   top: 40px;
   left: 170px;
 }
+
 #n4 {
   position: absolute;
   top: 80px;
