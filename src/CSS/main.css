@@ -1154,8 +1154,7 @@ input[type="file"] {
   border-radius: 20px;
   min-height: 300px;
   display: flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease-in-out;
@@ -1289,5 +1288,6 @@ input[type="file"] {
   }  
   .services {
     height: 500px;
+    flex-direction: column;
   }
 }
