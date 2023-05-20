@@ -566,6 +566,7 @@ nav {
 
 .loading-icon {
   display: flex;
+  width: 96vw;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -1143,6 +1144,8 @@ input[type="file"] {
   /* border: 1px solid #0eb132; */
 }
 
+.news 
+
 .news-card{
   min-height: 250px;
   width: 500px;
@@ -1281,7 +1284,7 @@ input[type="file"] {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-image: url(../assets/ui.png);
+  background-image: url(../assets/upgrade.png);
   border-top: 5px solid rgba(39, 38, 40, 0.725);
   background-position: center;
   background-size: contain;

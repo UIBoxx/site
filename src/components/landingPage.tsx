@@ -1,6 +1,8 @@
 import "../CSS/main.css";
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import Loading from "../assets/loading.gif";
+
 
 interface News {
   heading: string;
@@ -8,9 +10,12 @@ interface News {
   date: string;
 }
 
+
+
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [newsData, setNewsData] = useState<News[]>([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,6 +36,8 @@ function LandingPage() {
     };
     fetchData();
   }, []);
+
+  
 
   return (
     <div className="landingPage">
@@ -91,7 +98,12 @@ function LandingPage() {
       <section className="news-box">
         <div className="news">
           {isLoading ? (
-            <p>Loading news...</p>
+            <div className="loading-icon">
+            <img src={Loading} alt="" />
+            <p>
+              please wait...
+            </p>
+          </div>
           ) : (
             newsData.map((newsItem, index) => (
               <div className="news-card" key={index}>
