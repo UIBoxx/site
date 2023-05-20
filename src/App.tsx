@@ -14,7 +14,7 @@ import StackTutorial from "./components/stackTutorial";
 import QueueTutorial from "./components/QueueTutorial";
 import DijkstraVisualization from "./components/DijkstraVisualization";
 import TutorialBannerSlider from "./components/BannerTutorialSlider";
-import SelectionSortTutorialsDetails from "./components/selectionsort";
+import NewsPage from "./components/NewsPage";
 
 function App() {
   return (
@@ -79,6 +79,10 @@ function App() {
              <Route
               path="dijkstra"
               element={<DijkstraVisualization />}
+            />
+            <Route
+              path="news"
+              element={<NewsPage/>}
             />
           </Routes>
         </body>

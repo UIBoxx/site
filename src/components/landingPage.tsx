@@ -36,7 +36,7 @@ function LandingPage() {
     };
     fetchData();
   }, []);
-
+  const lastThreeNews = newsData.slice(-3).reverse();
   
 
   return (
@@ -92,7 +92,7 @@ function LandingPage() {
       </div>
       <div className="banner-title">
         <h1>Tech News</h1>
-        <a href="/">See All</a>
+        <a href="/news">See All</a>
       </div>
       <div className="underline"></div>
       <section className="news-box">
@@ -105,7 +105,7 @@ function LandingPage() {
             </p>
           </div>
           ) : (
-            newsData.map((newsItem, index) => (
+            lastThreeNews.map((newsItem, index) => (
               <div className="news-card" key={index}>
                 <h2>{newsItem.heading}</h2>
                 <p>{newsItem.article}</p>
