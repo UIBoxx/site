@@ -17,7 +17,8 @@ function Footer() {
       </Helmet>
       <p>
         {" "}
-        <span>UIBoxx </span>2023, all rights reserved
+        <span>UIBoxx </span>2023, all rights reserved <br />
+        <p style={{color: '#ffffff', textAlign: 'center'}}>contact@uiboxx.in</p>
       </p>
     </footer>
   );

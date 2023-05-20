@@ -48,6 +48,8 @@ function MyProfile() {
           <p id="end-line">
             Thanks for stopping by uiboxx.in. We can't wait to see what you
             create!
+            <br />
+            
           </p>
         </div>
         {/* <div className="email-card">

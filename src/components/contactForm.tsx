@@ -77,7 +77,7 @@ function contactForm() {
         <title>Contact Us | UIBoxx.in</title>
       </Helmet>
       <div className="form-wrapper">
-      <div className="sub-msg"><h2>Contact Form</h2></div>
+      <div className="banner-title"><h1>Contact Form</h1></div>
       <form>
         <input type="text" name="name" value={name} onChange={handleNameChange} placeholder="Name" required/>
         <input type="email" name="email" value={email} onChange={handleEmailChange} placeholder="E-mail" required/>
