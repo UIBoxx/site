@@ -1134,7 +1134,6 @@ input[type="file"] {
   border-radius: 10px;
   margin: 25px 0;
   /* box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff; */
-
 }
 .news{
   display: flex;
@@ -1156,7 +1155,6 @@ input[type="file"] {
   flex-direction: column;
   padding: 10px;
   /* box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9; */
-
 }
 
 
@@ -1171,6 +1169,11 @@ input[type="file"] {
 .news-card p{
   color: var(--textColor);
   font-size: 10px;
+}
+
+.news-card span{
+  font-size: 12px;
+  color: var(--secondaryColor);
 }
 
 
@@ -1264,6 +1267,27 @@ input[type="file"] {
   z-index: 10;
 }
 
+#news{
+  background-color: var(--subcolor);
+  animation-name: slide-in-left;
+}
+
+#news::before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-image: url(../assets/ui.png);
+  border-top: 5px solid rgba(39, 38, 40, 0.725);
+  background-position: center;
+  background-size: contain;
+  z-index: 10;
+}
+
 #design{
   background-color: var(--subcolor);
   animation-name: slide-in-right;
@@ -1339,8 +1363,12 @@ input[type="file"] {
     width: 350px;
   }  
   .services {
-    height: 600px;
+    height: 800px;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+  .news-card{
+    width: 350px;
+    min-height: 400px;
   }
 }

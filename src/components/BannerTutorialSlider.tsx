@@ -33,7 +33,7 @@ function TutorialBannerSlider() {
 
   return (
     <div className="tutorial-banner">
-      <div className="banner-title"><h1>Recent</h1><a href="/Tutorials">See All</a></div>
+      <div className="banner-title"><h1>Recent tutorials</h1><a href="/Tutorials">See All</a></div>
       <div className="underline"></div>
       <div className="banner-tutorial-cards" id="scrollable-tutorial-cards">
         {tutorials.map((tutorial, index) => (
