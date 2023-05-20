@@ -60,7 +60,7 @@ function LandingPage() {
           </details>
         </div>
       </section>
-      <div className="banner-title"><h1>What is happening in Tech-world?</h1><a href="/Tutorials">See All</a></div>
+      <div className="banner-title"><h1>What is happening in Tech-world?</h1><a href="/">See All</a></div>
       <div className="underline"></div>
       <section className="news-box">
         <div className="news">
