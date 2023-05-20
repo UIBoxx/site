@@ -148,10 +148,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 }
+
 
 .banner-title h1{
   color: var(--secondaryColor);
+
 }
 
 .banner-title a{
