@@ -1145,8 +1145,8 @@ input[type="file"] {
 }
 
 .news-card{
-  height: 300px;
-  width: 350px;
+  min-height: 250px;
+  width: 500px;
   border-radius: 10px;
   margin: 0 10px;
   background-color: var(--subcolor);
@@ -1155,19 +1155,15 @@ input[type="file"] {
   justify-content: center;
   flex-direction: column;
   padding: 10px;
-  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
+  /* box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9; */
 
 }
 
-.news-card img{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: contain;
-}
 
 .news h2{
-  color: var(--secondaryColor);
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  color: #dd9b20;
   font-size: 1.2rem;
   text-align: start;
 }
