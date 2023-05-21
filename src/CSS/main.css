@@ -1178,9 +1178,24 @@ input[type="file"] {
 
 .news-card span{
   font-size: 12px;
+  margin-top: 5px;
   color: var(--headcolor);
+  width: 100%;
+  text-align: end;
 }
 
+.news-card a{  
+  text-decoration: none;
+  color: var(--subcolor);
+  background-color: var(--secondaryColor);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.news-card a:hover{
+  color: var(--secondaryColor);
+  background-color: var(--subcolor);
+}
 
 
 .features-container{

@@ -8,6 +8,7 @@ interface News {
   heading: string;
   article: string;
   date: string;
+  link: string
 }
 
 
@@ -109,6 +110,7 @@ function LandingPage() {
               <div className="news-card" key={index}>
                 <h2>{newsItem.heading}</h2>
                 <p>{newsItem.article}</p>
+                <a href={newsItem.link}>See more</a>
                 <span>{newsItem.date}</span>
               </div>
             ))

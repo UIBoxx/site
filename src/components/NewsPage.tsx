@@ -6,6 +6,7 @@ interface News {
   heading: string;
   article: string;
   date: string;
+  link: string;
 }
 
 function NewsPage() {
@@ -48,15 +49,15 @@ function NewsPage() {
             lastestNews.map((newsItem, index) => (
               <div className="news-card" key={index}>
                 <details>
-                <summary>{newsItem.heading}</summary>
+                <summary style={{'fontSize':"1.2rem"}}>{newsItem.heading}</summary>
                 <p>{newsItem.article}</p>
+                <a href={newsItem.link}>See more...</a>
                 <span>{newsItem.date}</span>
                 </details>
               </div>
             ))
           )}
         </div>
-        \{" "}
       </div>
     </div>
   );
