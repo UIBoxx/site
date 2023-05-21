@@ -15,6 +15,7 @@ import QueueTutorial from "./components/QueueTutorial";
 import DijkstraVisualization from "./components/DijkstraVisualization";
 import TutorialBannerSlider from "./components/BannerTutorialSlider";
 import NewsPage from "./components/NewsPage";
+import ButtonGenerator from "./components/ButtonTool";
 
 function App() {
   return (
@@ -83,6 +84,10 @@ function App() {
             <Route
               path="news"
               element={<NewsPage/>}
+            />
+            <Route
+              path="button"
+              element={<ButtonGenerator/>}
             />
           </Routes>
         </body>
