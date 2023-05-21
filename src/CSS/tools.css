@@ -91,7 +91,6 @@
   }
 
   .code-container .html-code{
-    background-color: #91a69e31;
     min-height: 40px;
     display: flex;
     align-items: center;
@@ -102,7 +101,6 @@
   }
 
   .code-container .css-code{
-    background-color: #91a69e31;
     min-height: 40px;
     display: flex;
     align-items: center;
