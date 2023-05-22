@@ -21,6 +21,7 @@ import FlexboxGenerator from "./tools/flexBoxTool";
 import GridGenerator from './tools/gridBoxTool';
 import ToolsBanner from './components/BannerTools';
 import NeumorphismCardGenerator from "./tools/NeuCard";
+import AnimationGenerator from "./tools/CSSanimationGenerator";
 
 function App() {
   return (
@@ -110,6 +111,10 @@ function App() {
             <Route
               path="/neubox"
               element={<NeumorphismCardGenerator/>}
+            />
+             <Route
+              path="/anim"
+              element={<AnimationGenerator/>}
             />
           </Routes>
         </body>
