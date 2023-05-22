@@ -3,20 +3,23 @@ import Navbar from "./components/navbar";
 import MyProfile from "./components/contact";
 import Footer from "./components/Footer";
 import CSSDesigns from "./components/CssDesigns";
-import Tutorials from "./components/tutorial";
-import BinarySearchTutorialsDetails from "./components/binarysearchTutorial";
-import LinearSearchTutorialsDetails from "./components/linearSearchTutorial";
-import BubbleSortTutorialsDetails from "./components/bubsort";
-import HeapSortTutorialsDetails from "./components/HeapSortTutorial";
+import Tutorials from "./tutorials/tutorial";
+import BinarySearchTutorialsDetails from "./tutorials/binarysearchTutorial";
+import LinearSearchTutorialsDetails from "./tutorials/linearSearchTutorial";
+import BubbleSortTutorialsDetails from "./tutorials/bubsort";
+import HeapSortTutorialsDetails from "./tutorials/HeapSortTutorial";
 import ContactForm from "./components/contactForm";
 import LandingPage from "./components/landingPage";
-import StackTutorial from "./components/stackTutorial";
-import QueueTutorial from "./components/QueueTutorial";
-import DijkstraVisualization from "./components/DijkstraVisualization";
+import StackTutorial from "./tutorials/stackTutorial";
+import QueueTutorial from "./tutorials/QueueTutorial";
+import DijkstraVisualization from "./tutorials/DijkstraVisualization";
 import TutorialBannerSlider from "./components/BannerTutorialSlider";
 import NewsPage from "./components/NewsPage";
-import ButtonGenerator from "./components/ButtonTool";
-import InputGenerator from "./components/InputTool";
+import ButtonGenerator from "./tools/ButtonTool";
+import InputGenerator from "./tools/InputTool";
+import FlexboxGenerator from "./tools/flexBoxTool";
+import GridGenerator from './tools/gridBoxTool';
+import ToolsBanner from './components/BannerTools';
 
 function App() {
   return (
@@ -39,6 +42,7 @@ function App() {
               path="UI-Library"
               element={
                 <>
+                <ToolsBanner/>
                   <CSSDesigns />
                 </>
               }
@@ -55,31 +59,31 @@ function App() {
             {/* <Route path="upload" element={<SubForm />} /> */}
             <Route path="Tutorials" element={<Tutorials />} />
             <Route
-              path="binary-search-tutorial"
+              path="/binary-search-tutorial"
               element={<BinarySearchTutorialsDetails />}
             />
             <Route
-              path="linear-search-tutorial"
+              path="/linear-search-tutorial"
               element={<LinearSearchTutorialsDetails />}
             />
             <Route
-              path="bubble-sort-tutorial"
+              path="/bubble-sort-tutorial"
               element={<BubbleSortTutorialsDetails />}
             />
             <Route
-              path="heap-sort-tutorial"
+              path="/heap-sort-tutorial"
               element={<HeapSortTutorialsDetails />}
             />
             <Route
-              path="stack"
+              path="/stack"
               element={<StackTutorial />}
             />
             <Route
-              path="queue"
+              path="/queue"
               element={<QueueTutorial />}
             />
              <Route
-              path="dijkstra"
+              path="/dijkstra"
               element={<DijkstraVisualization />}
             />
             <Route
@@ -87,12 +91,20 @@ function App() {
               element={<NewsPage/>}
             />
             <Route
-              path="tools/button"
+              path="/button"
               element={<ButtonGenerator/>}
             />
             <Route
-              path="tools/input"
+              path="/input"
               element={<InputGenerator/>}
+            />
+            <Route
+              path="/flexbox"
+              element={<FlexboxGenerator/>}
+            />
+            <Route
+              path="/grid"
+              element={<GridGenerator/>}
             />
           </Routes>
         </body>
