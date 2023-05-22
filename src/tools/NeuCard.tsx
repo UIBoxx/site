@@ -9,25 +9,45 @@ function NeumorphismCardGenerator() {
   const pageKeywords =
     "Neumorphism card generator, Neumorphism design, card generator, web development";
 
-  const [cardProperties, setCardProperties] = useState({
+  const [cardProperties, setCardProperties] = useState<{
+    backgroundColor: string;
+    boxShadowColor: string;
+    size: string;
+    borderRadius: number;
+    distance: number;
+    intensity: number;
+    blur: number;
+    shape: string;
+  }>({
     backgroundColor: "#F2F2F2",
     boxShadowColor: "#D9D9D9",
     size: "medium",
-    borderRadius: 12,
-    distance: 10,
-    intensity: 10,
+    borderRadius: 20,
+    distance: 1,
+    intensity: 1,
     blur: 10,
-    shape: "concave",
+    shape: "convex",
   });
 
   const handlePropertyChange = (
     propertyName: string,
     propertyValue: string | number
   ) => {
-    setCardProperties((prevProperties) => ({
-      ...prevProperties,
-      [propertyName]: propertyValue,
-    }));
+    if (propertyName === "backgroundColor") {
+      // Automatically adjust boxShadowColor based on the new backgroundColor
+      const isDarkBackground = isDarkColor(propertyValue as string);
+      const newBoxShadowColor = isDarkBackground ? "#8d8686" : "#a19b9b";
+      setCardProperties((prevProperties) => ({
+        ...prevProperties,
+        backgroundColor: propertyValue as string,
+        boxShadowColor: newBoxShadowColor,
+      }));
+    } else {
+      setCardProperties((prevProperties) => ({
+        ...prevProperties,
+        [propertyName]: propertyValue,
+      }));
+    }
   };
 
   const {
@@ -43,7 +63,13 @@ function NeumorphismCardGenerator() {
 
   const cardStyle = {
     backgroundColor,
-    boxShadow: getBoxShadow(shape, boxShadowColor, distance, intensity, blur),
+    boxShadow: getBoxShadow(
+      shape,
+      boxShadowColor,
+      distance,
+      intensity,
+      blur
+    ),
     borderRadius: `${borderRadius}px`,
     width: getSizeValue(size),
     height: getSizeValue(size),
@@ -121,6 +147,19 @@ function NeumorphismCardGenerator() {
     }
   }
 
+  function isDarkColor(color: string) {
+    const hexColor = color.replace("#", "");
+    const red = parseInt(hexColor.substr(0, 2), 16);
+    const green = parseInt(hexColor.substr(2, 2), 16);
+    const blue = parseInt(hexColor.substr(4, 2), 16);
+
+    // Calculate relative luminance (per ITU-R BT.709)
+    const luminance = (0.2126 * red + 0.7152 * green + 0.0722 * blue) / 255;
+
+    // Return true if the luminance is below a threshold (e.g., 0.5)
+    return luminance < 0.5;
+  }
+
   return (
     <div className="generator-body">
       <Helmet>
@@ -129,9 +168,9 @@ function NeumorphismCardGenerator() {
         <meta name="keywords" content={pageKeywords} />
       </Helmet>
       <h1>Neumorphism Card</h1>
-      <div className="generator-header"  style={{ backgroundColor: backgroundColor }}>
-        <div className="card-generator" >
-          <div className="card-properties" >
+      <div className="generator-header" style={{ backgroundColor }}>
+        <div className="card-generator">
+          <div className="card-properties">
             <div className="card-property">
               <label htmlFor="background-color">Background Color:</label>
               <input
