@@ -40,11 +40,11 @@ function NewsPage() {
       <Helmet>
   <title>Technology News - Short Articles on Tech Trends | UIBoxx.in</title>
   <meta
-    property="description"
+    name="description"
     content="Stay up-to-date with the latest technology news and trends. Our short articles cover a wide range of technology-related topics, including gadgets, software, AI, cybersecurity, and more."
   />
   <meta
-    property="keywords"
+    name="keywords"
     content="technology news, tech articles, latest technology, gadgets, software, AI, cybersecurity"
   />
 </Helmet>

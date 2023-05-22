@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import { Helmet } from "react-helmet";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -20,16 +19,6 @@ function Navbar() {
 
   return (
     <header>
-      <Helmet>
-        <meta
-          property="description"
-          content="Explore free tutorials on different algorithms in DSA with visualization and demos. Master Data Structures and Algorithms, improve problem-solving skills, and enhance algorithmic understanding And Discover our collection of free UI components featuring various interactive elements, visualizations, and demos. Enhance your website's user experience with our easy-to-use and customizable UI components."
-        />
-        <meta
-          property="keywords"
-          content="free UI components, UI component features, interactive elements, visualizations, demos, user experience, customizable UI components,DSA algorithms, algorithm tutorials, algorithm visualizations, algorithm demos, DSA visualization, DSA tutorial, algorithmic concepts, data structures and algorithms, free tutorials, interactive learning"
-        />
-      </Helmet>
       <div className="logo">
         <a href="/">
           <img src={logo} alt="Loading" />

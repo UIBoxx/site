@@ -1,6 +1,5 @@
 import "../CSS/main.css";
 import { useState } from 'react';
-import { Helmet } from "react-helmet";
 
 function contactForm() {
   const [name, setName] = useState('');
@@ -65,17 +64,7 @@ function contactForm() {
 
   return (
     <div className="sub-form">
-      <Helmet>
-        <meta
-          property="description"
-          content="Contact us for any inquiries or feedback regarding our DSA Algorithm Tutorials & free UI components and designs. We are here to assist you and provide support."
-        />
-        <meta
-          property="keywords"
-          content="contact us, DSA algorithm tutorials, free UI, free App designs, free web UI, inquiries, feedback, support"
-        />
-        <title>Contact Us | UIBoxx.in</title>
-      </Helmet>
+      
       <div className="form-wrapper">
       <div className="banner-title"><h1>Contact Form</h1></div>
       <form>
