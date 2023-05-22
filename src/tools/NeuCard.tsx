@@ -90,7 +90,8 @@ function NeumorphismCardGenerator() {
   }\n`;
 
     cssCode += `.neumorphism-card.${shape} {
-    box-shadow: ${getBoxShadow(
+    box-shadow:
+    ${getBoxShadow(
       shape,
       boxShadowColor,
       distance,
@@ -114,16 +115,16 @@ function NeumorphismCardGenerator() {
     switch (shape) {
       case "concave":
         return `inset ${boxShadow},
-         inset -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
+    inset -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
       case "convex":
         return `${boxShadow},
-         -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
+    -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
       case "flat":
         return `${boxShadow},
-         -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor};`;
+    -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor};`;
       case "inset":
         return `inset ${boxShadow},
-         -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor};`;
+    -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor};`;
       default:
         return "";
     }
