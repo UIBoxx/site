@@ -143,9 +143,9 @@ function ButtonGenerator() {
   return (
     <div className="generator-body">
       <Helmet>
+        <meta property="description" content={pageDescription} />
+        <meta property="keywords" content={pageKeywords} />
         <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={pageKeywords} />
       </Helmet>
             <h1>Button Generator</h1>
         <div className="generator-header">

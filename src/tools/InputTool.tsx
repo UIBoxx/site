@@ -205,8 +205,8 @@ input {
       <h1>Input Generator</h1>
       <Helmet>
         <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={pageKeywords} />
+        <meta property="description" content={pageDescription} />
+        <meta property="keywords" content={pageKeywords} />
       </Helmet>
       <div className="generator-header">
         <div className="form-container">

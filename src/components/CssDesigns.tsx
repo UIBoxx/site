@@ -94,11 +94,11 @@ function CSSDesigns() {
           Free Designs and Components for App and Web Design | UIBoxx.in
         </title>
         <meta
-          name="description"
+          property="description"
           content="Get free designs and components for your app and web design projects. Our website offers high-quality, customizable designs that will help you save time and create beautiful designs."
         />
         <meta
-          name="keywords"
+          property="keywords"
           content="app design, web design, free designs, components, customizable designs"
         />
       </Helmet>

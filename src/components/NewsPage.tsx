@@ -38,10 +38,17 @@ function NewsPage() {
   return (
     <div className="news-body">
       <Helmet>
-       <title>Technology News - Short Articles on Tech Trends | UIBoxx.in</title>
-        <meta name="description" content="Stay up-to-date with the latest technology news and trends. Our short articles cover a wide range of technology-related topics, including gadgets, software, AI, cybersecurity, and more." />
-        <meta name="keywords" content="technology news, tech articles, latest technology, gadgets, software, AI, cybersecurity" />
-      </Helmet>
+  <title>Technology News - Short Articles on Tech Trends | UIBoxx.in</title>
+  <meta
+    property="description"
+    content="Stay up-to-date with the latest technology news and trends. Our short articles cover a wide range of technology-related topics, including gadgets, software, AI, cybersecurity, and more."
+  />
+  <meta
+    property="keywords"
+    content="technology news, tech articles, latest technology, gadgets, software, AI, cybersecurity"
+  />
+</Helmet>
+
       <div className="news-cards">
       <div className="banner-title">
         <h1>All News</h1>

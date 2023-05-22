@@ -67,8 +67,8 @@ align-content: ${alignContent};
     <div className="generator-body">
       <Helmet>
         <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={pageKeywords} />
+        <meta property="description" content={pageDescription} />
+        <meta property="keywords" content={pageKeywords} />
       </Helmet>
       <h1>Flexbox</h1>
       <div className="generator-header">
