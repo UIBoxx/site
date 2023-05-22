@@ -129,9 +129,9 @@ function NeumorphismCardGenerator() {
         <meta name="keywords" content={pageKeywords} />
       </Helmet>
       <h1>Neumorphism Card</h1>
-      <div className="generator-header">
-        <div className="card-generator">
-          <div className="card-properties">
+      <div className="generator-header"  style={{ backgroundColor: backgroundColor }}>
+        <div className="card-generator" >
+          <div className="card-properties" >
             <div className="card-property">
               <label htmlFor="background-color">Background Color:</label>
               <input
