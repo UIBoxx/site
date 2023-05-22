@@ -93,9 +93,9 @@ function LandingPage() {
       </div>
       <div className="banner-title">
         <h1>Tech News</h1>
+      <div className="underline"></div>
         <a href="/news">See All</a>
       </div>
-      <div className="underline"></div>
       <section className="news-box">
         <div className="news">
           {isLoading ? (

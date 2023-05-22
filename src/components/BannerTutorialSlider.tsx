@@ -39,9 +39,9 @@ function TutorialBannerSlider() {
     <div className="tutorial-banner">
       <div className="banner-title">
         <h1>Recent tutorials</h1>
+      <div className="underline"></div>
         <a href="/Tutorials">See All</a>
       </div>
-      <div className="underline"></div>
       <div className="banner-tutorial-cards" id="scrollable-tutorial-cards">
         {isLoading ? (
           <div className="loading-icon">

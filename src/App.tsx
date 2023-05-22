@@ -33,8 +33,8 @@ function App() {
               element={
                 <>
                   <LandingPage />
+                  <ToolsBanner/>
                   <TutorialBannerSlider/>
-                  {/* <FlutterDesigns /> */}
                 </>
               }
             />
@@ -42,7 +42,7 @@ function App() {
               path="UI-Library"
               element={
                 <>
-                <ToolsBanner/>
+                
                   <CSSDesigns />
                 </>
               }

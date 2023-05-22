@@ -594,7 +594,7 @@ nav {
 }
 
 .underline{
-  width: 96%;
+  width: 60%;
   height: 1px;
   background-color: var(--line);
 }

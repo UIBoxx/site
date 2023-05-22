@@ -37,8 +37,9 @@ function ToolsBanner() {
     <div className="tools-banner">
       <div className="banner-title">
         <h1>Tools</h1>
-      </div>
       <div className="underline"></div>
+      <a href="/">See All</a>
+      </div>
       <div className="banner-tools-cards" id="scrollable-tools-cards">
         {isLoading ? (
           <div className="loading-icon">
