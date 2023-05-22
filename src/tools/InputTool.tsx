@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/tools.css";
+import { Helmet } from "react-helmet";
+
 
 function InputGenerator() {
+
+  const pageTitle = "Input Generator Tool";
+  const pageDescription = "Generate customized input fields effortlessly with this user-friendly Input Generator tool.";
+  const pageKeywords = "input generator, form input creator, HTML input fields, web development";
+
+
   const [inputElement, setInputElement] = useState<HTMLInputElement>();
 
   useEffect(() => {
@@ -195,6 +203,11 @@ input {
   return (
     <div className="generator-body">
       <h1>Input Generator</h1>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+      </Helmet>
       <div className="generator-header">
         <div className="form-container">
           <form id="uiForm">

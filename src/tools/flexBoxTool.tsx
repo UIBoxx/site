@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import "../CSS/tools.css";
 import { Properties } from "csstype";
+import { Helmet } from "react-helmet";
+
 
 type FlexboxProperties = Properties<string | number, string>;
 
 function FlexboxGenerator() {
+  const pageTitle = "Flexbox Generator";
+  const pageDescription = "Generate flexbox layouts easily with this flexbox generator tool.";
+  const pageKeywords = "flexbox generator, flexbox layout, CSS flexbox, web development";
+
   const [flexProperties, setFlexProperties] = useState<FlexboxProperties>({
     flexDirection: "row",
     flexWrap: "nowrap",
@@ -59,6 +65,11 @@ align-content: ${alignContent};
 
   return (
     <div className="generator-body">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+      </Helmet>
       <h1>Flexbox</h1>
       <div className="generator-header">
         <div className="flexbox-generator">

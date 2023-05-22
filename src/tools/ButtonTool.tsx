@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import '../CSS/tools.css';
+import { Helmet } from "react-helmet";
+
 
 function ButtonGenerator() {
+
+  const pageTitle = "Button Generator Tool";
+  const pageDescription = "Create custom buttons effortlessly with this intuitive Button Generator tool.";
+  const pageKeywords = "button generator, custom button creator, CSS button styles, web development";
+
   const [buttonElement, setButtonElement] = useState<HTMLButtonElement>();
 
   useEffect(() => {
@@ -135,6 +142,11 @@ function ButtonGenerator() {
 
   return (
     <div className="generator-body">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+      </Helmet>
             <h1>Button Generator</h1>
         <div className="generator-header">
         <div className="form-container">
