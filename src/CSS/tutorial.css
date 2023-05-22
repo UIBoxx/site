@@ -58,7 +58,7 @@
 }
 
 .banner-content-card {
-  width: 350px;
+  width: 300px;
   height: 150px;
   display: flex;
   align-items: center;
@@ -69,6 +69,8 @@
   /* box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9; */
 
 }
+
+
 
 @media only screen and (max-width: 700px) {
 
@@ -215,6 +217,9 @@
   cursor: pointer;
 }
 
+#YellowBox{
+  background-color: #dcc410;
+}
 
 .tools-banner {
   min-height: 350px;
@@ -934,10 +939,114 @@ font-weight: bold;
 }
 
 .all-news .news-card h2{
-  color: #c52525;
+  color: #ce8b0d;
 }
 
 .all-news .news-card p{
   color: var(--textColor);
   font-size: 1rem;
 }
+
+.generator-body {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  background-color: var(--mainColor);
+  font-family: "Chakra Petch", sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.generator-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.card-generator {
+  width: 96vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-properties {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.card-property {
+  display: flex;
+  align-items: center;
+}
+
+.card-property label {
+  margin-right: 10px;
+}
+
+.neumorphism-card {
+  width: 350px;
+  height: 200px;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  box-shadow: inset 4px 4px 10px #d9d9d9, inset -4px -4px 10px #d9d9d9;
+}
+
+.neumorphism-card h2 {
+  margin-bottom: 10px;
+  font-size: 4rem;
+  color: red;
+}
+
+
+.concave {
+  box-shadow: inset 4px 4px 10px #d9d9d9, inset -4px -4px 10px #d9d9d9;
+}
+
+.convex {
+  box-shadow: 4px 4px 10px #d9d9d9, -4px -4px 10px #d9d9d9;
+}
+
+.flat {
+  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
+}
+
+.neubox-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  background-color: var(--textColor);
+  color: var(--mainColor);
+  border-radius: 10px;
+}
+
+.neuboxcode-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+pre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+

@@ -33,6 +33,9 @@ function ToolsBanner() {
     fetchData();
   }, []);
 
+  const AllTools = toolsData.slice().reverse();
+
+
   return (
     <div className="tools-banner">
       <div className="banner-title">
@@ -47,9 +50,9 @@ function ToolsBanner() {
             <p>please wait...</p>
           </div>
         ) : (
-          toolsData.map((tool, index) => (
+          AllTools.map((tool, index) => (
             <div className="banner-content-card" key={index}>
-              <div className="banner-title-head">
+              <div className="banner-title-head" id="YellowBox">
                 <h2>{tool.title}</h2>
                 <div className="action-area">
                   <a href={tool.link}>{tool.action}</a>
