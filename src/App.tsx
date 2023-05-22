@@ -16,6 +16,7 @@ import DijkstraVisualization from "./components/DijkstraVisualization";
 import TutorialBannerSlider from "./components/BannerTutorialSlider";
 import NewsPage from "./components/NewsPage";
 import ButtonGenerator from "./components/ButtonTool";
+import InputGenerator from "./components/InputTool";
 
 function App() {
   return (
@@ -86,8 +87,12 @@ function App() {
               element={<NewsPage/>}
             />
             <Route
-              path="button"
+              path="tools/button"
               element={<ButtonGenerator/>}
+            />
+            <Route
+              path="tools/input"
+              element={<InputGenerator/>}
             />
           </Routes>
         </body>

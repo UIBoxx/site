@@ -135,18 +135,19 @@ function ButtonGenerator() {
 
   return (
     <div className="generator-body">
-            <h1>Button</h1>
+            <h1>Button Generator</h1>
         <div className="generator-header">
         <div className="form-container">
         <form id="uiForm">
           <label htmlFor="componentLabel">Button Label:</label>
           <input type="text" id="componentLabel" />
           <br />
+          <div className="ToolColors">
           <label htmlFor="componentBgColor">Background Color:</label>
           <input type="color" id="componentBgColor" />
-          <br />
           <label htmlFor="componentTextColor">Text Color:</label>
           <input type="color" id="componentTextColor" />
+          </div>
           <br />
           <label htmlFor="componentFontSize">Font Size:</label>
           <input
