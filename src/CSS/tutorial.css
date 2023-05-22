@@ -964,7 +964,8 @@ h1 {
 
 .generator-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 40px;
 }

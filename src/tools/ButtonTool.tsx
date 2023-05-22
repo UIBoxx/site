@@ -43,7 +43,7 @@ function ButtonGenerator() {
           buttonPaddingVertical
         );
         if (generatedUIElement) {
-          generatedUIElement.innerHTML = ''; // Clear the UI container before adding the button
+          generatedUIElement.innerHTML = ''; 
           generatedUIElement.appendChild(buttonElement);
         }
       } else {
@@ -118,7 +118,6 @@ function ButtonGenerator() {
 
     function generateHTMLCode(button: HTMLButtonElement | undefined) {
       if (!button) return '';
-
       return `<button class="button">${button.textContent}</button>`;
     }
 
@@ -127,8 +126,7 @@ function ButtonGenerator() {
 
       const clonedButton = button.cloneNode(true) as HTMLButtonElement;
       clonedButton.classList.remove("button");
-      const generatedCSSCode = `
-.button {
+      const generatedCSSCode = `.button {
   background-color: ${clonedButton.style.backgroundColor};
   color: ${clonedButton.style.color};
   font-size: ${clonedButton.style.fontSize};
