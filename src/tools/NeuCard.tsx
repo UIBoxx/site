@@ -12,13 +12,17 @@ function NeumorphismCardGenerator() {
   const [cardProperties, setCardProperties] = useState({
     backgroundColor: "#F2F2F2",
     boxShadowColor: "#D9D9D9",
-    borderRadius: "12",
-    cardForm: "concave",
+    size: "medium",
+    borderRadius: 12,
+    distance: 10,
+    intensity: 10,
+    blur: 10,
+    shape: "concave",
   });
 
   const handlePropertyChange = (
     propertyName: string,
-    propertyValue: string
+    propertyValue: string | number
   ) => {
     setCardProperties((prevProperties) => ({
       ...prevProperties,
@@ -26,76 +30,74 @@ function NeumorphismCardGenerator() {
     }));
   };
 
-  const { backgroundColor, boxShadowColor, borderRadius, cardForm } =
-    cardProperties;
+  const {
+    backgroundColor,
+    boxShadowColor,
+    size,
+    borderRadius,
+    distance,
+    intensity,
+    blur,
+    shape,
+  } = cardProperties;
 
   const cardStyle = {
     backgroundColor,
-    boxShadow: getBoxShadow(cardForm, boxShadowColor),
+    boxShadow: getBoxShadow(shape, boxShadowColor, distance, intensity, blur),
     borderRadius: `${borderRadius}px`,
+    width: getSizeValue(size),
+    height: getSizeValue(size),
   };
 
   const generateHTMLCode = () => {
-    return `<div class="neumorphism-card ${cardForm}">
+    return `<div class="neumorphism-card ${shape}">
     <h2>&#10084;</h2>
 </div>`;
   };
 
   const generateCSSCode = () => {
     let cssCode = `.neumorphism-card {
-    width: 300px;
-    height: 200px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     ${getInlineStyles()}
   }\n`;
-  
-    switch (cardForm) {
-      case "concave":
-        cssCode += `.neumorphism-card .concave {
-    box-shadow: ${getBoxShadow("concave", boxShadowColor)};
-  }\n`;
-        break;
-      case "convex":
-        cssCode += `.neumorphism-card .convex {
-    box-shadow: ${getBoxShadow("convex", boxShadowColor)};
-  }\n`;
-        break;
-      case "flat":
-        cssCode += `.neumorphism-card .flat {
-    box-shadow: ${getBoxShadow("flat", boxShadowColor)};
-  }\n`;
-        break;
 
-        case "inset":
-        cssCode += `.neumorphism-card .inset {
-    box-shadow: ${getBoxShadow("inset", boxShadowColor)};
+    cssCode += `.neumorphism-card.${shape} {
+    box-shadow: ${getBoxShadow(
+      shape,
+      boxShadowColor,
+      distance,
+      intensity,
+      blur
+    )};
   }\n`;
-        break;
-      default:
-        break;
-    }
-  
+
     return cssCode;
   };
-  
 
-  function getBoxShadow(form: string, boxShadowColor: string) {
-    switch (form) {
+  function getBoxShadow(
+    shape: string,
+    boxShadowColor: string,
+    distance: number,
+    intensity: number,
+    blur: number
+  ) {
+    const boxShadow = `${distance}px ${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
+
+    switch (shape) {
       case "concave":
-        return `inset 8px 8px 16px ${boxShadowColor},
-         inset -8px -8px 16px ${boxShadowColor}`;
+        return `inset ${boxShadow},
+         inset -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
       case "convex":
-        return `4px 4px 10px ${boxShadowColor},
-         -4px -4px 10px ${boxShadowColor}`;
+        return `${boxShadow},
+         -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
       case "flat":
-        return `8px 8px 16px ${boxShadowColor},
-         -8px -8px 16px ${boxShadowColor};`;
-         case "inset":
-        return `inset 8px 8px 16px ${boxShadowColor},
-         -8px -8px 16px ${boxShadowColor};`;
+        return `${boxShadow},
+         -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor};`;
+      case "inset":
+        return `inset ${boxShadow},
+         -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor};`;
       default:
         return "";
     }
@@ -103,7 +105,20 @@ function NeumorphismCardGenerator() {
 
   function getInlineStyles() {
     return `background-color: ${backgroundColor};
-    border-radius: ${borderRadius}px;`;
+        border-radius: ${borderRadius}px;`;
+  }
+
+  function getSizeValue(size: string) {
+    switch (size) {
+      case "small":
+        return "100px";
+      case "medium":
+        return "200px";
+      case "large":
+        return "300px";
+      default:
+        return "200px";
+    }
   }
 
   return (
@@ -140,6 +155,18 @@ function NeumorphismCardGenerator() {
               />
             </div>
             <div className="card-property">
+              <label htmlFor="size">Size:</label>
+              <select
+                id="size"
+                value={size}
+                onChange={(e) => handlePropertyChange("size", e.target.value)}
+              >
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+            <div className="card-property">
               <label htmlFor="border-radius">Border Radius:</label>
               <input
                 type="range"
@@ -148,18 +175,55 @@ function NeumorphismCardGenerator() {
                 max="50"
                 value={borderRadius}
                 onChange={(e) =>
-                  handlePropertyChange("borderRadius", e.target.value)
+                  handlePropertyChange("borderRadius", parseInt(e.target.value))
                 }
               />
             </div>
             <div className="card-property">
-              <label htmlFor="card-form">Card Type:</label>
-              <select
-                id="card-form"
-                value={cardForm}
+              <label htmlFor="distance">Distance:</label>
+              <input
+                type="range"
+                id="distance"
+                min="0"
+                max="50"
+                value={distance}
                 onChange={(e) =>
-                  handlePropertyChange("cardForm", e.target.value)
+                  handlePropertyChange("distance", parseInt(e.target.value))
                 }
+              />
+            </div>
+            <div className="card-property">
+              <label htmlFor="intensity">Intensity:</label>
+              <input
+                type="range"
+                id="intensity"
+                min="0"
+                max="50"
+                value={intensity}
+                onChange={(e) =>
+                  handlePropertyChange("intensity", parseInt(e.target.value))
+                }
+              />
+            </div>
+            <div className="card-property">
+              <label htmlFor="blur">Blur:</label>
+              <input
+                type="range"
+                id="blur"
+                min="0"
+                max="50"
+                value={blur}
+                onChange={(e) =>
+                  handlePropertyChange("blur", parseInt(e.target.value))
+                }
+              />
+            </div>
+            <div className="card-property">
+              <label htmlFor="shape">Shape:</label>
+              <select
+                id="shape"
+                value={shape}
+                onChange={(e) => handlePropertyChange("shape", e.target.value)}
               >
                 <option value="concave">Concave</option>
                 <option value="convex">Convex</option>
@@ -167,9 +231,9 @@ function NeumorphismCardGenerator() {
                 <option value="inset">Inset</option>
               </select>
             </div>
-          <div className={`neumorphism-card ${cardForm}`} style={cardStyle}>
-            <h2>&#10084;</h2>
           </div>
+          <div className="neumorphism-card" style={cardStyle}>
+            <h2>&#10084;</h2>
           </div>
           <div className="neubox-code-container">
             <div className="neuboxcode-section">
