@@ -3,20 +3,16 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Loading from "../assets/loading.gif";
 
-
 interface News {
   heading: string;
   article: string;
   date: string;
-  link: string
+  link: string;
 }
-
-
 
 function LandingPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [newsData, setNewsData] = useState<News[]>([]);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +34,6 @@ function LandingPage() {
     fetchData();
   }, []);
   const lastThreeNews = newsData.slice(-3).reverse();
-  
 
   return (
     <div className="landingPage">
@@ -74,37 +69,37 @@ function LandingPage() {
       </section> */}
       <div className="service" id="service">
         <div className="services">
-          <div className="service-type" id="news">
-            <h3>Update yourself</h3>
-            <h2>New tools & technologies</h2>
-            <a href="/news">View</a>
-          </div>
-          <div className="service-type" id="design">
-            <h3>Interactive Tutorials</h3>
-            <h2>Programming & DSA</h2>
-            <a href="/Tutorials">Get Started</a>
-          </div>
           <div className="service-type" id="ai">
             <h3>Free UI</h3>
             <h2>Components & Design</h2>
             <a href="/UI-Library">Discover</a>
           </div>
+
+          <div className="service-type" id="design">
+            <h3>Interactive Tutorials</h3>
+            <h2>Programming & DSA</h2>
+            <a href="/Tutorials">Get Started</a>
+          </div>
+
+          <div className="service-type" id="news">
+            <h3>Update yourself</h3>
+            <h2>New tools & technologies</h2>
+            <a href="/news">View</a>
+          </div>
         </div>
       </div>
       <div className="banner-title">
         <h1>Tech News</h1>
-      <div className="underline"></div>
+        <div className="underline"></div>
         <a href="/news">See All</a>
       </div>
       <section className="news-box">
         <div className="news">
           {isLoading ? (
             <div className="loading-icon">
-            <img src={Loading} alt="" />
-            <p>
-              please wait...
-            </p>
-          </div>
+              <img src={Loading} alt="" />
+              <p>please wait...</p>
+            </div>
           ) : (
             lastThreeNews.map((newsItem, index) => (
               <div className="news-card" key={index}>
@@ -122,4 +117,3 @@ function LandingPage() {
 }
 
 export default LandingPage;
-
