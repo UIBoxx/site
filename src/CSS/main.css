@@ -95,7 +95,7 @@ nav li a {
 }
 
 nav a:hover {
-  color: var(--textColor);
+  color: var(--mainColor);
 }
 
 header .nav-btn {
@@ -104,7 +104,7 @@ header .nav-btn {
   background: transparent;
   border: none;
   outline: none;
-  color: var(--textColor);
+  color: var(--subcolor);
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
