@@ -9,7 +9,7 @@
 }
 
 :root {
-  --mainColor: #eaf1f1;
+  --mainColor: #1b1c1c;
   --mainColorLight: #84899b;
   --secondaryColor: #308162;
   --textColor: #2f3030;
@@ -1013,6 +1013,22 @@ h1 {
   color: red;
 }
 
+.glassmorphism-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #3e2e2e;
+  filter: blur(10px);
+  opacity: 0.8;
+  margin: 25px 0;
+}
+
+.glassmorphism-card h2 {
+  font-size: 48px;
+}
 
 .concave {
   box-shadow: inset 4px 4px 10px #d9d9d9, inset -4px -4px 10px #d9d9d9;

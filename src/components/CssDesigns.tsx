@@ -21,6 +21,12 @@ interface Design {
 }
 
 function CSSDesigns() {
+  const pageDescription =
+  "Generate Glassmorphism styles and Neumorphism cards easily with our generator tools. Get free high-quality, customizable designs and components for your app and web design projects. Save time and create beautiful designs with our website.";
+const pageKeywords =
+  "Glassmorphism styles, Neumorphism cards, generator tools, free designs, components, app design, web design";
+
+
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [designs, setDesigns] = useState<Design[]>([]);
@@ -60,7 +66,7 @@ function CSSDesigns() {
     setCurrentPage(1); // Reset to first page on search query change
   };
 
-  const itemsPerPage = 8;
+  const itemsPerPage = 4;
   const filteredDesigns = designs.filter((design) =>
     design.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -93,20 +99,15 @@ function CSSDesigns() {
         <title>
           Free Designs and Components for App and Web Design | UIBoxx.in
         </title>
-        <meta
-          name="description"
-          content="Get free designs and components for your app and web design projects. Our website offers high-quality, customizable designs that will help you save time and create beautiful designs."
-        />
-        <meta
-          name="keywords"
-          content="app design, web design, free designs, components, customizable designs"
-        />
+<meta name="description" content={pageDescription} />
+<meta name="keywords" content={pageKeywords} />
+
       </Helmet>
       <div className="div">
         <h2>
-          Unleash Your Creativity and <span>Elevate Your Designs</span> with Our
+          Unleash Your Creativity😎 and <span>Elevate Your Designs</span> with Our
           Exceptional UI Components, Turning Your Ideas into Stunning Visual
-          Experiences.
+          Experiences❤️.
         </h2>
       </div>
 
@@ -201,36 +202,6 @@ function CSSDesigns() {
         >
           Next
         </button>
-      </div>
-      <div className="desc">
-        <p>
-          <span>UIBoxx.in</span>, the ultimate destination for free UI
-          components that will take your web and app design to the next level.
-          Our website is designed to provide developers and designers with the
-          tools they need to create stunning user interfaces that are both
-          intuitive and visually appealing. Our extensive library of UI
-          components is tailored to suit the needs of various industries and
-          design preferences, ensuring that you have access to the best
-          resources to build your website or app. Whether you're looking for
-          buttons, forms, icons, menus, or any other UI element, you can find it
-          on our website.
-        </p>
-        <p>
-          Our team of experienced designers and developers has carefully crafted
-          each component to ensure that it meets the highest standards of design
-          and functionality. We understand that every project is unique, and
-          that's why we offer a diverse range of components that can be
-          customized to match your specific needs. We believe that everyone
-          should have access to great design resources, regardless of their
-          budget or experience level. That's why all our UI components are
-          completely free to download and use in your personal or commercial
-          projects. Our licensing terms are also flexible, so you can use our
-          components with confidence. At <span>UIBoxx.in</span>, we're committed
-          to helping you create exceptional user experiences. Whether you're a
-          seasoned designer or just starting out, our UI components will empower
-          you to bring your ideas to life. Browse us today and transform your
-          web and app designs with our free UI components.
-        </p>
       </div>
     </div>
   );

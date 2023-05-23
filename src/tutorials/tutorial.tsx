@@ -62,6 +62,11 @@ function Tutorials() {
           content="DSA algorithms, algorithm tutorials, algorithm visualizations, algorithm demos, DSA visualization, DSA tutorial, algorithmic concepts, data structures and algorithms, free tutorials, interactive learning"
         />
       </Helmet>
+      <div className="div">
+        <h2>
+        Unlock the Power of <span>Interactive Learning</span> 🔓✨: High-Quality Demos and Customization at Your Fingertips! 🎯🔧
+        </h2>
+      </div>
       <div className="search-box">
         <input
           type="text"

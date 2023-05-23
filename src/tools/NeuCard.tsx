@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
 import "../CSS/tutorial.css";
 
 function NeumorphismCardGenerator() {
-  const pageTitle = "Neumorphism Card Generator";
-  const pageDescription =
-    "Generate Neumorphism cards easily with this card generator tool.";
-  const pageKeywords =
-    "Neumorphism card generator, Neumorphism design, card generator, web development";
-
+  
   const [cardProperties, setCardProperties] = useState<{
     backgroundColor: string;
     boxShadowColor: string;
@@ -19,8 +13,8 @@ function NeumorphismCardGenerator() {
     blur: number;
     shape: string;
   }>({
-    backgroundColor: "#F2F2F2",
-    boxShadowColor: "#D9D9D9",
+    backgroundColor: "#f2caca",
+    boxShadowColor: "#dac3c3",
     size: "medium",
     borderRadius: 20,
     distance: 1,
@@ -163,12 +157,9 @@ function NeumorphismCardGenerator() {
 
   return (
     <div className="generator-body">
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={pageKeywords} />
-      </Helmet>
+      <div className="banner-title">
       <h1>Neumorphism Card</h1>
+      </div>
       <div className="generator-header" style={{ backgroundColor }}>
         <div className="card-generator">
           <div className="card-properties">
@@ -267,13 +258,11 @@ function NeumorphismCardGenerator() {
               >
                 <option value="concave">Concave</option>
                 <option value="convex">Convex</option>
-                <option value="flat">Flat</option>
-                <option value="inset">Inset</option>
               </select>
             </div>
           </div>
           <div className="neumorphism-card" style={cardStyle}>
-            <h2>&#10084;</h2>
+            <h2>🤖</h2>
           </div>
           <div className="neubox-code-container">
             <div className="neuboxcode-section">

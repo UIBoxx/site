@@ -9,7 +9,7 @@
 }
 
 :root {
-  --mainColor: #eaf1f1;
+  --mainColor: #1b1c1c;
   --mainColorLight: #84899b;
   --secondaryColor: #308162;
   --textColor: #2f3030;
@@ -219,7 +219,7 @@ nav {
 }
 
 .desc{
-  background-color: var(--headcolor);
+  /* background-color: var(--headcolor); */
  display: flex; 
  align-items: center;
  justify-content: space-evenly;

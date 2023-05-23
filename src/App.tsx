@@ -18,10 +18,11 @@ import NewsPage from "./components/NewsPage";
 import ButtonGenerator from "./tools/ButtonTool";
 import InputGenerator from "./tools/InputTool";
 import FlexboxGenerator from "./tools/flexBoxTool";
-import GridGenerator from './tools/gridBoxTool';
-import ToolsBanner from './components/BannerTools';
+import GridGenerator from "./tools/gridBoxTool";
+import ToolsBanner from "./components/BannerTools";
 import NeumorphismCardGenerator from "./tools/NeuCard";
 import AnimationGenerator from "./tools/CSSanimationGenerator";
+import GlassmorphismGenerator from "./tools/GlassMorCard";
 
 function App() {
   return (
@@ -35,8 +36,7 @@ function App() {
               element={
                 <>
                   <LandingPage />
-                  <ToolsBanner/>
-                  <TutorialBannerSlider/>
+                  <TutorialBannerSlider />
                 </>
               }
             />
@@ -44,8 +44,10 @@ function App() {
               path="UI-Library"
               element={
                 <>
-                
                   <CSSDesigns />
+                  <NeumorphismCardGenerator />
+                  <GlassmorphismGenerator />
+                  <ToolsBanner />
                 </>
               }
             />
@@ -59,7 +61,14 @@ function App() {
               }
             />
             {/* <Route path="upload" element={<SubForm />} /> */}
-            <Route path="Tutorials" element={<Tutorials />} />
+            <Route
+              path="Tutorials"
+              element={
+                <>
+                  <Tutorials />
+                </>
+              }
+            />
             <Route
               path="/binary-search-tutorial"
               element={<BinarySearchTutorialsDetails />}
@@ -76,46 +85,15 @@ function App() {
               path="/heap-sort-tutorial"
               element={<HeapSortTutorialsDetails />}
             />
-            <Route
-              path="/stack"
-              element={<StackTutorial />}
-            />
-            <Route
-              path="/queue"
-              element={<QueueTutorial />}
-            />
-             <Route
-              path="/dijkstra"
-              element={<DijkstraVisualization />}
-            />
-            <Route
-              path="news"
-              element={<NewsPage/>}
-            />
-            <Route
-              path="/button"
-              element={<ButtonGenerator/>}
-            />
-            <Route
-              path="/input"
-              element={<InputGenerator/>}
-            />
-            <Route
-              path="/flexbox"
-              element={<FlexboxGenerator/>}
-            />
-            <Route
-              path="/grid"
-              element={<GridGenerator/>}
-            />
-            <Route
-              path="/neubox"
-              element={<NeumorphismCardGenerator/>}
-            />
-             <Route
-              path="/anim"
-              element={<AnimationGenerator/>}
-            />
+            <Route path="/stack" element={<StackTutorial />} />
+            <Route path="/queue" element={<QueueTutorial />} />
+            <Route path="/dijkstra" element={<DijkstraVisualization />} />
+            <Route path="news" element={<NewsPage />} />
+            <Route path="/button" element={<ButtonGenerator />} />
+            <Route path="/input" element={<InputGenerator />} />
+            <Route path="/flexbox" element={<FlexboxGenerator />} />
+            <Route path="/grid" element={<GridGenerator />} />
+            <Route path="/anim" element={<AnimationGenerator />} />
           </Routes>
         </body>
         <Footer />

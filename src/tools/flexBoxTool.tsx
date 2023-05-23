@@ -70,8 +70,8 @@ align-content: ${alignContent};
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content={pageKeywords} />
       </Helmet>
-      <h1>Flexbox</h1>
       <div className="generator-header">
+      <h1>Flexbox</h1>
         <div className="flexbox-generator">
           <div className="flex-properties">
             <div className="flex-property">
