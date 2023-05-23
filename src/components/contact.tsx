@@ -22,26 +22,19 @@ function MyProfile() {
         </h1>
         <div className="contact-para">
           <p>
-            At uiboxx.in, we're passionate about creating beautiful, functional
-            designs for app and web. We believe that great design should be
-            accessible to everyone, which is why we offer a wide variety of free
-            components and designs that you can use in your own projects.
+          Welcome to UIBoxx.in, your go-to destination for free UI components, tech news, customizable designs, and interactive tutorials. We are passionate about providing developers and designers with the resources they need to create exceptional user experiences. Our mission is to empower creators by offering a wide range of free UI components that can be easily integrated into web and app designs. We believe that great design should be accessible to all, regardless of budget or experience level. With UIBoxx.in, you can unlock the power of interactive learning and elevate your projects to new heights.
           </p>
         </div>
         <div className="contact-para">
           <p>
-            At uiboxx.in, we're passionate about creating beautiful, functional
-            designs for app and web. We believe that great design should be
-            accessible to everyone, which is why we offer a wide variety of free
-            components and designs that you can use in your own projects.
+          At UIBoxx.in, we offer a diverse range of free UI components meticulously crafted to meet the highest standards of design and functionality. From buttons and cards to whole designs, our extensive library provides you with the building blocks you need to bring your ideas to life. We also provide up-to-date tech news, keeping you informed about the latest trends and advancements in the industry. Our customizable designs allow you to create unique and visually stunning interfaces, tailored to your specific needs and branding.
           </p>
         </div>
         <div className="contact-para">
           <p>
-            We're always adding new components and designs to our collection, so
-            be sure to check back often. And if you have any suggestions or
+            If you have any suggestions or
             requests, we'd love to hear from you! Just drop us a line using the
-            contact mail on our website.
+            contact form or a mail on our website.
           </p>
         </div>
         <div className="contact-para">
