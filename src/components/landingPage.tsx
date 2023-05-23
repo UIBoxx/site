@@ -80,7 +80,7 @@ function LandingPage() {
             <a href="/news">View</a>
           </div>
           <div className="service-type" id="design">
-            <h3>Deep Understanding</h3>
+            <h3>Interactive Tutorials</h3>
             <h2>Programming & DSA</h2>
             <a href="/Tutorials">Get Started</a>
           </div>
