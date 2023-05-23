@@ -64,7 +64,7 @@ function NeumorphismCardGenerator() {
       intensity,
       blur
     ),
-    borderRadius: `${borderRadius}px`,
+    borderRadius: `${borderRadius}%`,
     width: getSizeValue(size),
     height: getSizeValue(size),
   };
@@ -126,7 +126,7 @@ function NeumorphismCardGenerator() {
 
   function getInlineStyles() {
     return `background-color: ${backgroundColor};
-        border-radius: ${borderRadius}px;`;
+        border-radius: ${borderRadius}%;`;
   }
 
   function getSizeValue(size: string) {
@@ -203,7 +203,7 @@ function NeumorphismCardGenerator() {
                 type="range"
                 id="border-radius"
                 min="0"
-                max="50"
+                max="100"
                 value={borderRadius}
                 onChange={(e) =>
                   handlePropertyChange("borderRadius", parseInt(e.target.value))
@@ -216,7 +216,7 @@ function NeumorphismCardGenerator() {
                 type="range"
                 id="distance"
                 min="0"
-                max="50"
+                max="100"
                 value={distance}
                 onChange={(e) =>
                   handlePropertyChange("distance", parseInt(e.target.value))
@@ -229,7 +229,7 @@ function NeumorphismCardGenerator() {
                 type="range"
                 id="intensity"
                 min="0"
-                max="50"
+                max="100"
                 value={intensity}
                 onChange={(e) =>
                   handlePropertyChange("intensity", parseInt(e.target.value))
@@ -242,7 +242,7 @@ function NeumorphismCardGenerator() {
                 type="range"
                 id="blur"
                 min="0"
-                max="50"
+                max="100"
                 value={blur}
                 onChange={(e) =>
                   handlePropertyChange("blur", parseInt(e.target.value))

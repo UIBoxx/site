@@ -29,7 +29,7 @@ function GlassmorphismGenerator() {
   const glassStyle = {
     backgroundColor,
     filter: `blur(${blur}px)`,
-    borderRadius: `${borderRadius}px`,
+    borderRadius: `${borderRadius}%`,
     opacity,
   };
 
@@ -41,7 +41,7 @@ function GlassmorphismGenerator() {
     return `.glassmorphism {
   background-color: ${backgroundColor};
   filter: blur(${blur}px);
-  border-radius: ${borderRadius}px;
+  border-radius: ${borderRadius}%;
   opacity: ${opacity};
 }`;
   };
@@ -97,7 +97,7 @@ function GlassmorphismGenerator() {
               type="range"
               id="border-radius"
               min="0"
-              max="50"
+              max="100"
               value={borderRadius}
               onChange={(e) =>
                 handlePropertyChange("borderRadius", parseInt(e.target.value))

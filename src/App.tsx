@@ -92,8 +92,6 @@ function App() {
             <Route path="/button" element={<ButtonGenerator />} />
             <Route path="/input" element={<InputGenerator />} />
             <Route path="/flexbox" element={<FlexboxGenerator />} />
-            <Route path="/grid" element={<GridGenerator />} />
-            <Route path="/anim" element={<AnimationGenerator />} />
           </Routes>
         </body>
         <Footer />
