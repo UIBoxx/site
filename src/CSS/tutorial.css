@@ -9,14 +9,15 @@
 }
 
 :root {
-  --mainColor: #1b1c1c;
+  --mainColor: #002233;
   --mainColorLight: #84899b;
   --secondaryColor: #308162;
-  --textColor: #2f3030;
+  --textColor: #b2b8b8;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
-  --headcolor: #21d28e;
+  --headcolor: #FCAF3C;
   --subcolor:#fff;
+  --codecontainer: #161718;
 }
 
 .tutorial-body {
@@ -26,8 +27,8 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 40px 0;
-  background-color: var(--mainColor);
   font-family: "Chakra Petch", sans-serif;
+  background-color: var(--mainColor);
 }
 
 .tutorial-cards {
@@ -40,7 +41,6 @@
   margin: 25px 0;
   padding: 20px 5px;
   border-radius: 10px;
-  /* box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff; */
   /* border: 2px solid red; */
 }
 
@@ -53,7 +53,6 @@
   background-color: var(--subcolor);
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
 
 }
 
@@ -79,7 +78,7 @@
     margin: 25px 10px;
   }
   .tutorial-cards {
-    box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff;
+    box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;    /* border: 2px solid red; */
   }
 }
 
@@ -218,7 +217,7 @@
 }
 
 #YellowBox{
-  background-color: #dcc410;
+  background-color: #FCAF3C;
 }
 
 .tools-banner {
@@ -281,7 +280,7 @@ summary{
 #search-steps {
   text-align: start;
   width: 90vw;
-  color: var(--textColor);
+  color: var(--headcolor);
 }
 
 .demo-search-card h1 {
@@ -451,6 +450,10 @@ font-weight: bold;
 
 .intro h2{
   color: var(--secondaryColor);
+}
+
+.intro p{
+  color: var(--subcolor);
 }
 
 .algorithm h1 {
@@ -890,6 +893,7 @@ font-weight: bold;
   width: 350px;
   border-radius: 10px;
   margin: 10px 0;
+  color: var(--subcolor);
 }
 
 /* news-body */
@@ -943,7 +947,7 @@ font-weight: bold;
 }
 
 .all-news .news-card p{
-  color: var(--textColor);
+  color: var(--subcolor);
   font-size: 1rem;
 }
 
@@ -1047,8 +1051,8 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 350px;
-  background-color: var(--textColor);
-  color: var(--mainColor);
+  background-color: var(--codecontainer);
+  color: var(--subcolor);
   border-radius: 10px;
 }
 

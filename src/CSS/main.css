@@ -9,14 +9,15 @@
 }
 
 :root {
-  --mainColor: #1b1c1c;
+  --mainColor: #002233;
   --mainColorLight: #84899b;
   --secondaryColor: #308162;
-  --textColor: #2f3030;
+  --textColor: #b2b8b8;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
-  --headcolor: #21d28e;
+  --headcolor: #FCAF3C;
   --subcolor:#fff;
+  --codecontainer: #161718;
 }
 
 header {
@@ -60,7 +61,7 @@ footer {
 }
 
 footer p {
-  color: var(--textColor);
+  color: var(--subcolor);
 }
 
 footer p span {
@@ -192,7 +193,6 @@ nav {
 /* services */
 
 .div {
-  background-color: var(--mainColor);
   font-family: "Pacifico", cursive;
   min-height: 30vh;
   display: flex;
@@ -364,7 +364,7 @@ nav {
   outline: none;
   border-radius: 20px;
   height: 45px;
-  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
+  box-shadow: 1px 1px 5px #f3efef, -1px -1px 5px #f3efef;
 }
 .project-cards {
   min-height: 400px;
@@ -425,6 +425,8 @@ nav {
   flex-wrap: wrap;
   background-color: var(--mainColor);
   font-family: "Chakra Petch", sans-serif;
+  background: url(../assets/wave.png) no-repeat top;
+  background-size: cover;
 }
 
 .Design-cards {
@@ -795,8 +797,7 @@ nav {
     justify-content: center;
   }
   .Design-cards {
-    box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff;
-  
+    box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;
   }
 }
 
@@ -846,9 +847,9 @@ nav {
   border: none;
   outline: none;
   font-size: 1.2rem;
-  background-color: var(--subcolor);
+  background-color: #5c5e5f2c;
   color: var(--textColor);
-  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
+  box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;    /* border: 2px solid red; */
 
 }
 
@@ -861,9 +862,9 @@ nav {
   border: none;
   outline: none;
   font-size: 1.2rem;
-  background-color: var(--subcolor);
+  background-color: #5c5e5f2c;
   color: var(--textColor);
-  box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9;
+  box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;    /* border: 2px solid red; */
 
 }
 
@@ -875,12 +876,13 @@ nav {
   font-size: 1.2rem;
   border-radius: 8px;
   background-color: var(--secondaryColor);
-  color: var(--textColor);
+  color: var(--subcolor);
   border: none;
 }
 
 .sub-form button:hover{
-  background-color: var(--secondaryColor);
+  background-color: var(--headcolor);
+  color: var(--subcolor);
 }
 
 @media only screen and (max-width: 700px) {
@@ -1060,6 +1062,9 @@ input[type="file"] {
   justify-content: center;
   flex-direction: column;
   background-color: var(--mainColor);
+
+  background: url(../assets/landingPageBg.png) no-repeat center;
+  background-size: cover;
 }
 
 .landingpage-head{
@@ -1163,13 +1168,13 @@ input[type="file"] {
 .news h2{
   font-family: "Lato", sans-serif;
   font-weight: 900;
-  color: #ce8b0d;
+  color: var(--headcolor);
   font-size: 1.2rem;
   text-align: start;
 }
 
 .news-card p{
-  color: var(--mainColor);
+  color: var(--subcolor);
   font-size: 10px;
   text-align: justify;
 }

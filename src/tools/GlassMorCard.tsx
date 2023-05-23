@@ -8,9 +8,9 @@ function GlassmorphismGenerator() {
     opacity: number;
     borderRadius: number;
   }>({
-    backgroundColor: "#e3c0c0",
-    blur: 5,
-    opacity: 0.8,
+    backgroundColor: "##241e1e",
+    blur: 1,
+    opacity: 0.6,
     borderRadius: 10,
   });
 
@@ -31,6 +31,7 @@ function GlassmorphismGenerator() {
     filter: `blur(${blur}px)`,
     borderRadius: `${borderRadius}%`,
     opacity,
+    
   };
 
   const generateHTMLCode = () => {
@@ -51,7 +52,7 @@ function GlassmorphismGenerator() {
       <div className="banner-title">
       <h1>Glassmorphism Card</h1>
       </div>
-      <div className="generator-header">
+      <div className="generator-header" id="glass-header">
         <div className="generator-controls">
           <div className="control-group">
             <label htmlFor="background-color">Background Color:</label>

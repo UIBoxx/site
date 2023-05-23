@@ -9,14 +9,15 @@
 }
 
 :root {
-  --mainColor: #eaf1f1;
+  --mainColor: #002233;
   --mainColorLight: #84899b;
   --secondaryColor: #308162;
-  --textColor: #2f3030;
+  --textColor: #b2b8b8;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
-  --headcolor: #21d28e;
+  --headcolor: #FCAF3C;
   --subcolor:#fff;
+  --codecontainer: #161718;
 }
 .sort-body{
   min-height: 80vh;
@@ -111,6 +112,7 @@
 .sort-desc{
   width: 90vw;
   padding: 10px 20px;
+  color: var(--subcolor);
 }
 
 .sort-box summary{

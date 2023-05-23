@@ -9,14 +9,15 @@
 }
 
 :root {
-  --mainColor: #eaf1f1;
+  --mainColor: #002233;
   --mainColorLight: #84899b;
   --secondaryColor: #308162;
-  --textColor: #2f3030;
+  --textColor: #b2b8b8;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
-  --headcolor: #21d28e;
+  --headcolor: #FCAF3C;
   --subcolor:#fff;
+  --codecontainer: #161718;
 }
 
 .generator-body {
@@ -40,8 +41,8 @@
     margin: 25px 0;
     padding: 20px 5px;
     border-radius: 10px;
-    box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff;
-    /* border: 2px solid red; */
+    color: var(--headcolor);
+    box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;    /* border: 2px solid red; */
   }
 
   .generator-header button{
@@ -91,7 +92,7 @@
     flex-direction: column;
     color: var(--subcolor);
     border-radius: 10px;
-    background-color: var(--textColor);
+    background-color: var(--codecontainer);
   }
 
   .code-container .html-code{
@@ -194,14 +195,14 @@ select {
 
 input:focus, select:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--headcolor);
 }
 
 select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('arrow-down-icon.png');
+  background-image: url('../assets/arrow.png');
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 20px 20px;
@@ -210,6 +211,21 @@ select {
 
 select::-ms-expand {
   display: none;
+}
+
+#glass-header{
+  background-image: url(../assets/bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--subcolor);
+  box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;    /* border: 2px solid red; */
+
+}
+
+.glassmorphism-card{
+  box-shadow:1px 1px 10px 1px #dac3c3,
+  -1px -1px 10px 1px #dac3c3;
 }
 
 /* Add more styles as needed */
