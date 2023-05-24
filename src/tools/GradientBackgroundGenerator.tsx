@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import "../CSS/tutorial.css";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { zIndex } from "html2canvas/dist/types/css/property-descriptors/z-index";
 
 function GradientBackgroundGenerator() {
   const [gradientProperties, setGradientProperties] = useState({

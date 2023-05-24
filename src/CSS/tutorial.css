@@ -1171,6 +1171,11 @@ pre {
   color: var(--subcolor);
 }
 
+#gradient-header {
+  background: linear-gradient(to left, #002233, #fcaf3c, #002233);
+  box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; 
+}
+
 .css-code {
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -1178,7 +1183,8 @@ pre {
 
 @media only screen and (max-width: 700px) {
   #gradient-header {
-    box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; /* border: 2px solid red; */
+    background: radial-gradient(#e78e08, #002233, #3a3927, #002233);
+    box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; 
   }
   #gradientCSS-container {
     background-color: none;
