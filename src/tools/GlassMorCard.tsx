@@ -31,7 +31,6 @@ function GlassmorphismGenerator() {
     filter: `blur(${blur}px)`,
     borderRadius: `${borderRadius}%`,
     opacity,
-    
   };
 
   const generateHTMLCode = () => {
@@ -50,7 +49,7 @@ function GlassmorphismGenerator() {
   return (
     <div className="generator-body">
       <div className="banner-title">
-      <h1>Glassmorphism Card</h1>
+        <h1>Glassmorphism Card</h1>
       </div>
       <div className="generator-header" id="glass-header">
         <div className="generator-controls">
@@ -58,6 +57,14 @@ function GlassmorphismGenerator() {
             <label htmlFor="background-color">Background Color:</label>
             <input
               type="color"
+              id="background-color-picker"
+              value={backgroundColor}
+              onChange={(e) =>
+                handlePropertyChange("backgroundColor", e.target.value)
+              }
+            />
+            <input
+              type="text"
               id="background-color"
               value={backgroundColor}
               onChange={(e) =>
@@ -109,15 +116,14 @@ function GlassmorphismGenerator() {
         <div className="glassmorphism-card" style={glassStyle}>
           <h2>😎</h2>
         </div>
-        
-      <div className="code-container">
-        <div className="code-section">
-          <pre>{generateHTMLCode()}</pre>
-          <pre>{generateCSSCode()}</pre>
+
+        <div className="code-container">
+          <div className="code-section">
+            <pre>{generateHTMLCode()}</pre>
+            <pre>{generateCSSCode()}</pre>
+          </div>
         </div>
       </div>
-      </div>
-      
     </div>
   );
 }

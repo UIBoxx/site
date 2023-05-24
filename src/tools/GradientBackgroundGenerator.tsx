@@ -115,7 +115,6 @@ function GradientBackgroundGenerator() {
     }
   };
 
-
   return (
     <div className="generator-body">
       <div className="banner-title">
@@ -156,13 +155,21 @@ function GradientBackgroundGenerator() {
                   value={color}
                   onChange={(e) => handleColorChange(index, e.target.value)}
                 />
+                <input
+                  type="text"
+                  id={`color-${index}`}
+                  value={color}
+                  onChange={(e) =>
+                    handleColorChange(index, e.target.value)
+                  }
+                />
                 {index >= 2 && (
                   <button
-                  id="btnn-close"
+                    id="btnn-close"
                     className="remove-color"
                     onClick={() => handleRemoveColor(index)}
                   >
-                    Remove
+                    X
                   </button>
                 )}
               </div>
@@ -170,8 +177,12 @@ function GradientBackgroundGenerator() {
           ))}
           <div className="add-color-button-container">
             {colors.length < 10 && (
-              <button id="btnn" className="add-color-button" onClick={handleAddColor}>
-                Add Color
+              <button
+                id="btnn"
+                className="add-color-button"
+                onClick={handleAddColor}
+              >
+                Add+
               </button>
             )}
           </div>
@@ -188,7 +199,7 @@ function GradientBackgroundGenerator() {
                 onChange={(e) => handleBlurChange(parseFloat(e.target.value))}
               />
             </div>
-            </div>
+          </div>
           {gradientType === "linear" && (
             <div className="control-group">
               <label>Direction:</label>

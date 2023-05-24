@@ -979,7 +979,6 @@ h1 {
   margin: 0 10px;
 }
 
-
 .card-property label {
   margin-right: 10px;
 }
@@ -1019,7 +1018,6 @@ h1 {
   font-size: 48px;
 }
 
-
 .neubox-code-container {
   display: flex;
   justify-content: center;
@@ -1046,44 +1044,39 @@ pre {
   padding: 10px;
 }
 
-#concavebtn{
+#concavebtn {
   height: 75px;
   width: 75px;
   border-radius: 5px;
   margin: 10px;
   color: var(--subcolor);
-  box-shadow:
-    inset 1px 1px 10px 1px #b87575,
-    inset -1px -1px 10px 1px #b87575;
+  box-shadow: inset 1px 1px 10px 1px #b87575, inset -1px -1px 10px 1px #b87575;
 }
 
-#convexbtn{
+#convexbtn {
   height: 75px;
   width: 75px;
   border-radius: 5px;
   margin: 10px;
   color: var(--subcolor);
-  box-shadow:
-    1px 1px 10px 1px #8d8686,
-    -1px -1px 10px 1px #8d8686; 
+  box-shadow: 1px 1px 10px 1px #8d8686, -1px -1px 10px 1px #8d8686;
 }
-
 
 /* tutorial.css */
 
-.gradient-type-buttons{
- width: 230px;
- height: 30px;
- display: flex;
- justify-content: space-between;
- align-items: center;
+.gradient-type-buttons {
+  width: 230px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.gradient-type-buttons.active{
+.gradient-type-buttons.active {
   color: #7e95a8;
 }
 
-.gradient-type-buttons button{
+.gradient-type-buttons button {
   width: 50px;
   height: 25px;
   border-radius: 5px;
@@ -1092,10 +1085,9 @@ pre {
   transition: background-color 0.4s;
 }
 
-.gradient-type-buttons button:hover{
+.gradient-type-buttons button:hover {
   background-color: var(--mainColor);
 }
-
 
 .direction-icons {
   color: #fff;
@@ -1122,7 +1114,6 @@ pre {
   background-color: var(--mainColor);
   cursor: pointer;
 }
-
 
 #preview-width {
   width: 80px;
@@ -1157,8 +1148,6 @@ pre {
   margin: 20px 0;
 }
 
-
-
 .gradient-preview-container .gradient-preview {
   max-width: 100%;
   max-height: 100%;
@@ -1187,9 +1176,8 @@ pre {
   word-wrap: break-word;
 }
 
-
 @media only screen and (max-width: 700px) {
-  #gradient-header{
+  #gradient-header {
     box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; /* border: 2px solid red; */
   }
   #gradientCSS-container {
@@ -1207,7 +1195,7 @@ pre {
 }
 
 
-#btnn{
+#btnn {
   min-width: 60px;
   height: 25px;
   border-radius: 5px;
@@ -1217,7 +1205,7 @@ pre {
   transition: background-color 0.4s;
 }
 
-#btnn-close{
+#btnn-close {
   min-width: 60px;
   height: 25px;
   border-radius: 5px;
@@ -1227,10 +1215,10 @@ pre {
   transition: background-color 0.4s;
 }
 
-#btnn:hover{
+#btnn:hover {
   background-color: var(--mainColor);
 }
 
-#btnn-close:hover{
+#btnn-close:hover {
   background-color: var(--mainColor);
 }

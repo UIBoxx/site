@@ -133,11 +133,19 @@ function NeumorphismCardGenerator() {
       </div>
       <div className="generator-header" style={{ backgroundColor }}>
         <div className="card-generator">
-          <div className="card-properties" style={{color: '#fff'}}>
+          <div className="card-properties" style={{ color: "#fff" }}>
             <div className="card-property">
               <label htmlFor="background-color">Background Color:</label>
               <input
                 type="color"
+                id="background-color-picker"
+                value={backgroundColor}
+                onChange={(e) =>
+                  handlePropertyChange("backgroundColor", e.target.value)
+                }
+              />
+              <input
+                type="text"
                 id="background-color"
                 value={backgroundColor}
                 onChange={(e) =>
@@ -149,10 +157,18 @@ function NeumorphismCardGenerator() {
               <label htmlFor="box-shadow-color">Box Shadow Color:</label>
               <input
                 type="color"
-                id="box-shadow-color"
+                id="box-shadow-color-picker"
                 value={boxShadowColor}
                 onChange={(e) =>
                   handlePropertyChange("boxShadowColor", e.target.value)
+                }
+              />
+              <input
+                type="text"
+                id="box-shadow-color"
+                value={boxShadowColor}
+                onChange={(e) =>
+                  handlePropertyChange("backgroundColor", e.target.value)
                 }
               />
             </div>
@@ -208,28 +224,26 @@ function NeumorphismCardGenerator() {
                 }
               />
             </div>
-          <div className="card-property">
-            <div className="shape-buttons">
-              <button
-              id="concavebtn"
-              style={{ backgroundColor }}
-                className={`shape-button ${
-                  shape === "concave" ? "active" : ""
-                }`}
-                onClick={() => handlePropertyChange("shape", "concave")}
-              >
-                
-              </button>
-              <button
-              id="convexbtn"
-              style={{ backgroundColor }}
-                className={`shape-button ${shape === "convex" ? "active" : ""}`}
-                onClick={() => handlePropertyChange("shape", "convex")}
-              >
-                
-              </button>
+            <div className="card-property">
+              <div className="shape-buttons">
+                <button
+                  id="concavebtn"
+                  style={{ backgroundColor }}
+                  className={`shape-button ${
+                    shape === "concave" ? "active" : ""
+                  }`}
+                  onClick={() => handlePropertyChange("shape", "concave")}
+                ></button>
+                <button
+                  id="convexbtn"
+                  style={{ backgroundColor }}
+                  className={`shape-button ${
+                    shape === "convex" ? "active" : ""
+                  }`}
+                  onClick={() => handlePropertyChange("shape", "convex")}
+                ></button>
+              </div>
             </div>
-          </div>
           </div>
 
           <div className="neumorphism-card" style={cardStyle}>
