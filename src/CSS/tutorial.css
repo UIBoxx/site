@@ -1181,6 +1181,12 @@ pre {
   color: var(--subcolor);
 }
 
+.css-code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
 @media only screen and (max-width: 700px) {
   #gradient-header{
     box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; /* border: 2px solid red; */

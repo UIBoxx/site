@@ -245,7 +245,7 @@ function GradientBackgroundGenerator() {
         </div>
         <div id="gradientCSS-container">
           <div id="gradientCSS">
-            <pre>{generateCSSCode()}</pre>
+            <pre className="css-code">{generateCSSCode()}</pre>
           </div>
         </div>
       </div>
