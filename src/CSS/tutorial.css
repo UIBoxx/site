@@ -1208,7 +1208,7 @@ pre {
 
 
 #btnn{
-  width: 60px;
+  min-width: 60px;
   height: 25px;
   border-radius: 5px;
   color: var(--subcolor);
@@ -1218,7 +1218,7 @@ pre {
 }
 
 #btnn-close{
-  width: 60px;
+  min-width: 60px;
   height: 25px;
   border-radius: 5px;
   color: var(--subcolor);
