@@ -209,9 +209,14 @@ input {
         <meta name="keywords" content={pageKeywords} />
       </Helmet>
       <div className="generator-header">
-        <div className="form-container">
+        <div className="form-container" style={{color: '#fff'}}>
           <form id="uiForm">
+
+
+
+
             <label htmlFor="inputType">Input Type:</label>
+            
             <select id="inputType">
               <option value="text">Text</option>
               <option value="number">Number</option>

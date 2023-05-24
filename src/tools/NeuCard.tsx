@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../CSS/tutorial.css";
 
 function NeumorphismCardGenerator() {
-  
   const [cardProperties, setCardProperties] = useState<{
     backgroundColor: string;
     boxShadowColor: string;
@@ -47,7 +46,6 @@ function NeumorphismCardGenerator() {
   const {
     backgroundColor,
     boxShadowColor,
-    size,
     borderRadius,
     distance,
     intensity,
@@ -57,16 +55,8 @@ function NeumorphismCardGenerator() {
 
   const cardStyle = {
     backgroundColor,
-    boxShadow: getBoxShadow(
-      shape,
-      boxShadowColor,
-      distance,
-      intensity,
-      blur
-    ),
+    boxShadow: getBoxShadow(shape, boxShadowColor, distance, intensity, blur),
     borderRadius: `${borderRadius}%`,
-    width: getSizeValue(size),
-    height: getSizeValue(size),
   };
 
   const generateHTMLCode = () => {
@@ -85,13 +75,7 @@ function NeumorphismCardGenerator() {
 
     cssCode += `.neumorphism-card.${shape} {
     box-shadow:
-    ${getBoxShadow(
-      shape,
-      boxShadowColor,
-      distance,
-      intensity,
-      blur
-    )};
+    ${getBoxShadow(shape, boxShadowColor, distance, intensity, blur)};
   }\n`;
 
     return cssCode;
@@ -129,19 +113,6 @@ function NeumorphismCardGenerator() {
         border-radius: ${borderRadius}%;`;
   }
 
-  function getSizeValue(size: string) {
-    switch (size) {
-      case "small":
-        return "100px";
-      case "medium":
-        return "200px";
-      case "large":
-        return "300px";
-      default:
-        return "200px";
-    }
-  }
-
   function isDarkColor(color: string) {
     const hexColor = color.replace("#", "");
     const red = parseInt(hexColor.substr(0, 2), 16);
@@ -158,11 +129,11 @@ function NeumorphismCardGenerator() {
   return (
     <div className="generator-body">
       <div className="banner-title">
-      <h1>Neumorphism Card</h1>
+        <h1>Neumorphism Card</h1>
       </div>
       <div className="generator-header" style={{ backgroundColor }}>
         <div className="card-generator">
-          <div className="card-properties">
+          <div className="card-properties" style={{color: '#fff'}}>
             <div className="card-property">
               <label htmlFor="background-color">Background Color:</label>
               <input
@@ -184,18 +155,6 @@ function NeumorphismCardGenerator() {
                   handlePropertyChange("boxShadowColor", e.target.value)
                 }
               />
-            </div>
-            <div className="card-property">
-              <label htmlFor="size">Size:</label>
-              <select
-                id="size"
-                value={size}
-                onChange={(e) => handlePropertyChange("size", e.target.value)}
-              >
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-              </select>
             </div>
             <div className="card-property">
               <label htmlFor="border-radius">Border Radius:</label>
@@ -249,18 +208,30 @@ function NeumorphismCardGenerator() {
                 }
               />
             </div>
-            <div className="card-property">
-              <label htmlFor="shape">Shape:</label>
-              <select
-                id="shape"
-                value={shape}
-                onChange={(e) => handlePropertyChange("shape", e.target.value)}
+          <div className="card-property">
+            <div className="shape-buttons">
+              <button
+              id="concavebtn"
+              style={{ backgroundColor }}
+                className={`shape-button ${
+                  shape === "concave" ? "active" : ""
+                }`}
+                onClick={() => handlePropertyChange("shape", "concave")}
               >
-                <option value="concave">Concave</option>
-                <option value="convex">Convex</option>
-              </select>
+                
+              </button>
+              <button
+              id="convexbtn"
+              style={{ backgroundColor }}
+                className={`shape-button ${shape === "convex" ? "active" : ""}`}
+                onClick={() => handlePropertyChange("shape", "convex")}
+              >
+                
+              </button>
             </div>
           </div>
+          </div>
+
           <div className="neumorphism-card" style={cardStyle}>
             <h2>🤖</h2>
           </div>

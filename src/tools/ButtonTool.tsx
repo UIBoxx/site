@@ -212,7 +212,7 @@ function ButtonGenerator() {
         <title>{pageTitle}</title>
       </Helmet>
       <h1>Button Generator</h1>
-      <div className="generator-header">
+      <div className="generator-header" style={{color: '#fff'}}>
         <div className="form-container">
           <form id="uiForm">
             <label htmlFor="componentLabel">Button Label:</label>

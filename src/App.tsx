@@ -18,11 +18,10 @@ import NewsPage from "./components/NewsPage";
 import ButtonGenerator from "./tools/ButtonTool";
 import InputGenerator from "./tools/InputTool";
 import FlexboxGenerator from "./tools/flexBoxTool";
-import GridGenerator from "./tools/gridBoxTool";
 import ToolsBanner from "./components/BannerTools";
 import NeumorphismCardGenerator from "./tools/NeuCard";
-import AnimationGenerator from "./tools/CSSanimationGenerator";
 import GlassmorphismGenerator from "./tools/GlassMorCard";
+import GradientBackgroundGenerator from "./tools/GradientBackgroundGenerator";
 
 function App() {
   return (
@@ -47,6 +46,7 @@ function App() {
                   <CSSDesigns />
                   <NeumorphismCardGenerator />
                   <GlassmorphismGenerator />
+                  <GradientBackgroundGenerator />
                   <ToolsBanner />
                 </>
               }
