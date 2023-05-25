@@ -82,7 +82,7 @@ function SVGShapeGenerator() {
           style={{
             margin: "20px 10px",
             color: "#308162",
-            fontSize: "3rem",
+            fontSize: "2.3rem",
             textAlign: "center",
           }}
         >
