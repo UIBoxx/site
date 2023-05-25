@@ -52,6 +52,9 @@ function GlassmorphismGenerator() {
         <h1>Glassmorphism Card</h1>
       </div>
       <div className="generator-header" id="glass-header">
+        <div className="glassmorphism-card" style={glassStyle}>
+          <h2>😎</h2>
+        </div>
         <div className="generator-controls">
           <div className="control-group">
             <label htmlFor="background-color">Background Color:</label>
@@ -112,9 +115,6 @@ function GlassmorphismGenerator() {
               }
             />
           </div>
-        </div>
-        <div className="glassmorphism-card" style={glassStyle}>
-          <h2>😎</h2>
         </div>
 
         <div className="code-container">

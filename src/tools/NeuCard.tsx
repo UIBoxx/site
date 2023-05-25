@@ -133,6 +133,9 @@ function NeumorphismCardGenerator() {
       </div>
       <div className="generator-header" style={{ backgroundColor }}>
         <div className="card-generator">
+        <div className="neumorphism-card" style={cardStyle}>
+            <h2>🤖</h2>
+          </div>
           <div className="card-properties" style={{ color: "#fff" }}>
             <div className="card-property">
               <label htmlFor="background-color">Background Color:</label>
@@ -244,10 +247,6 @@ function NeumorphismCardGenerator() {
                 ></button>
               </div>
             </div>
-          </div>
-
-          <div className="neumorphism-card" style={cardStyle}>
-            <h2>🤖</h2>
           </div>
           <div className="neubox-code-container">
             <div className="neuboxcode-section">

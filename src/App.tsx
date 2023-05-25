@@ -93,7 +93,6 @@ function App() {
             <Route path="/button" element={<ButtonGenerator />} />
             <Route path="/input" element={<InputGenerator />} />
             <Route path="/flexbox" element={<FlexboxGenerator />} />
-            <Route path="/svg" element={<SVGShapeGenerator />} />
           </Routes>
         </body>
         <Footer />

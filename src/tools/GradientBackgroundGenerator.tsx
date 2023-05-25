@@ -122,6 +122,13 @@ function GradientBackgroundGenerator() {
         <h1>Gradient Color Generator</h1>
       </div>
       <div className="generator-header" id="gradient-header">
+      <div className="gradient-preview-container">
+          <div
+            className="gradient-preview"
+            style={gradientStyle}
+            ref={gradientPreviewRef}
+          ></div>
+        </div>
         <div className="generator-controls" style={{ color: "#fff" }}>
           <div className="control-group">
             <label htmlFor="gradient-type">Gradient Type:</label>
@@ -248,13 +255,7 @@ function GradientBackgroundGenerator() {
             </div>
           )}
         </div>
-        <div className="gradient-preview-container">
-          <div
-            className="gradient-preview"
-            style={gradientStyle}
-            ref={gradientPreviewRef}
-          ></div>
-        </div>
+        
         <div id="gradientCSS-container">
           <div id="gradientCSS">
             <pre className="css-code">{generateCSSCode()}</pre>
