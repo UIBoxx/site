@@ -22,7 +22,7 @@ import ToolsBanner from "./components/BannerTools";
 import NeumorphismCardGenerator from "./tools/NeuCard";
 import GlassmorphismGenerator from "./tools/GlassMorCard";
 import GradientBackgroundGenerator from "./tools/GradientBackgroundGenerator";
-
+import SVGShapeGenerator from "./tools/svgshape";
 function App() {
   return (
     <BrowserRouter basename="/">
@@ -35,6 +35,7 @@ function App() {
               element={
                 <>
                   <LandingPage />
+                  <SVGShapeGenerator />
                   <TutorialBannerSlider />
                 </>
               }
@@ -92,6 +93,7 @@ function App() {
             <Route path="/button" element={<ButtonGenerator />} />
             <Route path="/input" element={<InputGenerator />} />
             <Route path="/flexbox" element={<FlexboxGenerator />} />
+            <Route path="/svg" element={<SVGShapeGenerator />} />
           </Routes>
         </body>
         <Footer />

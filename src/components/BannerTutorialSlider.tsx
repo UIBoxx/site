@@ -8,9 +8,40 @@ interface Tutorial {
   link: string;
 }
 
+interface News {
+  heading: string;
+  article: string;
+  date: string;
+  link: string;
+}
+
 function TutorialBannerSlider() {
   const [isLoading, setIsLoading] = useState(false);
   const [tutorialsData, setTutorialsData] = useState<Tutorial[]>([]);
+
+
+  const [newsData, setNewsData] = useState<News[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        // Add a 0.1 second delay
+        await new Promise((resolve) => setTimeout(resolve, 100));
+        const response = await fetch(
+          "https://uiboxxapi.netlify.app/.netlify/functions/api/News"
+        );
+        const data: News[] = await response.json();
+        setNewsData(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error(error);
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+  const lastThreeNews = newsData.slice(-3).reverse();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,6 +68,30 @@ function TutorialBannerSlider() {
 
   return (
     <div className="tutorial-banner">
+      <div className="banner-title">
+        <h1>Tech News</h1>
+        <div className="underline"></div>
+        <a href="/news">See All</a>
+      </div>
+      <section className="news-box">
+        <div className="news">
+          {isLoading ? (
+            <div className="loading-icon">
+              <img src={Loading} alt="" />
+              <p>please wait...</p>
+            </div>
+          ) : (
+            lastThreeNews.map((newsItem, index) => (
+              <div className="news-card" key={index}>
+                <h2>{newsItem.heading}</h2>
+                <p>{newsItem.article}</p>
+                <a href={newsItem.link}>See more</a>
+                <span>{newsItem.date}</span>
+              </div>
+            ))
+          )}
+        </div>
+      </section>
       <div className="banner-title">
         <h1>Recent tutorials</h1>
       <div className="underline"></div>
