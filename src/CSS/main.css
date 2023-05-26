@@ -52,7 +52,7 @@ header .logo img{
 
 
 footer {
-  min-height: 300px;
+  min-height: 400px;
   width: 100%;
   background-color: var(--mainColor);
   display: flex;
@@ -63,9 +63,20 @@ footer {
   position: relative;
 }
 
+
 footer p {
   color: var(--subcolor);
 }
+
+.beautiful-bullets {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.beautiful-bullets li{
+  margin: 10px 0;
+}
+
 
 footer p span {
   font-family: "Pacifico", cursive;
@@ -269,6 +280,7 @@ nav {
   color: var(--secondaryColor);
   font-weight: 800;
   font-size: 1rem;
+  margin-top: 10px;
 }
 
 .address h4{
