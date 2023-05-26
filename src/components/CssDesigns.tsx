@@ -203,6 +203,23 @@ const pageKeywords =
           Next
         </button>
       </div>
+      <div className="desc">
+       <div className="about-page">
+       <p>
+          At <span>UIBoxx.in</span>, we are a dedicated team of designers and
+          developers committed to providing exceptional user experiences and
+          empowering individuals in the digital realm. Our mission is to offer
+          innovative solutions and resources that enhance your online presence.
+          We believe in providing beautifully designed UI elements through our
+          Free UI feature, while also offering comprehensive coding resources
+          and tutorials to help you stay ahead in the industry. We value
+          creativity, collaboration, and continuous improvement, and we are
+          always striving to exceed your expectations. Join us on this journey
+          to create stunning interfaces, unlock the power of algorithms, and
+          make a lasting impact in the digital world.
+        </p>
+       </div>
+      </div>
     </div>
   );
 }

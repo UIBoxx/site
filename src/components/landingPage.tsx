@@ -21,7 +21,7 @@ function LandingPage() {
       </Helmet>
       <div className="landingpage-head">
         <h2>
-          Unlock <span>Your Potential</span>
+          Design <span>With Us</span>
         </h2>
       </div>
       {/* <section className="stats">
@@ -44,18 +44,6 @@ function LandingPage() {
             <h3>Free UI</h3>
             <h2>Components & Design</h2>
             <a href="/UI-Library">Discover</a>
-          </div>
-
-          <div className="service-type" id="design">
-            <h3>Interactive Tutorials</h3>
-            <h2>Programming & DSA</h2>
-            <a href="/Tutorials">Get Started</a>
-          </div>
-
-          <div className="service-type" id="news">
-            <h3>Update yourself</h3>
-            <h2>New tools & technologies</h2>
-            <a href="/news">View</a>
           </div>
         </div>
       </div>

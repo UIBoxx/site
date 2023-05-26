@@ -81,7 +81,8 @@ function SVGShapeGenerator() {
         <h1
           style={{
             margin: "20px 10px",
-            color: "#308162",
+            color: "#81305f",
+            fontWeight: "800",
             fontSize: "2.3rem",
             textAlign: "center",
           }}

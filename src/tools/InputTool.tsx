@@ -202,13 +202,17 @@ input {
 
   return (
     <div className="generator-body">
-      <h1>Input Generator</h1>
+      <h1>Input Fields in HTML With CSS</h1>
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content={pageKeywords} />
       </Helmet>
       <div className="generator-header">
+      <div className="generated-Ui">
+          <h2>Generated Input</h2>
+          <div id="generatedUI"></div>
+        </div>
         <div className="form-container" style={{color: '#fff'}}>
           <form id="uiForm">
 
@@ -328,10 +332,7 @@ input {
           </form>
         </div>
         <hr />
-        <div className="generated-Ui">
-          <h2>Generated Input</h2>
-          <div id="generatedUI"></div>
-        </div>
+       
 
         <div className="code-container">
           <div className="html-code">

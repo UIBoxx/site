@@ -1,17 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&family=Lato:wght@400;700&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;500&family=Source+Code+Pro:wght@400;800&family=Urbanist:wght@200;600&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Chakra Petch", sans-serif;
+  /* font-family: "Chakra Petch", sans-serif; */
+  /* font-family: 'Montserrat Alternates', sans-serif; */
+  /* font-family: 'Source Code Pro', monospace; */
+  font-family: "Urbanist", sans-serif;
+  letter-spacing: 1px;
 }
 
 :root {
   --mainColor: #002233;
   --mainColorLight: #84899b;
-  --secondaryColor: #308162;
+  --secondaryColor: #bc6262;
   --textColor: #b2b8b8;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
@@ -42,7 +47,8 @@
   padding: 20px 5px;
   border-radius: 10px;
   color: var(--headcolor);
-  box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; /* border: 2px solid red; */
+  /* outline: 5px dashed var(--mainColorLight); */
+  /* box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; */
 }
 
 .generator-header button {
@@ -69,7 +75,7 @@
 .generated-Ui {
   min-height: 100px;
   width: 350px;
-  background-color: var(--subcolor);
+  border: 1px dotted var(--headcolor);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -81,6 +87,7 @@
 .generator-body h1 {
   color: var(--secondaryColor);
   font-size: 2rem;
+  font-weight: 800;
 }
 
 .code-container {
@@ -219,7 +226,7 @@ select::-ms-expand {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--subcolor);
-  box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; /* border: 2px solid red; */
+  /* box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; border: 2px solid red; */
 }
 
 .glassmorphism-card {
@@ -235,10 +242,14 @@ select::-ms-expand {
   .generator-header {
     flex-direction: column;
   }
-
-  #svg-container{
-    box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; /* border: 2px solid red; */
+  #glass-header {
+    outline: 4px dashed var(--secondaryColor);
   }
+
+}
+#svg-container {
+  /* box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; */
+  outline: 4px dashed var(--secondaryColor);
 }
 
 .flexbox-generator {
@@ -300,15 +311,13 @@ select::-ms-expand {
   border-radius: 10px;
 }
 
-.svg-btn{
+.svg-btn {
   width: 96%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
-
 }
-
 
 .svg-btn button {
   background-color: var(--secondaryColor);
@@ -318,7 +327,7 @@ select::-ms-expand {
   border-radius: 5px;
 }
 
-.svg-btn button:hover{
+.svg-btn button:hover {
   background-color: var(--subcolor);
   color: var(--secondaryColor);
 }

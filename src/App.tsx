@@ -13,16 +13,15 @@ import LandingPage from "./components/landingPage";
 import StackTutorial from "./tutorials/stackTutorial";
 import QueueTutorial from "./tutorials/QueueTutorial";
 import DijkstraVisualization from "./tutorials/DijkstraVisualization";
-import TutorialBannerSlider from "./components/BannerTutorialSlider";
 import NewsPage from "./components/NewsPage";
 import ButtonGenerator from "./tools/ButtonTool";
 import InputGenerator from "./tools/InputTool";
 import FlexboxGenerator from "./tools/flexBoxTool";
-import ToolsBanner from "./components/BannerTools";
 import NeumorphismCardGenerator from "./tools/NeuCard";
 import GlassmorphismGenerator from "./tools/GlassMorCard";
 import GradientBackgroundGenerator from "./tools/GradientBackgroundGenerator";
 import SVGShapeGenerator from "./tools/svgshape";
+import NewsSlider from "./components/BannerTutorialSlider";
 function App() {
   return (
     <BrowserRouter basename="/">
@@ -34,9 +33,9 @@ function App() {
               path="/"
               element={
                 <>
-                  <LandingPage />
                   <SVGShapeGenerator />
-                  <TutorialBannerSlider />
+                  <LandingPage />
+                  <NewsSlider/>
                 </>
               }
             />
@@ -45,10 +44,16 @@ function App() {
               element={
                 <>
                   <CSSDesigns />
+                </>
+              }
+            />
+            <Route
+              path="tools"
+              element={
+                <>
                   <NeumorphismCardGenerator />
                   <GlassmorphismGenerator />
                   <GradientBackgroundGenerator />
-                  <ToolsBanner />
                 </>
               }
             />

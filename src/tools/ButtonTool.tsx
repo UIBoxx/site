@@ -211,8 +211,12 @@ function ButtonGenerator() {
         <meta name="keywords" content={pageKeywords} />
         <title>{pageTitle}</title>
       </Helmet>
-      <h1>Button Generator</h1>
+      <h1>Button in HTML With CSS</h1>
       <div className="generator-header" style={{color: '#fff'}}>
+      <div className="generated-Ui">
+          <h2>Generated Button</h2>
+          <div id="generatedUI"></div>
+        </div>
         <div className="form-container">
           <form id="uiForm">
             <label htmlFor="componentLabel">Button Label:</label>
@@ -302,10 +306,7 @@ function ButtonGenerator() {
           </form>
         </div>
         <hr />
-        <div className="generated-Ui">
-          <h2>Generated Button</h2>
-          <div id="generatedUI"></div>
-        </div>
+        
 
         <div className="code-container">
           <div className="html-code">
