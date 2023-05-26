@@ -889,6 +889,7 @@ summary {
 
 .generator-body {
   min-height: 90vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -975,7 +976,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
+  min-width: 300px;
   background-color: var(--codecontainer);
   color: var(--subcolor);
   border-radius: 10px;
