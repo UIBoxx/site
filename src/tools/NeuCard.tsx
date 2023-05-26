@@ -94,17 +94,13 @@ function NeumorphismCardGenerator() {
 
     switch (shape) {
       case "concave":
-        return `inset ${boxShadow},
-    inset -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
+        return `inset 
+    ${boxShadow},
+    inset
+     -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
       case "convex":
         return `${boxShadow},
     -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
-      case "flat":
-        return `${boxShadow},
-    -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor};`;
-      case "inset":
-        return `inset ${boxShadow},
-    -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor};`;
       default:
         return "";
     }
@@ -135,7 +131,7 @@ function NeumorphismCardGenerator() {
       </div>
       <div className="generator-header" style={{ backgroundColor }}>
         <div className="card-generator">
-        <div className="neumorphism-card" style={cardStyle}>
+          <div className="neumorphism-card" style={cardStyle}>
             <h2>🤖</h2>
           </div>
           <div className="card-properties" style={{ color: "#fff" }}>
@@ -252,8 +248,8 @@ function NeumorphismCardGenerator() {
           </div>
           <div className="neubox-code-container">
             <div className="neuboxcode-section">
-              <pre>{generateHTMLCode()}</pre>
-              <pre>{generateCSSCode()}</pre>
+              <pre className="css-code">{generateHTMLCode()}</pre>
+              <pre className="css-code">{generateCSSCode()}</pre>
             </div>
           </div>
         </div>

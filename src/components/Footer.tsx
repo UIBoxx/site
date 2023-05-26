@@ -32,11 +32,11 @@ function Footer() {
               </a>
             </li>
           </ul>
-        </div>
         <div className="address">
           <h5>Kathmandu, Nepal</h5>
           <h5>44600</h5>
           <h5>contact@uiboxx.in</h5>
+        </div>
         </div>
       </div>
       <p>

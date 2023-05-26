@@ -71,12 +71,13 @@ footer p {
 .beautiful-bullets {
   list-style: none;
   padding-left: 0px;
+  list-style-type: circle;
+  color: var(--subcolor);
 }
 
 .beautiful-bullets li{
   margin-top: 10px;
 }
-
 
 footer p span {
   font-family: "Pacifico", cursive;
@@ -205,6 +206,7 @@ nav {
   footer{
     padding: 20px;
     align-items: center;
+    min-height: 500px;
   }
 }
 
@@ -278,7 +280,7 @@ nav {
 
 .address h5{
   color: var(--secondaryColor);
-  font-weight: 800;
+  font-weight: 300;
   font-size: 1rem;
   margin-top: 10px;
 }
