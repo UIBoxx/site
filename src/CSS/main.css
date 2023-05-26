@@ -52,12 +52,12 @@ header .logo img{
 
 
 footer {
-  min-height: 10vh;
+  min-height: 300px;
   width: 100%;
   background-color: var(--mainColor);
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   padding: 20px 40px;
   position: relative;

@@ -11,6 +11,13 @@ function Footer() {
           <a href="">
             <h4>Policy</h4>
           </a>
+          <a href="/UI-Library">
+            <h4>Free UI Components</h4>
+          </a>
+          <a href="/tools">
+            <h4>Tools</h4>
+          </a>
+
           <a href="/contact">
             <h4>Contact Us</h4>
           </a>
