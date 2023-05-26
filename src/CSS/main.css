@@ -256,7 +256,6 @@ nav {
 
 .about-page p{
   color: var(--textColor);
-  font-size: 10px;
   text-align: justify;
 }
 
@@ -279,7 +278,7 @@ nav {
 }
 
 .address h5{
-  color: var(--secondaryColor);
+  color: var(--textColor);
   font-weight: 300;
   font-size: 1rem;
   margin-top: 10px;
