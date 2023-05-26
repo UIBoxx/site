@@ -34,7 +34,8 @@ function GlassmorphismGenerator() {
   };
 
   const generateHTMLCode = () => {
-    return `<div class="glassmorphism"></div>`;
+    return `<div class="glassmorphism">
+    </div>`;
   };
 
   const generateCSSCode = () => {
