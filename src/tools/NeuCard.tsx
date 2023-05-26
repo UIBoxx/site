@@ -60,7 +60,9 @@ function NeumorphismCardGenerator() {
   };
 
   const generateHTMLCode = () => {
-    return `<div class="neumorphism-card ${shape}">
+    return `<div
+    class="neumorphism-card
+    ${shape}">
     <h2>&#10084;</h2>
 </div>`;
   };

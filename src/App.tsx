@@ -53,7 +53,7 @@ function App() {
                 <>
                   <NeumorphismCardGenerator />
                   <GlassmorphismGenerator />
-                  {/* <GradientBackgroundGenerator /> */}
+                  <GradientBackgroundGenerator />
                 </>
               }
             />
