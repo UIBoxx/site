@@ -9,6 +9,7 @@ function Footer() {
           <h5>contact@uiboxx.in</h5>
           <h5>Kathmandu, Nepal</h5>
           <h5>44600</h5>
+          <h5></h5>
         </div>
           <ul className="beautiful-bullets">
             <li>
