@@ -92,7 +92,7 @@
 
 .code-container {
   min-height: 300px;
-  width: 300px;
+  width: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,7 +245,6 @@ select::-ms-expand {
   #glass-header {
     outline: 4px dashed var(--secondaryColor);
   }
-
 }
 #svg-container {
   /* box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; */
@@ -304,10 +303,10 @@ select::-ms-expand {
 }
 
 .shape-box {
-  height: 350px;
-  width: 350px;
+  height: 300px;
+  width: 300px;
   border: 1px dashed var(--secondaryColor);
-  margin: 20px 10px;
+  margin: 20px 0px;
   border-radius: 10px;
 }
 
@@ -330,4 +329,8 @@ select::-ms-expand {
 .svg-btn button:hover {
   background-color: var(--subcolor);
   color: var(--secondaryColor);
+}
+
+.generator-controls{
+  width: 300px;
 }
