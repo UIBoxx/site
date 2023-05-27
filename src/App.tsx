@@ -22,6 +22,7 @@ import GlassmorphismGenerator from "./tools/GlassMorCard";
 import GradientBackgroundGenerator from "./tools/GradientBackgroundGenerator";
 import SVGShapeGenerator from "./tools/svgshape";
 import NewsSlider from "./components/BannerTutorialSlider";
+import BackgroundGenerator from "./tools/BgGenTool";
 function App() {
   return (
     <BrowserRouter basename="/">
@@ -98,6 +99,7 @@ function App() {
             <Route path="/button" element={<ButtonGenerator />} />
             <Route path="/input" element={<InputGenerator />} />
             <Route path="/flexbox" element={<FlexboxGenerator />} />
+            <Route path="/bg" element={<BackgroundGenerator />} />
           </Routes>
         </body>
         <Footer />

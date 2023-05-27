@@ -976,7 +976,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 300px;
+  width: 300px;
+  min-height: 200px;
   background-color: var(--codecontainer);
   color: var(--subcolor);
   border-radius: 10px;
@@ -1126,8 +1127,7 @@ pre {
 
 #gradient-header {
   width: 96%;
-  background: linear-gradient(to left, #002233, #fcaf3c, #002233);
-  /* box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;  */
+  outline: 4px dashed var(--secondaryColor);
 }
 
 .css-code {
@@ -1137,7 +1137,6 @@ pre {
 
 @media only screen and (max-width: 700px) {
   #gradient-header {
-    background: radial-gradient(#e78e08, #002233, #3a3927, #002233);
     outline: 4px dashed var(--secondaryColor);
     /* box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;  */
   }

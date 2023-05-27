@@ -33,18 +33,12 @@ function GlassmorphismGenerator() {
     opacity,
   };
 
-  const generateHTMLCode = () => {
-    return `<div class="glassmorphism">
-    </div>`;
-  };
-
   const generateCSSCode = () => {
-    return `.glassmorphism {
+    return `
   background-color: ${backgroundColor};
   filter: blur(${blur}px);
   border-radius: ${borderRadius}%;
-  opacity: ${opacity};
-}`;
+  opacity: ${opacity};`;
   };
 
   return (
@@ -120,7 +114,6 @@ function GlassmorphismGenerator() {
 
         <div className="code-container">
           <div className="code-section">
-            <pre>{generateHTMLCode()}</pre>
             <pre>{generateCSSCode()}</pre>
           </div>
         </div>

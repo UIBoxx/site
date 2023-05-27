@@ -60,18 +60,16 @@ footer {
   justify-content: space-between;
   flex-direction: column;
   padding: 20px 40px;
-  position: relative;
 }
 
-
-footer p {
-  color: var(--subcolor);
+footer p{
+  color: var(--textColor);
 }
 
 .beautiful-bullets {
   list-style: none;
   padding-left: 0px;
-  list-style-type: circle;
+  list-style-type: none;
   color: var(--subcolor);
 }
 
@@ -272,7 +270,6 @@ nav {
   justify-content: space-between;
   /* background-color: #0eb132; */
 }
-
 .address a{
   text-decoration: none;
 }

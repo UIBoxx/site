@@ -97,20 +97,14 @@ function GradientBackgroundGenerator() {
   const generateCSSCode = () => {
     switch (gradientType) {
       case "linear":
-        return `body {
-  background: linear-gradient(${direction}, ${colors.join(", ")});
-  filter: blur(${blur}px);
-}`;
-      case "radial":
-        return `body {
-  background: radial-gradient(${colors.join(", ")});
-  filter: blur(${blur}px);
-}`;
+        return `background: linear-gradient(${direction}, ${colors.join(", ")});
+filter: blur(${blur}px);`;
+case "radial":
+        return `background: radial-gradient(${colors.join(", ")});
+filter: blur(${blur}px);`;
       case "conic":
-        return `body {
-  background: conic-gradient(${colors.join(", ")});
-  filter: blur(${blur}px);
-}`;
+        return `background: conic-gradient(${colors.join(", ")});
+filter: blur(${blur}px);`;
       default:
         return "";
     }
@@ -122,7 +116,7 @@ function GradientBackgroundGenerator() {
         <h1>Gradient Color Generator</h1>
       </div>
       <div className="generator-header" id="gradient-header">
-      <div className="gradient-preview-container">
+        <div className="gradient-preview-container">
           <div
             className="gradient-preview"
             style={gradientStyle}
@@ -167,9 +161,7 @@ function GradientBackgroundGenerator() {
                   type="text"
                   id={`color-${index}`}
                   value={color}
-                  onChange={(e) =>
-                    handleColorChange(index, e.target.value)
-                  }
+                  onChange={(e) => handleColorChange(index, e.target.value)}
                 />
                 {index >= 2 && (
                   <button
@@ -255,7 +247,7 @@ function GradientBackgroundGenerator() {
             </div>
           )}
         </div>
-        
+
         <div id="gradientCSS-container">
           <div id="gradientCSS">
             <pre className="css-code">{generateCSSCode()}</pre>

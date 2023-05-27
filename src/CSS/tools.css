@@ -91,8 +91,8 @@
 }
 
 .code-container {
-  min-height: 300px;
-  width: 320px;
+  min-height: 200px;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,16 +100,6 @@
   color: var(--subcolor);
   border-radius: 10px;
   background-color: var(--codecontainer);
-}
-
-.code-container .html-code {
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
 }
 
 .code-container .css-code {

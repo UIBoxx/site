@@ -85,10 +85,10 @@ function SVGShapeGenerator() {
             fontWeight: "800",
             fontSize: "2.3rem",
             textAlign: "center",
+            width: '80vw'
           }}
         >
-          SquareCircleSVG: Seamlessly Blend Squares and Circles in Stunning SVG
-          Compositions
+          SquareCircleSVG
         </h1>
         <div className="shape-box">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
