@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../CSS/tutorial.css";
+import { Helmet } from "react-helmet";
+
 
 function NeumorphismCardGenerator() {
   const [cardProperties, setCardProperties] = useState<{
@@ -12,8 +14,8 @@ function NeumorphismCardGenerator() {
     blur: number;
     shape: string;
   }>({
-    backgroundColor: "#ffffff",
-    boxShadowColor: "#dbd6d6",
+    backgroundColor: "#f2baba",
+    boxShadowColor: "#aeadad",
     size: "medium",
     borderRadius: 10,
     distance: 3,
@@ -115,10 +117,21 @@ function NeumorphismCardGenerator() {
 
   return (
     <div className="generator-body">
+      <Helmet>
+      <meta name="description" content="Elevate your web designs with our free UI components, innovative Neumorphism and Glassmorphism tools. Create sleek and modern user interfaces effortlessly. Customize shadows, gradients, and colors. Experience the future of UI design and revolutionize your projects."/>
+      <meta name="keywords" content="UI components, free web designs, Neumorphism tool, Glassmorphism tool, gradient color generator, web design tools, HTML, CSS, JavaScript, user interface design, web development, front-end development, responsive design, SVG shapes, neumorphic effects, glassmorphic effects, color schemes, visual design, web design inspiration"/>
+      <title>UIboxx.in | Neumorphism Tool, Glassmorphism Tool, Gradient Color Generator</title>
+      </Helmet>
+      <div className="desc">
+          <div className="about-page">
+            <p id="styledP">"Experience the <span>future of UI design</span>"</p>
+          </div>
+        </div>
       <div className="banner-title">
         <h1>Neumorphism Card</h1>
       </div>
       <div className="generator-header" style={{ backgroundColor }}>
+      
         <div className="card-generator">
           <div className="neumorphism-card" style={cardStyle}>
             <h2>🤖</h2>

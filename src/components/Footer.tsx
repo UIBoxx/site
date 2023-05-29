@@ -42,7 +42,7 @@ function Footer() {
         </div>
       </div>
       <p>
-        <span>UIBoxx </span>2023, all rights reserved <br />
+      <a href="/" style={{textDecoration:"none"}}><span>UIBoxx </span></a>2023, all rights reserved <br />
       </p>
     </footer>
   );

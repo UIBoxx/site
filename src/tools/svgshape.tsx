@@ -76,7 +76,7 @@ function SVGShapeGenerator() {
       <div
         className="generator-header"
         id="svg-container"
-        style={{ color: "#9d064f" }}
+        style={{ color: "#9d064f"}}
       >
         <h1
           style={{
@@ -112,7 +112,6 @@ function SVGShapeGenerator() {
                 ${100 - scale}
             )`}
             ></path>
-            
           </svg>
         </div>
         <div className="generator-controls">
@@ -174,18 +173,20 @@ function SVGShapeGenerator() {
       </div>
       <div className="desc">
         <div className="about-page">
-          <p>
-            Introducing an innovative tool that enables you to effortlessly
+          <p id="styledP">
+            "Introducing an innovative tool that enables you to effortlessly
             create visually striking SVG shapes combining the elegance of
-            squares with the smoothness of circles. With this intuitive tool,
-            you can generate unique square_circle combinations in SVG format,
-            allowing for endless creative possibilities. Tailor the colors of
-            your shapes to match your vision, as you seamlessly blend the
-            geometric precision of squares with the organic curves of circles.
-            Whether you're a designer seeking to add a touch of modernity or an
-            artist experimenting with captivating visual compositions, this tool
-            unlocks a new realm of possibilities, redefining the boundaries of
-            digital design.
+            squares with the smoothness of circles"
+          </p>
+          <p>
+            With this intuitive tool, you can generate unique square_circle
+            combinations in SVG format, allowing for endless creative
+            possibilities. Tailor the colors of your shapes to match your
+            vision, as you seamlessly blend the geometric precision of squares
+            with the organic curves of circles. Whether you're a designer
+            seeking to add a touch of modernity or an artist experimenting with
+            captivating visual compositions, this tool unlocks a new realm of
+            possibilities, redefining the boundaries of digital design.
           </p>
         </div>
       </div>

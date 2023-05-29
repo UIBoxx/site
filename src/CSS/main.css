@@ -102,13 +102,13 @@ nav .upload-btn:hover{
 
 nav li a {
   margin: 0 1rem;
-  color: var(--subcolor);
+  color: purple;
   text-decoration: none;
   font-size: 1.5rem;
 }
 
 nav a:hover {
-  color: var(--mainColor);
+  color:  var(--subcolor);
 }
 
 header .nav-btn {
@@ -255,9 +255,15 @@ nav {
 .about-page p{
   color: var(--textColor);
   text-align: justify;
+  font-weight: 800;
 }
 
 .desc p span{
+  color: var(--secondaryColor);
+  font-family: "Pacifico", cursive;
+}
+
+#websiteName{
   color: var(--secondaryColor);
   font-family: "Pacifico", cursive;
 }
@@ -275,14 +281,14 @@ nav {
 }
 
 .address h5{
-  color: var(--textColor);
-  font-weight: 300;
+  color: var(--subcolor);
+  font-weight: 800;
   font-size: 1rem;
   margin-top: 10px;
 }
 
 .address h4{
-  color: var(--secondaryColor);
+  color: purple;
   font-weight: 800;
   font-size: 1.4rem;
 }
@@ -772,13 +778,14 @@ nav {
 }
 
 .contact-body .contact-wrapper{
-  width: 50vw;
+  width: 96vw;
 }
 
 .contact-body h1{
   color: var(--textColor);
   font-size: 2rem;
   margin: 2rem 0;
+  font-weight: 800;
 }
 
 .contact-body h1 span{
@@ -794,11 +801,11 @@ nav {
 .contact-body .contact-para p{
   color: var(--textColor);
   text-align: start;
-  font-size: 1rem;
+  font-weight: 800;
 }
 
 .contact-body .contact-para #end-line{
-  color: var(--secondaryColor);
+  color: purple;
   font-family: "Pacifico", cursive;
   font-size: 1.5rem;
 }
@@ -856,7 +863,7 @@ nav {
 
 }
 .form-wrapper{
-  width: 50vw;
+  width: 96vw;
   display: flex;
   align-items: start;
   justify-content: start;
@@ -1190,7 +1197,6 @@ input[type="file"] {
   width: 500px;
   border-radius: 10px;
   margin: 0 10px;
-  opacity: 0.5;
   display: flex;
   align-items: start;
   justify-content: center;
@@ -1200,15 +1206,14 @@ input[type="file"] {
 
 
 .news h2{
-  font-family: "Lato", sans-serif;
   font-weight: 900;
-  color:#450301;
+  color: red;
   font-size: 1.2rem;
   text-align: start;
 }
 
 .news-card p{
-  color: var(--textColor);
+  color: black;
   font-size: 10px;
   text-align: justify;
 }
@@ -1364,5 +1369,9 @@ input[type="file"] {
   .news-card{
     width: 350px;
     min-height: 350px;
+  }
+
+  .news-card p{
+    color: black;
   }
 }

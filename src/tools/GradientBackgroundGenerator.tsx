@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function GradientBackgroundGenerator() {
   const [gradientProperties, setGradientProperties] = useState({
     gradientType: "linear",
-    colors: ["#e28d8d", "#530928"],
+    colors: ["#fb4b95","#eeff05"],
     direction: "to right",
     blur: 0,
   });
@@ -98,7 +98,7 @@ function GradientBackgroundGenerator() {
       case "linear":
         return `background: linear-gradient(${direction}, ${colors.join(", ")});
 filter: blur(${blur}px);`;
-case "radial":
+      case "radial":
         return `background: radial-gradient(${colors.join(", ")});
 filter: blur(${blur}px);`;
       case "conic":
@@ -122,7 +122,7 @@ filter: blur(${blur}px);`;
             ref={gradientPreviewRef}
           ></div>
         </div>
-        <div className="generator-controls" style={{ color: "#fff" }}>
+        <div className="generator-controls" style={{ color: "#9d064f"}}>
           <div className="control-group">
             <label htmlFor="gradient-type">Gradient Type:</label>
             <div className="gradient-type-buttons">
@@ -251,6 +251,42 @@ filter: blur(${blur}px);`;
           <div id="gradientCSS">
             <pre className="css-code">{generateCSSCode()}</pre>
           </div>
+        </div>
+      </div>
+      <div className="desc">
+        <div className="about-page">
+          <p>
+            Elevate your designs to new heights with our innovative Neumorphism
+            tool. With just a few clicks, effortlessly create sleek and modern
+            user interfaces that feature soft, realistic shadows and subtle
+            gradients. Our intuitive interface puts customization at your
+            fingertips, allowing you to fine-tune the size, depth, and color of
+            your Neumorphic elements. Step into the future of UI design and
+            captivate your users with this cutting-edge trend that will set your
+            projects apart. <br /><br />
+            Prepare to mesmerize your audience with the enchanting world of
+            Glassmorphism, made accessible through our powerful tool. Infuse
+            your user interfaces with an elegant touch of depth using
+            translucent elements and mesmerizing frosted glass effects. Dive
+            into a realm of creativity as you explore customizable blur,
+            transparency, and color settings, enabling you to craft stunning
+            glass-like buttons, cards, and overlays. Elevate your designs with
+            the captivating allure of Glassmorphism and leave a lasting
+            impression on your users. <br /><br />
+            But that's not all—unleash your creative prowess with our Color
+            Gradient Generator tool. Design breathtaking color schemes that
+            seamlessly transition from one hue to another, injecting depth and
+            visual interest into your web projects. With various gradient types
+            at your disposal, you can experiment with different styles,
+            customize starting and ending colors, and explore diverse directions
+            and intensities. Enhance the overall aesthetics and mood of your
+            designs with the perfect blend of colors that our tool empowers you
+            to create. Join <span>UIBoxx.in</span> today and unlock the
+            potential of these powerful tools that will revolutionize your web
+            design journey. Inspiration awaits you, and with just a click,
+            you'll open the door to endless possibilities. Experience the future
+            of design and set your creativity free!
+          </p>
         </div>
       </div>
     </div>

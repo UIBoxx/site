@@ -22,27 +22,61 @@ function MyProfile() {
         </h1>
         <div className="contact-para">
           <p>
-          Welcome to UIBoxx.in, your go-to destination for free UI components, tech news, customizable designs, and interactive tutorials. We are passionate about providing developers and designers with the resources they need to create exceptional user experiences. Our mission is to empower creators by offering a wide range of free UI components that can be easily integrated into web and app designs. We believe that great design should be accessible to all, regardless of budget or experience level. With UIBoxx.in, you can unlock the power of interactive learning and elevate your projects to new heights.
-          </p>
-        </div>
-        <div className="contact-para">
-          <p>
-          At UIBoxx.in, we offer a diverse range of free UI components meticulously crafted to meet the highest standards of design and functionality. From buttons and cards to whole designs, our extensive library provides you with the building blocks you need to bring your ideas to life. We also provide up-to-date tech news, keeping you informed about the latest trends and advancements in the industry. Our customizable designs allow you to create unique and visually stunning interfaces, tailored to your specific needs and branding.
-          </p>
-        </div>
-        <div className="contact-para">
-          <p>
-            If you have any suggestions or
-            requests, we'd love to hear from you! Just drop us a line using the
-            contact form or a mail on our website.
+            At <span id="websiteName">UIBoxx.in</span> we are dedicated to
+            providing web designers and developers with the resources they need
+            to bring their creative visions to life. Our platform offers a wide
+            range of tools and components that empower you to create exceptional
+            user experiences and stunning web designs.
+            <br />
+            Discover our extensive collection of free UI components that are
+            ready to be seamlessly integrated into your projects. From buttons
+            and forms to cards and navigation menus, our library of HTML, CSS,
+            and JavaScript components saves you valuable time and effort,
+            allowing you to focus on designing impactful user interfaces.
+            <br /><br />
+            But we don't stop there. We understand the importance of staying
+            ahead of design trends and pushing the boundaries of creativity.
+            That's why we offer innovative design tools, including our
+            Neumorphism and Glassmorphism tools. With our Neumorphism tool, you
+            can effortlessly create sleek and modern interfaces, complete with
+            soft shadows and subtle gradients. Dive into the enchanting world of
+            Glassmorphism using our powerful tool, which adds depth and elegance
+            to your designs through translucent elements and frosted glass
+            effects.
+            <br /><br />
+            In addition to these tools, our SVG tool boasts a unique feature –
+            the square_circle shape generator. Unleash your creativity and
+            explore the possibilities of combining square and circular shapes in
+            your SVG designs. This tool allows you to customize and generate
+            visually striking shapes that will add an extra layer of visual
+            interest to your web projects.
+            <br /><br />
+            Furthermore, our Color Gradient Generator tool enables you to design
+            captivating color schemes that seamlessly transition between hues.
+            Enhance the visual appeal and mood of your designs by experimenting
+            with various gradient types, starting and ending colors, and
+            different directions and intensities.
+            <br /><br />
+            At <span id="websiteName">UIBoxx.in</span>, we are committed to
+            providing you with a comprehensive platform that supports your
+            creative endeavors. Whether you are an experienced professional or
+            just starting your web design journey, our resources and inspiration
+            will help you achieve remarkable results. Join our vibrant community
+            today and unlock the tools and knowledge that will revolutionize
+            your web design projects.
           </p>
         </div>
         <div className="contact-para">
           <p id="end-line">
-            Thanks for stopping by uiboxx.in. We can't wait to see what you
-            create!
+            Thank you for choosing <span id="websiteName">UIBoxx.in</span>. We
+            are excited to be a part of your web design success story!
             <br />
-            
+          </p>
+        </div>
+        <div className="contact-para">
+          <p>
+            If you have any suggestions or requests, we'd love to hear from you!
+            Just drop us a line using the contact form or a mail on our website.
           </p>
         </div>
         {/* <div className="email-card">

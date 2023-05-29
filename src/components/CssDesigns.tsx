@@ -103,12 +103,10 @@ const pageKeywords =
 <meta name="keywords" content={pageKeywords} />
 
       </Helmet>
-      <div className="div">
-        <h2>
-          Unleash Your Creativity😎 and <span>Elevate Your Designs</span> with Our
-          Exceptional UI Components, Turning Your Ideas into Stunning Visual
-          Experiences❤️.
-        </h2>
+      <div className="desc">
+        <div className="about-page">
+          <p id="styledP">"Transform Your Website Design with Our <span>Free UI Elements</span>"</p>
+        </div>
       </div>
 
       <div className="search-box">
@@ -206,17 +204,7 @@ const pageKeywords =
       <div className="desc">
        <div className="about-page">
        <p>
-          At <span>UIBoxx.in</span>, we are a dedicated team of designers and
-          developers committed to providing exceptional user experiences and
-          empowering individuals in the digital realm. Our mission is to offer
-          innovative solutions and resources that enhance your online presence.
-          We believe in providing beautifully designed UI elements through our
-          Free UI feature, while also offering comprehensive coding resources
-          and tutorials to help you stay ahead in the industry. We value
-          creativity, collaboration, and continuous improvement, and we are
-          always striving to exceed your expectations. Join us on this journey
-          to create stunning interfaces, unlock the power of algorithms, and
-          make a lasting impact in the digital world.
+       Welcome to our Free UI Components page, where you'll find a treasure trove of professionally designed elements to enhance your website. We offer a vast collection of UI components, meticulously crafted in HTML, CSS, and JavaScript, ready to be seamlessly integrated into your web design projects. From stylish buttons and interactive forms to sleek cards and intuitive navigation menus, our free UI components will save you valuable time and effort, while adding a touch of elegance and functionality to your website. Elevate your designs and create remarkable user experiences with our extensive selection of high-quality UI components, all at no cost.
         </p>
        </div>
       </div>

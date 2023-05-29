@@ -63,7 +63,7 @@ function NewsPage() {
             lastestNews.map((newsItem, index) => (
               <div className="news-card" key={index}>
                 <details>
-                <summary style={{'fontSize':"1.2rem"}}>{newsItem.heading}</summary>
+                <summary>{newsItem.heading}</summary>
                 <p>{newsItem.article}</p>
                 <a href={newsItem.link}>See more...</a>
                 <span>{newsItem.date}</span>

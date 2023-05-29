@@ -3,7 +3,6 @@ import "../CSS/tutorial.css";
 import "../CSS/main.css";
 import Loading from "../assets/loading.gif";
 
-
 interface News {
   heading: string;
   article: string;
@@ -13,7 +12,6 @@ interface News {
 
 function NewsSlider() {
   const [isLoading, setIsLoading] = useState(false);
-
 
   const [newsData, setNewsData] = useState<News[]>([]);
 
@@ -37,7 +35,6 @@ function NewsSlider() {
     fetchData();
   }, []);
   const lastThreeNews = newsData.slice(-3).reverse();
-
 
   return (
     <div className="tutorial-banner">
@@ -66,21 +63,27 @@ function NewsSlider() {
         </div>
       </section>
       <div className="desc">
-       <div className="about-page">
-       <p>
-          At <span>UIBoxx.in</span>, we are a dedicated team of designers and
-          developers committed to providing exceptional user experiences and
-          empowering individuals in the digital realm. Our mission is to offer
-          innovative solutions and resources that enhance your online presence.
-          We believe in providing beautifully designed UI elements through our
-          Free UI feature, while also offering comprehensive coding resources
-          and tutorials to help you stay ahead in the industry. We value
-          creativity, collaboration, and continuous improvement, and we are
-          always striving to exceed your expectations. Join us on this journey
-          to create stunning interfaces, unlock the power of algorithms, and
-          make a lasting impact in the digital world.
-        </p>
-       </div>
+        <div className="about-page">
+          <p>
+            Welcome to <span>UIBoxx.in</span>, the ultimate destination for web
+            designers and developers seeking high-quality UI components and
+            designs. We offer a vast collection of free HTML/CSS/JS UI
+            components that are ready to be integrated into your web projects,
+            saving you valuable time and effort. Our comprehensive range
+            includes buttons, forms, cards, navigation menus, and much more.
+            <br />
+            But that's not all! Our website also provides a powerful set of
+            tools for creating stunning visual effects. Dive into the world of
+            neumorphism and glassmorphism with our intuitive tools, allowing you
+            to effortlessly apply these modern design trends to your projects.
+            Additionally, our gradient color generator empowers you to generate
+            eye-catching color schemes with ease. <br />
+            Whether you're a seasoned professional or just starting your web
+            design journey, <span>UIBoxx.in</span> is here to inspire and assist
+            you in creating beautiful, engaging web experiences. Explore our
+            collection and unleash your creativity today!
+          </p>
+        </div>
       </div>
     </div>
   );

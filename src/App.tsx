@@ -25,7 +25,6 @@ import SVGShapeGenerator from "./tools/svgshape";
 import NewsSlider from "./components/BannerTutorialSlider";
 import BackgroundGenerator from "./tools/BgGenTool";
 
-
 type FunctionType = (...args: any[]) => void;
 
 function debounce<T extends FunctionType>(func: T, wait: number): T {
@@ -40,7 +39,6 @@ function debounce<T extends FunctionType>(func: T, wait: number): T {
   } as T;
 }
 
-
 function App() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -48,9 +46,7 @@ function App() {
   useEffect(() => {
     const handleScroll = debounce(() => {
       const currentScrollPos = window.pageYOffset;
-      setShowNavbar(
-        currentScrollPos <= prevScrollPos || currentScrollPos < 10
-      );
+      setShowNavbar(currentScrollPos <= prevScrollPos || currentScrollPos < 5);
       setPrevScrollPos(currentScrollPos);
     }, 100);
 
@@ -61,10 +57,11 @@ function App() {
     };
   }, [prevScrollPos]);
 
+
   return (
     <BrowserRouter basename="/">
       <div>
-        {showNavbar && <Navbar />}
+        {showNavbar && <Navbar/>}
         <body>
           <Routes>
             <Route
@@ -139,7 +136,7 @@ function App() {
             <Route path="/bg" element={<BackgroundGenerator />} />
           </Routes>
         </body>
-        <Footer />
+        <Footer/>
       </div>
     </BrowserRouter>
   );
