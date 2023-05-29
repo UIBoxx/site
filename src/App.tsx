@@ -30,15 +30,23 @@ function App() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
+    let timeout: string | number | NodeJS.Timeout | undefined;
+
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setShowNavbar(currentScrollPos <= prevScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const currentScrollPos = window.pageYOffset;
+        setShowNavbar(
+          currentScrollPos <= prevScrollPos || currentScrollPos < 10
+        );
+        setPrevScrollPos(currentScrollPos);
+      }, 500);
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
+      clearTimeout(timeout);
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
