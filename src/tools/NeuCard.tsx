@@ -14,8 +14,8 @@ function NeumorphismCardGenerator() {
     blur: number;
     shape: string;
   }>({
-    backgroundColor: "#f2baba",
-    boxShadowColor: "#aeadad",
+    backgroundColor: "#f1eaea",
+    boxShadowColor: "#a6a6a6",
     size: "medium",
     borderRadius: 10,
     distance: 3,
