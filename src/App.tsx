@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import MyProfile from "./components/contact";
@@ -23,11 +24,29 @@ import GradientBackgroundGenerator from "./tools/GradientBackgroundGenerator";
 import SVGShapeGenerator from "./tools/svgshape";
 import NewsSlider from "./components/BannerTutorialSlider";
 import BackgroundGenerator from "./tools/BgGenTool";
+
 function App() {
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setShowNavbar(currentScrollPos <= prevScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
     <BrowserRouter basename="/">
       <div>
-        <Navbar />
+        {showNavbar && <Navbar />}
         <body>
           <Routes>
             <Route

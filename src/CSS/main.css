@@ -892,8 +892,6 @@ nav {
   font-size: 1.2rem;
   background-color: #5c5e5f2c;
   color: var(--textColor);
-  box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;    /* border: 2px solid red; */
-
 }
 
 .sub-form form textarea{
@@ -907,8 +905,6 @@ nav {
   font-size: 1.2rem;
   background-color: #5c5e5f2c;
   color: var(--textColor);
-  box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;    /* border: 2px solid red; */
-
 }
 
 
