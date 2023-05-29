@@ -128,7 +128,7 @@ function NeumorphismCardGenerator() {
           </div>
         </div>
       <div className="banner-title">
-        <h1>Neumorphism Card</h1>
+        <h1>Neumorphism Effect</h1>
       </div>
       <div className="generator-header" style={{ backgroundColor }}>
       

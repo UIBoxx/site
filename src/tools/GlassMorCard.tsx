@@ -44,7 +44,7 @@ function GlassmorphismGenerator() {
   return (
     <div className="generator-body">
       <div className="banner-title">
-        <h1>Glassmorphism Card</h1>
+        <h1>Glassmorphism Effect</h1>
       </div>
       <div className="generator-header" id="glass-header">
         <div className="glassmorphism-card" style={glassStyle}>
