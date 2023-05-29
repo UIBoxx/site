@@ -14,6 +14,8 @@ interface News {
 function NewsPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [newsData, setNewsData] = useState<News[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,7 +36,21 @@ function NewsPage() {
     };
     fetchData();
   }, []);
-  const lastestNews = newsData.slice().reverse();
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const itemsPerPage = 6;
+
+  const lastestNewses = [...newsData].reverse();
+  const pageCount = Math.ceil(lastestNewses.length / itemsPerPage);
+  const lastestNews = lastestNewses.slice(
+    (currentPage - 1) * itemsPerPage,
+    (currentPage - 1) * itemsPerPage + itemsPerPage
+  );
+  
+
+
   return (
     <div className="news-body">
       <Helmet>
@@ -71,6 +87,39 @@ function NewsPage() {
               </div>
             ))
           )}
+        </div>
+        <div className="pagination">
+        <button
+          className="pagination-button"
+          disabled={currentPage === 1}
+          onClick={() => handlePageChange(currentPage - 1)}
+        >
+          Prev
+        </button>
+        {[...Array(pageCount)].map((_, index) => (
+          <button
+            key={index}
+            className={`pagination-button${
+              index + 1 === currentPage ? "active" : ""
+            }`}
+            onClick={() => handlePageChange(index + 1)}
+          >
+            {index + 1}
+          </button>
+        ))}
+        <button
+          className="pagination-button"
+          disabled={currentPage === pageCount}
+          onClick={() => handlePageChange(currentPage + 1)}
+        >
+          Next
+        </button>
+      </div>
+
+      </div>
+      <div className="desc">
+        <div className="about-page">
+          <p>This is a one-stop destination for the latest news and insights in technology and artificial intelligence. With a team of experts curating cutting-edge content, we provide comprehensive coverage of tech trends, including AI, robotics, cybersecurity, and more. Stay informed, engage in discussions, and embrace the future with our thought-provoking articles, expert opinions, and vibrant community. Explore the transformative power of technology and stay at the forefront of the tech revolution with our informative and engaging platform.</p>
         </div>
       </div>
     </div>
