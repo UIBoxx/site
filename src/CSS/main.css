@@ -19,7 +19,7 @@
   --textColor: #b2b8b8;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
-  --headcolor: #FCAF3C;
+  --headcolor: #9d064f;
   --subcolor:#fff;
   --codecontainer: #161718;
 }
@@ -30,7 +30,7 @@ header {
   justify-content: space-around;
   height: 80px;
   padding: 0 2rem;
-  background-color: var(--mainColor);
+  background-color: var(--headcolor);
   color: var(--secondaryColor);
   /* box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; */
 
@@ -54,7 +54,7 @@ header .logo img{
 footer {
   min-height: 400px;
   width: 100%;
-  background-color: var(--mainColor);
+  background-color: var(--headcolor);
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -153,7 +153,7 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: var(--mainColor);
+    background-color: var(--headcolor);
     transition: 1s;
     z-index: 100;
   }
@@ -473,8 +473,6 @@ nav {
   flex-wrap: wrap;
   background-color: var(--mainColor);
   font-family: "Chakra Petch", sans-serif;
-  background: url(../assets/wave.png) no-repeat top;
-  background-size: cover;
 }
 
 .Design-cards {
@@ -844,9 +842,6 @@ nav {
   .sub-title{
     justify-content: center;
   }
-  .Design-cards {
-    box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;
-  }
 }
 
 .sub-form{
@@ -1110,9 +1105,6 @@ input[type="file"] {
   justify-content: center;
   flex-direction: column;
   background-color: var(--mainColor);
-
-  background: url(../assets/landingPageBg.png) no-repeat center;
-  background-size: cover;
 }
 
 .landingpage-head{
@@ -1202,27 +1194,25 @@ input[type="file"] {
   width: 500px;
   border-radius: 10px;
   margin: 0 10px;
-  background-color: #e8dfdf35;
   opacity: 0.5;
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
   padding: 10px;
-  /* box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #d9d9d9; */
 }
 
 
 .news h2{
   font-family: "Lato", sans-serif;
   font-weight: 900;
-  color: var(--headcolor);
+  color:#450301;
   font-size: 1.2rem;
   text-align: start;
 }
 
 .news-card p{
-  color: var(--subcolor);
+  color: var(--textColor);
   font-size: 10px;
   text-align: justify;
 }
@@ -1230,7 +1220,7 @@ input[type="file"] {
 .news-card span{
   font-size: 12px;
   margin-top: 5px;
-  color: var(--headcolor);
+  color: var(--textColor);
   width: 100%;
   text-align: end;
 }

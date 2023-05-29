@@ -212,7 +212,7 @@ function ButtonGenerator() {
         <title>{pageTitle}</title>
       </Helmet>
       <h1>Button in HTML With CSS</h1>
-      <div className="generator-header" style={{color: '#fff'}}>
+      <div className="generator-header" style={{color: '#9d064f'}}>
       <div className="generated-Ui">
           <h2>Generated Button</h2>
           <div id="generatedUI"></div>

@@ -117,11 +117,15 @@
 }
 
 .sort-box summary{
-  font-family: "Lato", sans-serif;
   font-weight: 800;
   font-size: 2rem;
-  color: var(--secondaryColor);
+  color: var(--textColor);
 }
+
+details p{
+  color: var(--textColor);
+}
+
 
 
 @media only screen and (max-width: 700px) {

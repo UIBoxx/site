@@ -12,11 +12,11 @@ function NeumorphismCardGenerator() {
     blur: number;
     shape: string;
   }>({
-    backgroundColor: "#925454",
-    boxShadowColor: "#b87575",
+    backgroundColor: "#ffffff",
+    boxShadowColor: "#dbd6d6",
     size: "medium",
-    borderRadius: 20,
-    distance: 1,
+    borderRadius: 10,
+    distance: 3,
     intensity: 1,
     blur: 10,
     shape: "convex",
@@ -123,7 +123,7 @@ function NeumorphismCardGenerator() {
           <div className="neumorphism-card" style={cardStyle}>
             <h2>🤖</h2>
           </div>
-          <div className="card-properties" style={{ color: "#fff" }}>
+          <div className="card-properties" style={{ color: "#9d064f" }}>
             <div className="card-property">
               <label htmlFor="background-color">Background Color:</label>
               <input

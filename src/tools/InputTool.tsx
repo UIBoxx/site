@@ -213,7 +213,7 @@ input {
           <h2>Generated Input</h2>
           <div id="generatedUI"></div>
         </div>
-        <div className="form-container" style={{color: '#fff'}}>
+        <div className="form-container" style={{color: '#9d064f'}}>
           <form id="uiForm">
 
 

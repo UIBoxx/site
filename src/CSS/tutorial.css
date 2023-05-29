@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4b484883;
+  background-color: var(--headcolor);
   margin: 10px;
   border-radius: 10px;
   opacity: 0.8;
@@ -74,16 +74,12 @@
     width: 350px;
     margin: 25px 10px;
   }
-  .tutorial-cards {
-    box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220; /* border: 2px solid red; */
-  }
 }
 
 .image-demo {
-  /* background-color: var(--subcolor); */
   height: 80px;
   width: 100px;
-  color: var(--textColor);
+  color: var(--subcolor);
   transition: 0.4s ease-in-out;
   display: flex;
   align-items: center;
@@ -94,8 +90,7 @@
   font-size: 1.5rem;
 }
 .title-head {
-  /* background-color: var(--textColor); */
-  border: 1px dashed var(--textColor);
+  border: 1px dashed var(--subcolor);
   height: 120px;
   width: 200px;
   padding: 5px 10px;
@@ -109,7 +104,7 @@
 .title-head h2 {
   margin: 5px 0;
   font-size: 1rem;
-  color: var(--subcolor);
+  color: var(--textColor);
 }
 .title-head .action-area {
   margin-bottom: 5px;
@@ -203,8 +198,6 @@
 
 summary {
   font-size: 2rem;
-  color: var(--secondaryColor);
-  font-family: "Lato", sans-serif;
   font-weight: 800;
 }
 
@@ -226,7 +219,7 @@ summary {
 #search-steps {
   text-align: start;
   width: 90vw;
-  color: var(--headcolor);
+  color: var(--secondaryColor);
 }
 
 .demo-search-card h1 {
@@ -395,7 +388,7 @@ summary {
 }
 
 .intro p {
-  color: var(--subcolor);
+  color: var(--textColor);
 }
 
 .algorithm h1 {
@@ -829,7 +822,7 @@ summary {
   width: 350px;
   border-radius: 10px;
   margin: 10px 0;
-  color: var(--subcolor);
+  color: var(--textColor);
 }
 
 /* news-body */
@@ -879,11 +872,11 @@ summary {
 }
 
 .all-news .news-card h2 {
-  color: #ce8b0d;
+  color: var(--headcolor);
 }
 
 .all-news .news-card p {
-  color: var(--subcolor);
+  color: var(--textColor);
   font-size: 1rem;
 }
 
@@ -909,6 +902,7 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 40px;
+  outline: 1px dashed var(--secondaryColor);
 }
 
 .card-generator {
@@ -1127,7 +1121,8 @@ pre {
 
 #gradient-header {
   width: 96%;
-  outline: 4px dashed var(--secondaryColor);
+  outline: 1px dashed var(--secondaryColor);
+  background-color: #ffffff;
 }
 
 .css-code {
@@ -1137,7 +1132,7 @@ pre {
 
 @media only screen and (max-width: 700px) {
   #gradient-header {
-    outline: 4px dashed var(--secondaryColor);
+    outline: 1px dashed var(--secondaryColor);
     /* box-shadow: 8px 8px 16px #001220, -8px -8px 16px #001220;  */
   }
   #gradientCSS-container {

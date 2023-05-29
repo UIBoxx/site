@@ -72,7 +72,7 @@ align-content: ${alignContent};
       </Helmet>
       <div className="generator-header">
       <h1>Flexbox</h1>
-        <div className="flexbox-generator" style={{color: '#fff'}}>
+        <div className="flexbox-generator" style={{color: '#9d064f'}}>
           <div className="flex-properties">
             <div className="flex-property">
               <label htmlFor="flex-direction">Flex Direction:</label>

@@ -2,10 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { copy } from "clipboard";
 
 function SVGShapeGenerator() {
-  const [rotation, setRotation] = useState(28);
-  const [curvature, setCurvature] = useState(100);
-  const [fillColor, setFillColor] = useState("#1fbd39");
-  const [scale, setScale] = useState(41);
+  const [rotation, setRotation] = useState(30);
+  const [curvature, setCurvature] = useState(10);
+  const [fillColor, setFillColor] = useState("#e7235d");
+  const [scale, setScale] = useState(50);
   const [svgCode, setSvgCode] = useState("");
   const [buttonText, setButtonText] = useState("Copy SVG Code");
 
@@ -76,7 +76,7 @@ function SVGShapeGenerator() {
       <div
         className="generator-header"
         id="svg-container"
-        style={{ color: "#fff" }}
+        style={{ color: "#9d064f" }}
       >
         <h1
           style={{
@@ -85,7 +85,7 @@ function SVGShapeGenerator() {
             fontWeight: "800",
             fontSize: "2.3rem",
             textAlign: "center",
-            width: '80vw'
+            width: "80vw",
           }}
         >
           SquareCircleSVG
@@ -112,6 +112,7 @@ function SVGShapeGenerator() {
                 ${100 - scale}
             )`}
             ></path>
+            
           </svg>
         </div>
         <div className="generator-controls">
@@ -171,18 +172,23 @@ function SVGShapeGenerator() {
           <button onClick={copySvgCode}>{buttonText}</button>
         </div>
       </div>
-      <p style={{ margin: "20px", color: "#b2b8b8" }}>
-        Introducing an innovative tool that enables you to effortlessly create
-        visually striking SVG shapes combining the elegance of squares with the
-        smoothness of circles. With this intuitive tool, you can generate unique
-        square_circle combinations in SVG format, allowing for endless creative
-        possibilities. Tailor the colors of your shapes to match your vision, as
-        you seamlessly blend the geometric precision of squares with the organic
-        curves of circles. Whether you're a designer seeking to add a touch of
-        modernity or an artist experimenting with captivating visual
-        compositions, this tool unlocks a new realm of possibilities, redefining
-        the boundaries of digital design.
-      </p>
+      <div className="desc">
+        <div className="about-page">
+          <p>
+            Introducing an innovative tool that enables you to effortlessly
+            create visually striking SVG shapes combining the elegance of
+            squares with the smoothness of circles. With this intuitive tool,
+            you can generate unique square_circle combinations in SVG format,
+            allowing for endless creative possibilities. Tailor the colors of
+            your shapes to match your vision, as you seamlessly blend the
+            geometric precision of squares with the organic curves of circles.
+            Whether you're a designer seeking to add a touch of modernity or an
+            artist experimenting with captivating visual compositions, this tool
+            unlocks a new realm of possibilities, redefining the boundaries of
+            digital design.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
