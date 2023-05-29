@@ -25,28 +25,38 @@ import SVGShapeGenerator from "./tools/svgshape";
 import NewsSlider from "./components/BannerTutorialSlider";
 import BackgroundGenerator from "./tools/BgGenTool";
 
+
+type FunctionType = (...args: any[]) => void;
+
+function debounce<T extends FunctionType>(func: T, wait: number): T {
+  let timeout: ReturnType<typeof setTimeout>;
+  return function executedFunction(this: any, ...args: any[]) {
+    const later = () => {
+      clearTimeout(timeout);
+      func.apply(this, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  } as T;
+}
+
+
 function App() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
-    let timeout: string | number | NodeJS.Timeout | undefined;
-
-    const handleScroll = () => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        const currentScrollPos = window.pageYOffset;
-        setShowNavbar(
-          currentScrollPos <= prevScrollPos || currentScrollPos < 10
-        );
-        setPrevScrollPos(currentScrollPos);
-      }, 500);
-    };
+    const handleScroll = debounce(() => {
+      const currentScrollPos = window.pageYOffset;
+      setShowNavbar(
+        currentScrollPos <= prevScrollPos || currentScrollPos < 10
+      );
+      setPrevScrollPos(currentScrollPos);
+    }, 100);
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      clearTimeout(timeout);
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
