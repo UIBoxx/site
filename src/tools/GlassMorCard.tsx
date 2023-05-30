@@ -3,15 +3,15 @@ import "../CSS/tutorial.css";
 
 function GlassmorphismGenerator() {
   const [glassProperties, setGlassProperties] = useState<{
-    backgroundColor: string;
+    color: string;
     blur: number;
-    opacity: number;
+    transparency: number;
     borderRadius: number;
   }>({
-    backgroundColor: "##241e1e",
-    blur: 1,
-    opacity: 0.6,
-    borderRadius: 10,
+    color: "#e8d8d8",
+    blur: 5,
+    transparency: 0.1,
+    borderRadius: 1,
   });
 
   const handlePropertyChange = (
@@ -24,21 +24,35 @@ function GlassmorphismGenerator() {
     }));
   };
 
-  const { backgroundColor, blur, opacity, borderRadius } = glassProperties;
+  const { color, blur, transparency, borderRadius } = glassProperties;
+
+  const hexToRGBA = (hex: string, alpha: number) => {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  };
 
   const glassStyle = {
-    backgroundColor,
-    filter: `blur(${blur}px)`,
+    background: hexToRGBA(color, transparency),
+    boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+    backdropFilter: `blur(${blur}px)`,
+    WebkitBackdropFilter: `blur(${blur}px)`,
     borderRadius: `${borderRadius}%`,
-    opacity,
+    border: "1px solid rgba(255, 255, 255, 0.18)",
   };
 
   const generateCSSCode = () => {
     return `
-  background-color: ${backgroundColor};
-  filter: blur(${blur}px);
-  border-radius: ${borderRadius}%;
-  opacity: ${opacity};`;
+      background:
+        ${hexToRGBA(color, transparency)};
+      box-shadow:
+        0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(${blur}px);
+      -webkit-backdrop-filter: blur(${blur}px);
+      border-radius: ${borderRadius}%;
+      border:
+        1px solid rgba(255, 255, 255, 0.18);`;
   };
 
   return (
@@ -48,26 +62,23 @@ function GlassmorphismGenerator() {
       </div>
       <div className="generator-header" id="glass-header">
         <div className="glassmorphism-card" style={glassStyle}>
-          <h2>😎</h2>
+          <h2>Hello</h2>
+          <h2>❤️</h2>
         </div>
         <div className="generator-controls">
           <div className="control-group">
-            <label htmlFor="background-color">Background Color:</label>
+            <label htmlFor="color">Color:</label>
             <input
               type="color"
-              id="background-color-picker"
-              value={backgroundColor}
-              onChange={(e) =>
-                handlePropertyChange("backgroundColor", e.target.value)
-              }
+              id="color-picker"
+              value={color}
+              onChange={(e) => handlePropertyChange("color", e.target.value)}
             />
             <input
               type="text"
-              id="background-color"
-              value={backgroundColor}
-              onChange={(e) =>
-                handlePropertyChange("backgroundColor", e.target.value)
-              }
+              id="color"
+              value={color}
+              onChange={(e) => handlePropertyChange("color", e.target.value)}
             />
           </div>
           <div className="control-group">
@@ -84,16 +95,16 @@ function GlassmorphismGenerator() {
             />
           </div>
           <div className="control-group">
-            <label htmlFor="opacity">Opacity:</label>
+            <label htmlFor="transparency">Transparency:</label>
             <input
               type="range"
-              id="opacity"
+              id="transparency"
               min="0"
               max="1"
               step="0.1"
-              value={opacity}
+              value={transparency}
               onChange={(e) =>
-                handlePropertyChange("opacity", parseFloat(e.target.value))
+                handlePropertyChange("transparency", parseFloat(e.target.value))
               }
             />
           </div>

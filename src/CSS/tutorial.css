@@ -955,17 +955,15 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 200px;
   height: 200px;
-  border-radius: 10px;
-  background-color: #3e2e2e;
-  filter: blur(10px);
-  opacity: 0.8;
   margin: 25px 0;
 }
 
 .glassmorphism-card h2 {
   font-size: 48px;
+  font-weight: 800;
 }
 
 .neubox-code-container {
