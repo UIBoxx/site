@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../CSS/tutorial.css";
 import { Helmet } from "react-helmet";
 
-
 function NeumorphismCardGenerator() {
+  const [buttonText, setButtonText] = useState("Copy CSS Code");
   const [cardProperties, setCardProperties] = useState<{
     backgroundColor: string;
     boxShadowColor: string;
@@ -23,6 +23,18 @@ function NeumorphismCardGenerator() {
     blur: 10,
     shape: "convex",
   });
+
+  useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+    if (buttonText === "Copied") {
+      timeoutId = setTimeout(() => {
+        setButtonText("Copy CSS Code");
+      }, 2000);
+    }
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [buttonText]);
 
   const handlePropertyChange = (
     propertyName: string,
@@ -61,7 +73,6 @@ function NeumorphismCardGenerator() {
     borderRadius: `${borderRadius}%`,
   };
 
-
   const generateCSSCode = () => {
     let cssCode = ``;
     cssCode += `
@@ -85,13 +96,10 @@ function NeumorphismCardGenerator() {
 
     switch (shape) {
       case "concave":
-        return `inset 
-    ${boxShadow},
-    inset
-    -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
+        return `inset ${boxShadow},
+    inset -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
       case "convex":
-        return `${boxShadow},
-    -${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
+        return `${boxShadow},-${distance}px -${distance}px ${blur}px ${intensity}px ${boxShadowColor}`;
       default:
         return "";
     }
@@ -115,23 +123,30 @@ function NeumorphismCardGenerator() {
     return luminance < 0.5;
   }
 
+  function copyCssCode() {
+    const code = generateCSSCode();
+    navigator.clipboard.writeText(code).then(() => {
+      setButtonText("Copied");
+    });
+  }
+
   return (
-    <div className="generator-body">
+    <div className="generator-body" style={{ backgroundColor }}>
       <Helmet>
-      <meta name="description" content="Elevate your web designs with our free UI components, innovative Neumorphism and Glassmorphism tools. Create sleek and modern user interfaces effortlessly. Customize shadows, gradients, and colors. Experience the future of UI design and revolutionize your projects."/>
-      <meta name="keywords" content="UI components, free web designs, Neumorphism tool, Glassmorphism tool, gradient color generator, web design tools, HTML, CSS, JavaScript, user interface design, web development, front-end development, responsive design, SVG shapes, neumorphic effects, glassmorphic effects, color schemes, visual design, web design inspiration"/>
-      <title>UIboxx.in | Neumorphism Tool, Glassmorphism Tool, Gradient Color Generator</title>
+        <meta
+          name="description"
+          content="Elevate your web designs with our free UI components, innovative Neumorphism and Glassmorphism tools. Create sleek and modern user interfaces effortlessly. Customize shadows, gradients, and colors. Experience the future of UI design and revolutionize your projects."
+        />
+        <meta
+          name="keywords"
+          content="UI components, free web designs, Neumorphism tool, Glassmorphism tool, gradient color generator, web design tools, HTML, CSS, JavaScript, user interface design, web development, front-end development, responsive design, SVG shapes, neumorphic effects, glassmorphic effects, color schemes, visual design, web design inspiration"
+        />
+        <title>
+          UIboxx.in | Neumorphism Tool, Glassmorphism Tool, Gradient Color
+          Generator
+        </title>
       </Helmet>
-      <div className="desc">
-          <div className="about-page">
-            <p id="styledP">"Experience the <span>future of UI design</span>"</p>
-          </div>
-        </div>
-      <div className="banner-title">
-        <h1>Neumorphism Effect</h1>
-      </div>
       <div className="generator-header" style={{ backgroundColor }}>
-      
         <div className="card-generator">
           <div className="neumorphism-card" style={cardStyle}>
             <h2>🤖</h2>
@@ -248,11 +263,14 @@ function NeumorphismCardGenerator() {
               </div>
             </div>
           </div>
-          <div className="neubox-code-container">
-            <div className="neuboxcode-section">
-              <pre className="css-code">{generateCSSCode()}</pre>
-            </div>
-          </div>
+        </div>
+      </div>
+      <div className="code-container" id="code-container">
+        <div className="code-section">
+          <pre className="css-code">{generateCSSCode()}</pre>
+        </div>
+        <div className="css-btn">
+          <button onClick={copyCssCode}>{buttonText}</button>
         </div>
       </div>
     </div>

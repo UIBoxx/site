@@ -1011,6 +1011,14 @@ pre {
   box-shadow: 1px 1px 10px 1px #8d8686, -1px -1px 10px 1px #8d8686;
 }
 
+#code-container{
+  width: 90vw;
+  min-height: 10vh;
+  background-color: var(--codecontainer);
+  color: var(--secondaryColor);
+  overflow: auto;
+}
+
 /* tutorial.css */
 
 .gradient-type-buttons {

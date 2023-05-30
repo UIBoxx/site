@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../CSS/tutorial.css";
 
 function GlassmorphismGenerator() {
+  const [buttonText, setButtonText] = useState("Copy CSS Code");
   const [glassProperties, setGlassProperties] = useState<{
     color: string;
     blur: number;
     transparency: number;
     borderRadius: number;
   }>({
-    color: "#e8d8d8",
+    color: "#dd4040",
     blur: 5,
-    transparency: 0.1,
-    borderRadius: 1,
+    transparency: 0.2,
+    borderRadius: 10,
   });
 
   const handlePropertyChange = (
@@ -23,6 +24,18 @@ function GlassmorphismGenerator() {
       [propertyName]: propertyValue,
     }));
   };
+
+  useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+    if (buttonText === "Copied") {
+      timeoutId = setTimeout(() => {
+        setButtonText("Copy CSS Code");
+      }, 2000);
+    }
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [buttonText]);
 
   const { color, blur, transparency, borderRadius } = glassProperties;
 
@@ -44,25 +57,25 @@ function GlassmorphismGenerator() {
 
   const generateCSSCode = () => {
     return `
-      background:
-        ${hexToRGBA(color, transparency)};
-      box-shadow:
-        0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      background: ${hexToRGBA(color, transparency)};
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(${blur}px);
       -webkit-backdrop-filter: blur(${blur}px);
       border-radius: ${borderRadius}%;
-      border:
-        1px solid rgba(255, 255, 255, 0.18);`;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    `;
   };
 
+  function copyCssCode() {
+    const code = generateCSSCode();
+    navigator.clipboard.writeText(code).then(() => {
+      setButtonText("Copied");
+    });
+  }
   return (
     <div className="generator-body">
-      <div className="banner-title">
-        <h1>Glassmorphism Effect</h1>
-      </div>
       <div className="generator-header" id="glass-header">
         <div className="glassmorphism-card" style={glassStyle}>
-          <h2>Hello</h2>
           <h2>❤️</h2>
         </div>
         <div className="generator-controls">
@@ -123,14 +136,18 @@ function GlassmorphismGenerator() {
           </div>
         </div>
 
-        <div className="code-container">
+      </div>
+        <div className="code-container" id="code-container">
           <div className="code-section">
             <pre>{generateCSSCode()}</pre>
           </div>
-        </div>
+        <div className="css-btn">
+        <button onClick={copyCssCode}>{buttonText}</button>
       </div>
+        </div>
     </div>
   );
 }
 
 export default GlassmorphismGenerator;
+    

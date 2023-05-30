@@ -23,45 +23,13 @@ import GlassmorphismGenerator from "./tools/GlassMorCard";
 import GradientBackgroundGenerator from "./tools/GradientBackgroundGenerator";
 import SVGShapeGenerator from "./tools/svgshape";
 import NewsSlider from "./components/BannerTutorialSlider";
-import BackgroundGenerator from "./tools/BgGenTool";
-
-type FunctionType = (...args: any[]) => void;
-
-function debounce<T extends FunctionType>(func: T, wait: number): T {
-  let timeout: ReturnType<typeof setTimeout>;
-  return function executedFunction(this: any, ...args: any[]) {
-    const later = () => {
-      clearTimeout(timeout);
-      func.apply(this, args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  } as T;
-}
+import AllTools from "./tools/tools";
 
 function App() {
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = debounce(() => {
-      const currentScrollPos = window.pageYOffset;
-      setShowNavbar(currentScrollPos <= prevScrollPos || currentScrollPos < 5);
-      setPrevScrollPos(currentScrollPos);
-    }, 100);
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
-
-
   return (
     <BrowserRouter basename="/">
       <div>
-        {showNavbar && <Navbar/>}
+        <Navbar/>
         <body>
           <Routes>
             <Route
@@ -85,11 +53,7 @@ function App() {
             <Route
               path="tools"
               element={
-                <>
-                  <NeumorphismCardGenerator />
-                  <GlassmorphismGenerator />
-                  <GradientBackgroundGenerator />
-                </>
+                <AllTools/>
               }
             />
             <Route
@@ -133,7 +97,10 @@ function App() {
             <Route path="/button" element={<ButtonGenerator />} />
             <Route path="/input" element={<InputGenerator />} />
             <Route path="/flexbox" element={<FlexboxGenerator />} />
-            <Route path="/bg" element={<BackgroundGenerator />} />
+            <Route path="/neubox" element={<NeumorphismCardGenerator />} />
+            <Route path="/glassbox" element={<GlassmorphismGenerator />} />
+            <Route path="/Color-Gradient" element={<GradientBackgroundGenerator />} />
+
           </Routes>
         </body>
         <Footer/>

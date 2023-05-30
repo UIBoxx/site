@@ -134,8 +134,7 @@ nav {
   header {
     justify-content: space-around;
     z-index: 999;
-    position: sticky;
-    top: 0;
+    position: relative;
   }
   header .nav-btn {
     visibility: visible;
