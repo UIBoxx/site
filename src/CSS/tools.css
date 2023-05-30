@@ -592,9 +592,8 @@ select::-ms-expand {
 .explore-btn a{
   font-size: 2rem;
   text-decoration: none;
-  color: var(--subcolor);
+  color: var(--secondaryColor);
   font-weight: 900;
-  background-color: var(--secondaryColor);
   padding: 5px 20px;
   border-radius: 0 20px 20px 0;
   transition: 1s ease;
@@ -602,4 +601,5 @@ select::-ms-expand {
 
 .explore-btn a:hover{
   background-color: var(--headcolor);
+  color: var(--subcolor);
 }

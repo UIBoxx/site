@@ -173,9 +173,7 @@ function SVGShapeGenerator() {
           <button onClick={copySvgCode}>{buttonText}</button>
         </div>
       </div>
-      <div className="explore-btn">
-      <a href="/tools">Explore More<FontAwesomeIcon icon={faAnglesRight} /></a>
-      </div>
+     
       <div className="desc">
         <div className="about-page">
           <p id="styledP">
@@ -194,6 +192,9 @@ function SVGShapeGenerator() {
             possibilities, redefining the boundaries of digital design.
           </p>
         </div>
+        <div className="explore-btn">
+      <a href="/tools">Explore More<FontAwesomeIcon icon={faAnglesRight} /></a>
+      </div>
       </div>
     </div>
   );
