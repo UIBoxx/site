@@ -3,7 +3,7 @@ import "../CSS/tools.css";
 import { Helmet } from "react-helmet";
 
 function ButtonGenerator() {
-  const pageTitle = "Button Generator Tool";
+  const pageTitle = "Button in HTML With CSS";
   const pageDescription =
     "Create custom buttons effortlessly with this intuitive Button Generator tool.";
   const pageKeywords =
@@ -306,7 +306,6 @@ function ButtonGenerator() {
           </form>
         </div>
         <hr />
-        
 
         <div className="code-container">
           <div className="html-code">

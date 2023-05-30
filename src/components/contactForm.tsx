@@ -124,6 +124,13 @@ function contactForm() {
           {isValid ? null : <p>Please enter a valid name and email.</p>}
           {successMessage && <p>{successMessage}</p>}
         </form>
+      <div className="contact-para">
+          <p id="end-line" style={{margin:"20px 0"}}>
+            Thank you for choosing <span id="websiteName">UIBoxx.in</span>. We
+            are excited to be a part of your web design success story!
+            <br />
+          </p>
+        </div>
       </div>
     </div>
   );

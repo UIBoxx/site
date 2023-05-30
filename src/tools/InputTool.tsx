@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 
 function InputGenerator() {
 
-  const pageTitle = "Input Generator Tool";
+  const pageTitle = "Input Fields in HTML With CSS";
   const pageDescription = "Generate customized input fields effortlessly with this user-friendly Input Generator tool.";
   const pageKeywords = "input generator, form input creator, HTML input fields, web development";
 

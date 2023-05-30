@@ -10,9 +10,9 @@ function GlassmorphismGenerator() {
     borderRadius: number;
   }>({
     color: "#dd4040",
-    blur: 5,
-    transparency: 0.2,
-    borderRadius: 10,
+    blur: 2,
+    transparency: 0.3,
+    borderRadius: 5,
   });
 
   const handlePropertyChange = (
@@ -75,8 +75,12 @@ function GlassmorphismGenerator() {
   return (
     <div className="generator-body">
       <div className="generator-header" id="glass-header">
-        <div className="glassmorphism-card" style={glassStyle}>
+        <div className="glassmorphism-card" style={{borderRadius:`${borderRadius}%`}}>
+          <div className="sqr"></div>
+          <div className="sqr"></div>
+          <div className="glassmorphism-card-inner" style={glassStyle}> 
           <h2>❤️</h2>
+          </div>
         </div>
         <div className="generator-controls">
           <div className="control-group">

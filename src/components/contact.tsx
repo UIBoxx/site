@@ -66,13 +66,7 @@ function MyProfile() {
             your web design projects.
           </p>
         </div>
-        <div className="contact-para">
-          <p id="end-line">
-            Thank you for choosing <span id="websiteName">UIBoxx.in</span>. We
-            are excited to be a part of your web design success story!
-            <br />
-          </p>
-        </div>
+        
         <div className="contact-para">
           <p>
             If you have any suggestions or requests, we'd love to hear from you!

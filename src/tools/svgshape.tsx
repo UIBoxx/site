@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { copy } from "clipboard";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function SVGShapeGenerator() {
   const [rotation, setRotation] = useState(30);
@@ -170,6 +172,9 @@ function SVGShapeGenerator() {
         <div className="svg-btn">
           <button onClick={copySvgCode}>{buttonText}</button>
         </div>
+      </div>
+      <div className="explore-btn">
+      <a href="/tools">Explore More<FontAwesomeIcon icon={faAnglesRight} /></a>
       </div>
       <div className="desc">
         <div className="about-page">

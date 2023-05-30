@@ -952,19 +952,47 @@ h1 {
 }
 
 .glassmorphism-card {
+  width: 300px;
+  height: 200px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+  margin: 15px 20px;
+  transition: 1s ease-in-out;
+}
+
+.glassmorphism-card-inner{
+  width: inherit;
+  height: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 200px;
-  height: 200px;
-  margin: 25px 0;
 }
 
 .glassmorphism-card h2 {
   font-size: 48px;
-  font-weight: 800;
 }
+
+.glassmorphism-card .sqr {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient( #b8d308,#e0f21aca);
+  border-radius: 20px;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.sqr:nth-child(1) {
+  top: -25px;
+  right: -25px;
+}
+
+.sqr:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+}
+
 
 .neubox-code-container {
   display: flex;
