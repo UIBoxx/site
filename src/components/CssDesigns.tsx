@@ -5,6 +5,8 @@ import "../CSS/main.css";
 
 import ExampleComponent from "../components/copyCode";
 import Loading from "../assets/loading.gif";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Design {
   title: string;
@@ -139,6 +141,32 @@ function CSSDesigns() {
               onClick={() => setSelectedDesign(design)}
             >
               <div className="Design-image">
+              <div className="copy-code-btn">
+              <div className="codePrinter">
+                  <button
+                    className="show-codebutton"
+                    onClick={() => handleCodeButtonClick(design)}
+                  >
+                  <i><FontAwesomeIcon icon={faCode} /></i>
+                  </button>
+                  {showModal && selectedDesign === design && (
+                    <div className="modal">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h2>{design.title}</h2>
+                          <span
+                            className="modal-close"
+                            onClick={() => setShowModal(false)}
+                          >
+                            x
+                          </span>
+                        </div>
+                        <ExampleComponent selectedDesign={selectedDesign} />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
                 <div className="iframe-container">
                   <iframe
                     title="HTML/CSS/JS Demo"
@@ -172,37 +200,6 @@ function CSSDesigns() {
                   />
                 </div>
               </div>
-
-              {/* <div className="card-desc">
-                <h3>{design.title}</h3> */}
-                {/* <div className="codePrinter">
-                  <button
-                    className="button"
-                    onClick={() => handleCodeButtonClick(design)}
-                  >
-                    {design.action}
-                  </button>
-                  {showModal && selectedDesign === design && (
-                    <div className="modal">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h2></h2>
-                          <span
-                            className="modal-close"
-                            onClick={() => setShowModal(false)}
-                          >
-                            x
-                          </span>
-                        </div>
-                        <ExampleComponent selectedDesign={selectedDesign} />
-                      </div>
-                    </div>
-                  )}
-                </div> */}
-                {/* <p>
-                  {design.date} <span>{design.language}</span>
-                </p> */}
-              {/* </div> */}
             </div>
           ))}
         </div>

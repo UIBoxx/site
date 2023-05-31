@@ -23,11 +23,16 @@ function CodeBlock({ language, code }: CodeBlockProps) {
     clipboard.on("success", () => {
       setCopied(true);
       clipboard.destroy();
+  
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000); // Revert back to "Copy" after 2 seconds
     });
     clipboard.on("error", () => {
       clipboard.destroy();
     });
   };
+  
 
   return (
     <div className="code-block">

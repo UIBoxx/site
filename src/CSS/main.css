@@ -496,16 +496,45 @@ nav {
   justify-content: center;
   align-items: center;
   height: 400px;
+  width: 320px;
+  margin: 5px;
 }
 
 .Design-image iframe {
-  width: 100%;
   height: 100%;
   border: none;
 }
 
+.copy-code-btn{
+  height: 40px;
+  width: 100px;
+  background-color: #93999570;
+  position: relative;
+  top: 40px;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 10px 0;
+}
 
+.copy-code-btn i{
+  font-size: 2rem;
+  color: var(--subcolor);
+}
 
+.copy-code-btn:hover{
+  background-color: #2e0a0265;
+}
+
+.show-codebutton{
+  height: 40px;
+  width: 100px;
+  border-radius: 2px;
+  border: none;
+  background-color: transparent;
+}
 
 .Design-card a {
   text-decoration: none;
