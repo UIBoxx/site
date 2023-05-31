@@ -22,10 +22,9 @@ interface Design {
 
 function CSSDesigns() {
   const pageDescription =
-  "Generate Glassmorphism styles and Neumorphism cards easily with our generator tools. Get free high-quality, customizable designs and components for your app and web design projects. Save time and create beautiful designs with our website.";
-const pageKeywords =
-  "Glassmorphism styles, Neumorphism cards, generator tools, free designs, components, app design, web design";
-
+    "Generate Glassmorphism styles and Neumorphism cards easily with our generator tools. Get free high-quality, customizable designs and components for your app and web design projects. Save time and create beautiful designs with our website.";
+  const pageKeywords =
+    "Glassmorphism styles, Neumorphism cards, generator tools, free designs, components, app design, web design";
 
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -66,7 +65,7 @@ const pageKeywords =
     setCurrentPage(1); // Reset to first page on search query change
   };
 
-  const itemsPerPage = 4;
+  const itemsPerPage = 8;
   const filteredDesigns = designs.filter((design) =>
     design.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -99,13 +98,15 @@ const pageKeywords =
         <title>
           Free Designs and Components for App and Web Design | UIBoxx.in
         </title>
-<meta name="description" content={pageDescription} />
-<meta name="keywords" content={pageKeywords} />
-
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
       </Helmet>
       <div className="desc">
         <div className="about-page">
-          <p id="styledP">"Transform Your Website Design with Our <span>Free UI Elements</span>"</p>
+          <p id="styledP">
+            "Transform Your Website Design with Our{" "}
+            <span>Free UI Elements</span>"
+          </p>
         </div>
       </div>
 
@@ -138,11 +139,43 @@ const pageKeywords =
               onClick={() => setSelectedDesign(design)}
             >
               <div className="Design-image">
-                <img src={`data:image/png;base64, ${design.image}`} alt="" />
+                <div className="iframe-container">
+                  <iframe
+                    title="HTML/CSS/JS Demo"
+                    srcDoc={`
+                      <html>
+                        <head>
+                          <style>${design.csscode}</style>
+                          <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+                    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+                    crossorigin="anonymous"
+                    referrerpolicy="no-referrer"
+                  />
+                        </head>
+                        <body>
+                          <script>
+                            // Prevent navigation
+                            document.addEventListener('click', (event) => {
+                              if (event.target.tagName === 'A') {
+                                event.preventDefault();
+                              }
+                            });
+                          </script>
+                          ${design.htmlcode}
+                          <script>${design.jscode}</script>
+                        </body>
+                      </html>
+                    `}
+                    sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+                  />
+                </div>
               </div>
-              <div className="card-desc">
-                <h3>{design.title}</h3>
-                <div className="codePrinter">
+
+              {/* <div className="card-desc">
+                <h3>{design.title}</h3> */}
+                {/* <div className="codePrinter">
                   <button
                     className="button"
                     onClick={() => handleCodeButtonClick(design)}
@@ -165,11 +198,11 @@ const pageKeywords =
                       </div>
                     </div>
                   )}
-                </div>
-                <p>
+                </div> */}
+                {/* <p>
                   {design.date} <span>{design.language}</span>
-                </p>
-              </div>
+                </p> */}
+              {/* </div> */}
             </div>
           ))}
         </div>
@@ -202,11 +235,20 @@ const pageKeywords =
         </button>
       </div>
       <div className="desc">
-       <div className="about-page">
-       <p>
-       Welcome to our Free UI Components page, where you'll find a treasure trove of professionally designed elements to enhance your website. We offer a vast collection of UI components, meticulously crafted in HTML, CSS, and JavaScript, ready to be seamlessly integrated into your web design projects. From stylish buttons and interactive forms to sleek cards and intuitive navigation menus, our free UI components will save you valuable time and effort, while adding a touch of elegance and functionality to your website. Elevate your designs and create remarkable user experiences with our extensive selection of high-quality UI components, all at no cost.
-        </p>
-       </div>
+        <div className="about-page">
+          <p>
+            Welcome to our Free UI Components page, where you'll find a treasure
+            trove of professionally designed elements to enhance your website.
+            We offer a vast collection of UI components, meticulously crafted in
+            HTML, CSS, and JavaScript, ready to be seamlessly integrated into
+            your web design projects. From stylish buttons and interactive forms
+            to sleek cards and intuitive navigation menus, our free UI
+            components will save you valuable time and effort, while adding a
+            touch of elegance and functionality to your website. Elevate your
+            designs and create remarkable user experiences with our extensive
+            selection of high-quality UI components, all at no cost.
+          </p>
+        </div>
       </div>
     </div>
   );

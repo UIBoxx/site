@@ -477,7 +477,6 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   background-color: var(--mainColor);
-  font-family: "Chakra Petch", sans-serif;
 }
 
 .Design-cards {
@@ -487,80 +486,26 @@ nav {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 25px 0;
-  padding: 20px 5px;
   border-radius: 10px;
-  /* box-shadow: 8px 8px 16px #ffffff, -8px -8px 16px #ffffff; */
-
-  /* border: 2px solid red; */
-}
-.Design-card {
-  height:300px;
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  /* border: 1px solid var(--line); */
-  padding: 10px;
-  margin: 2rem -10px -0.5rem -10px;
-  border-radius: 5px;
 }
 
-.Design-image {
-  width: 250px;
-  height: 250px;
+
+
+.iframe-container {
   display: flex;
-  /* border: 1px solid var(--line); */
-  background-color: var(--subcolor); 
-  align-items: center;
   justify-content: center;
-  border-radius: 10px 10px 0 0;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.Design-image img {
-  padding: 10px;
-  width: 200px;
-  height: 250px;
-  object-fit: contain;
-  border-radius: 5px;
-}
-
-
-.card-desc{
-  height: 125px;
-  width: 250px;
-  background-color: var(--subcolor);
-  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 5px;
-  border-radius: 0 0 10px 10px;  
-  /* border: 1px solid var(--line); */
-
+  height: 400px;
 }
 
-.card-desc h3 {
-  color: var(--textColor);
-  text-align: start;
-  font-size: 1rem;
+.Design-image iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-.card-desc p {
-  color: var(--textColor);
-  text-align: center;
-  margin: 5px 0;
-  font-size: 0.8rem;
-}
 
-.card-desc p span {
-  color: var(--secondaryColor);
-  margin: 0 20px;
-  font-size: 0.8rem;
-}
+
 
 .Design-card a {
   text-decoration: none;
