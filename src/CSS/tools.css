@@ -17,7 +17,7 @@
 :root {
   --mainColor: #f2eded;
   --mainColorLight: #84899b;
-  --secondaryColor: #bc6262;
+  --secondaryColor: teal;
   --textColor: #4c4e4e;
   --cardColor: rgba(241, 119, 92, 0.532);
   --line: #7a7171ab;
@@ -160,7 +160,7 @@
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
   padding: 5px 20px;
   border-radius: 5px;
-  color: purple;
+  color: teal;
 }
 
 
@@ -438,7 +438,7 @@ select::-ms-expand {
 }
 
 #glass-header {
-  color: purple;
+  color: teal;
 }
 
 .glassmorphism-card {
@@ -557,7 +557,7 @@ select::-ms-expand {
 }
 
 .css-btn button {
-  background-color: purple;
+  background-color: teal;
   padding: 5px 20px;
   color: var(--subcolor);
   border: none;
@@ -566,7 +566,7 @@ select::-ms-expand {
 
 .css-btn button:hover {
   background-color: var(--subcolor);
-  color: purple;
+  color: teal;
 }
 
 .generator-controls {
@@ -574,7 +574,7 @@ select::-ms-expand {
 }
 
 #styledP {
-  color: purple;
+  color: teal;
   font-size: 2rem;
   font-family: "Pacifico", cursive;
   text-align: center;

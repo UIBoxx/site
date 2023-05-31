@@ -302,7 +302,7 @@ nav {
 }
 
 .address h4{
-  color: purple;
+  color: teal;
   font-weight: 800;
   font-size: 1.4rem;
 }
@@ -819,7 +819,7 @@ nav {
 }
 
 .contact-body .contact-para #end-line{
-  color: purple;
+  color: teal;
   font-family: "Pacifico", cursive;
   font-size: 1.5rem;
 }

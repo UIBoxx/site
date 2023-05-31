@@ -104,7 +104,7 @@
 .title-head h2 {
   margin: 5px 0;
   font-size: 1rem;
-  color: purple;
+  color: teal;
   font-weight: bolder;
 }
 .title-head .action-area {
@@ -200,7 +200,7 @@
 summary {
   font-size: 1.5rem;
   font-weight: 900;
-  color: purple;
+  color: teal;
 }
 
 .demo-search-card {
