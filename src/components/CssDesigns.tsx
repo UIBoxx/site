@@ -5,18 +5,12 @@ import "../CSS/main.css";
 
 import ExampleComponent from "../components/copyCode";
 import Loading from "../assets/loading.gif";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Design {
   title: string;
-  image: string;
-  link: string;
-  action: string;
-  date: string;
-  type: string;
-  language: string;
-  likes: string;
+  views: string;
   htmlcode: string;
   csscode: string;
   jscode: string;
@@ -141,39 +135,54 @@ function CSSDesigns() {
               onClick={() => setSelectedDesign(design)}
             >
               <div className="Design-image">
-              <div className="copy-code-btn">
-              <div className="codePrinter">
-                  <button
-                    className="show-codebutton"
-                    onClick={() => handleCodeButtonClick(design)}
-                  >
-                  <i><FontAwesomeIcon icon={faCode} /></i>
-                  </button>
-                  {showModal && selectedDesign === design && (
-                    <div className="modal">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h2>{design.title}</h2>
-                          <span
-                            className="modal-close"
-                            onClick={() => setShowModal(false)}
-                          >
-                            x
-                          </span>
+                
+                <div className="copy-code-btn">
+                  <div className="codePrinter">
+                    <button
+                      className="show-codebutton"
+                      onClick={() => handleCodeButtonClick(design)}
+                    >
+                      <i>
+                        <FontAwesomeIcon icon={faCode} /><span>Code</span>
+                      </i>
+                    </button>
+                    {showModal && selectedDesign === design && (
+                      <div className="modal">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h2>{design.title}</h2>
+                            <span
+                              className="modal-close"
+                              onClick={() => setShowModal(false)}
+                            >
+                              x
+                            </span>
+                          </div>
+                          <ExampleComponent selectedDesign={selectedDesign} />
                         </div>
-                        <ExampleComponent selectedDesign={selectedDesign} />
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
-              </div>
                 <div className="iframe-container">
                   <iframe
                     title="HTML/CSS/JS Demo"
                     srcDoc={`
                       <html>
                         <head>
-                          <style>${design.csscode}</style>
+                          <style>${design.csscode}
+                          body{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 400px;
+                          } 
+                          ::-webkit-scrollbar {
+                            display: none
+                          }
+
+                    
+                          </style>
                           <link
                     rel="stylesheet"
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -198,6 +207,9 @@ function CSSDesigns() {
                     `}
                     sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
                   />
+                </div>
+                <div className="design-view">
+                <i><FontAwesomeIcon icon={faEye} />1.1k</i>
                 </div>
               </div>
             </div>

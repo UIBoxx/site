@@ -117,13 +117,13 @@ nav .upload-btn:hover{
 
 nav li a {
   margin: 0 1rem;
-  color: purple;
+  color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
 }
 
 nav a:hover {
-  color:  var(--subcolor);
+  color:  var(--textColor);
 }
 
 header .nav-btn {
@@ -513,6 +513,10 @@ nav {
   height: 400px;
   width: 320px;
   margin: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--headcolor);
+  /* background-color: var(--subcolor); */
+  
 }
 
 .iframe-container iframe {
@@ -525,7 +529,7 @@ nav {
 .copy-code-btn{
   height: 40px;
   width: 100px;
-  background-color: #93999570;
+  background-color: var(--headcolor);
   position: relative;
   top: 40px;
   left: 0;
@@ -537,12 +541,32 @@ nav {
 }
 
 .copy-code-btn i{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--subcolor);
+}
+.copy-btn i span{
+  font-size: 1.2rem;
 }
 
 .copy-code-btn:hover{
   background-color: #2e0a0265;
+}
+
+.design-view{
+  height: 25px;
+  width: 170px;
+  position: relative;
+  bottom: 30px;
+  left: 150px;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  border-radius: 0 0 10px 0;
+  display: none;
+}
+
+.design-view i{
+  font-size: 1.2rem;
 }
 
 .show-codebutton{
