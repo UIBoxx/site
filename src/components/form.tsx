@@ -3,36 +3,13 @@ import { useState } from "react";
 
 function SubForm() {
   const [title, setTitle] = useState("");
-  const [image, setImage] = useState("");
-  const [type, setType] = useState("");
-  const [language, setLanguage] = useState("");
   const [textarea1, setTextarea1] = useState("");
   const [textarea2, setTextarea2] = useState("");
   const [textarea3, setTextarea3] = useState("");
-  const [link, setLink] = useState("");
   const [authorname, setAuthorname] = useState("");
 
   const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
-  };
-
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImage(reader.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-  
-  const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setType(event.target.value);
-  };
-
-  const handleLanguageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setLanguage(event.target.value);
   };
 
   const handletextarea1Change = (
@@ -53,10 +30,6 @@ function SubForm() {
     setTextarea3(event.target.value);
   };
 
-  const handleLinkChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setLink(event.target.value);
-  };
-
   const handleauthorNameChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -68,47 +41,25 @@ function SubForm() {
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
     event.preventDefault();
-    console.log(
-      "Submitting form with title:",
-      title,
-      "and image:",
-      image,
-      type,
-      language,
-      link,
-      authorname,
-    );
     await Designs(
       title,
-      image,
-      type,
-      language,
       textarea1,
       textarea2,
       textarea3,
-      link,
       authorname,
     );
     setTitle("");
-    setImage("");
-    setType("");
-    setLanguage("");
     setTextarea1("");
     setTextarea2("");
     setTextarea3("");
-    setLink("");
     setAuthorname("");
   };
 
   const Designs = async (
     title: string,
-    image: string,
-    type: string,
-    language: string,
     textarea1: string,
     textarea2: string,
     textarea3: string,
-    link: string,
     authorname: string,
   ) => {
     try {
@@ -119,13 +70,9 @@ function SubForm() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             title: title,
-            image: image,
-            type: type,
-            language: language,
             textarea1: textarea1,
             textarea2: textarea2,
             textarea3: textarea3,
-            link: link,
             authorname: authorname,
           }),
         }
@@ -145,9 +92,10 @@ function SubForm() {
 
 
   return (
-    <div className="form-container">
+    <div className="form-body">
+      <div className="form-container">
+        <h1></h1>
       <form className="upload-form">
-        <h1>Upload Design</h1>
         <div className="form-head-container">
           <div className="form-content">
             <label htmlFor="title">Title:</label>
@@ -160,48 +108,8 @@ function SubForm() {
               onChange={handleTitleChange}
             />
           </div>
-
-          <div className="form-content">
-            <label htmlFor="image">Demo Image:</label>
-            <input
-              type="file"
-              id="image"
-              name="image"
-              required
-              onChange={handleImageChange}
-            />
-            <p style={{ color: "green" }}>Image should be less than 750kb.</p>
-          </div>
-
-          <div className="htmlForm-content">
-            <label htmlFor="type">Type:</label>
-            <select
-              id="type"
-              name="type"
-              required
-              onChange={handleTypeChange}
-              value={type}
-            >
-              <option value="">Select Type</option>
-              <option value="web">Web</option>
-              <option value="app">App</option>
-            </select>
-          </div>
-          <div className="htmlForm-content">
-            <label htmlFor="language">Language:</label>
-            <input
-              type="text"
-              id="language"
-              name="language"
-              placeholder="HTML/CSS,.."
-              required
-              value={language}
-              onChange={handleLanguageChange}
-            />
-          </div>
         </div>
-       {
-        (type === 'web') ? <div>
+        <div>
           <div className="htmlForm-content">
             <label htmlFor="textarea1">HTML:</label>
             <textarea
@@ -229,32 +137,8 @@ function SubForm() {
               onChange={handletextarea3Change}
             ></textarea>
           </div>
-          <div className="link-part">
-            <h2>OR</h2>
-            <div className="htmlForm-content">
-              <label htmlFor="link">Link to code:</label>
-              <input
-                type="text"
-                name="link"
-                id="link"
-                placeholder="github,..."
-                value={link}
-                onChange={handleLinkChange}
-              />
-            </div>
-          </div>
-        </div>: <div className="htmlForm-content">
-              <label htmlFor="link">Link to code:</label>
-              <input
-                type="text"
-                name="link"
-                id="link"
-                placeholder="github,..."
-                value={link}
-                onChange={handleLinkChange}
-              />
-            </div>
-       }
+        </div>
+       
         <div className="form-content">
           <label htmlFor="authorname">Author Name:</label>
           <input
@@ -270,6 +154,7 @@ function SubForm() {
           {"Upload"}
         </button>
       </form>
+    </div>
     </div>
   );
 }

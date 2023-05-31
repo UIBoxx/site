@@ -24,6 +24,21 @@
   --codecontainer: #161718;
 }
 
+::-webkit-scrollbar {
+  height: 1px;
+  width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--mainColor);
+  border-radius: 10px;
+  
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--mainColor);
+}
+
 header {
   display: flex;
   align-items: center;
@@ -500,10 +515,12 @@ nav {
   margin: 5px;
 }
 
-.Design-image iframe {
+.iframe-container iframe {
   height: 100%;
+  width: 100%;
   border: none;
 }
+
 
 .copy-code-btn{
   height: 40px;
@@ -968,13 +985,17 @@ nav {
 
 /* upload form */
 
-.form-container{
+.form-body{
   background-color: var(--mainColor);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .upload-form{
-  /* box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2); */
-  min-height: 50vh;
-  padding: 20px;
+  padding: 0 20px;
+  color: var(--secondaryColor);
 }
 
 
@@ -982,7 +1003,6 @@ nav {
   margin-top: 5px;
   color: var(--textColor);
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .upload-form h2 {
@@ -991,56 +1011,39 @@ nav {
 }
 .upload-form label {
   display: block;
-  color: #fff;
   margin-bottom: 10px;
 }
 #type-select{
   color: var(--secondaryColor);
 }
 
-.upload-form input[type="text"],
-input[type="file"] {
-  width: 100%;
+.upload-form input[type="text"]{
+  width: 300px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #372b2b;
-  margin-bottom: 20px;
-  color: #fff;
-  background-color: #78717144;
+  color: var(--textColor);
   font-size: 16px;
   line-height: 1.5;
   resize: none;
   outline: none;
+  border: none;
 }
 
 .upload-form textarea{
-  width: 100%;
+  width: 300px;
   height: 100px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #372b2b;
   margin-bottom: 20px;
-  color: #fff;
-  background-color: #78717144;
+  color: var(--textColor);
   font-size: 16px;
   line-height: 1.5;
-  resize: none;
+  /* resize: none; */
   outline: none;
+  border: none;
+
 }
 
-.upload-form select{
-  width: 100%;
-  padding: 10px;
-  border: none;
-  margin-bottom: 20px;
-  color: #ffffff;
-  border-radius: 2px;
-  background-color: #19692a;
-  font-size: 16px;
-  line-height: 1.5;
-  resize: none;
-  outline: none;
-}
 .upload-form button {
   display: block;
   width: 100%;
@@ -1051,10 +1054,11 @@ input[type="file"] {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin: 20px 0;
 }
 
-.upload-form input[type="submit"]:hover {
-  background-color: #0eb132;
+.upload-form button:hover {
+  background-color: var(--headcolor);
 }
 
 /* Tablet and Desktop Styles */
@@ -1071,6 +1075,14 @@ input[type="file"] {
   .upload-form .form-content {
     width: calc(50% - 10px);
   }
+  
+.upload-form input[type="text"]{
+  width: 700px;
+}
+
+.upload-form textarea{
+  width: 700px;
+}
 }
 
 .landingPage{

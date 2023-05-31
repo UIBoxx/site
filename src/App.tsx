@@ -24,6 +24,7 @@ import GradientBackgroundGenerator from "./tools/GradientBackgroundGenerator";
 import SVGShapeGenerator from "./tools/svgshape";
 import NewsSlider from "./components/BannerTutorialSlider";
 import AllTools from "./tools/tools";
+import SubForm from "./components/form";
 
 function App() {
   return (
@@ -100,6 +101,7 @@ function App() {
             <Route path="/neubox" element={<NeumorphismCardGenerator />} />
             <Route path="/glassbox" element={<GlassmorphismGenerator />} />
             <Route path="/Color-Gradient" element={<GradientBackgroundGenerator />} />
+            <Route path="/upload" element={<SubForm />} />
 
           </Routes>
         </body>

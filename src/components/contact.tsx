@@ -73,11 +73,13 @@ function MyProfile() {
             Just drop us a line using the contact form or a mail on our website.
           </p>
         </div>
-        {/* <div className="email-card">
-          <a href="mailto: contact@uiboxx.in">
-            <button>E-mail</button>
-          </a>
-        </div> */}
+        <div className="contact-para">
+          <p id="end-line" style={{margin:"20px 0"}}>
+            Thank you for choosing <span id="websiteName">UIBoxx.in</span>. We
+            are excited to be a part of your web design success story!
+            <br />
+          </p>
+        </div>
       </div>
     </div>
   );
