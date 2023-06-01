@@ -1,0 +1,24 @@
+<div className="tags">
+        <span
+          className={`tag${selectedTag === null ? " active" : ""}`}
+          onClick={() => handleTagClick(null)}
+        >
+          All
+        </span>
+        {tags.map((tag, index) => (
+          <span
+            key={index}
+            className={`tag${selectedTag === tag ? " active" : ""}`}
+            onClick={() => handleTagClick(tag)}
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+
+      const handleTagClick = (tag: string | null) => {
+    setSelectedTag(tag);
+    setCurrentPage(1); // Reset to first page on tag selection
+  };
+

@@ -14,6 +14,7 @@ interface Design {
   htmlcode: string;
   csscode: string;
   jscode: string;
+  tags: string[];
 }
 
 function CSSDesigns() {
@@ -27,6 +28,7 @@ function CSSDesigns() {
   const [designs, setDesigns] = useState<Design[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedDesign, setSelectedDesign] = useState<Design | null>(null);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -58,12 +60,26 @@ function CSSDesigns() {
     event: React.SyntheticEvent<HTMLInputElement>
   ) => {
     setSearchQuery(event.currentTarget.value);
+    setSelectedTag(null);
     setCurrentPage(1); // Reset to first page on search query change
   };
 
+  const tags = Array.from(new Set(designs.flatMap(design => design.tags)))
+  .filter(tag => tag && tag.trim() !== "");
+
+
+  const handleTagClick = (tag: string | null) => {
+    setSelectedTag(tag);
+    setCurrentPage(1); // Reset to first page when tag is selected
+  };
+
   const itemsPerPage = 9;
-  const filteredDesigns = designs.filter((design) =>
-    design.title.toLowerCase().includes(searchQuery.toLowerCase())
+
+  const filteredDesigns = designs.filter(
+    (design) =>
+      design.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      (selectedTag === null ||
+        (design.tags && design.tags.includes(selectedTag)))
   );
 
   // Reverse the array of filtered designs
@@ -73,12 +89,6 @@ function CSSDesigns() {
     (currentPage - 1) * itemsPerPage,
     (currentPage - 1) * itemsPerPage + itemsPerPage
   );
-
-  // const pageCount = Math.ceil(filteredDesigns.length / itemsPerPage);
-  // const currentPageDesigns = filteredDesigns.slice(
-  //   (currentPage - 1) * itemsPerPage,
-  //   (currentPage - 1) * itemsPerPage + itemsPerPage
-  // );
 
   const handleCodeButtonClick = (design: Design) => {
     setSelectedDesign(design);
@@ -114,6 +124,27 @@ function CSSDesigns() {
           onChange={handleSearchInputChange}
         />
       </div>
+      <div className="tags-container">
+        <div className="tags">
+          <span
+          id="all"
+            className={`tag${selectedTag === null ? " active" : ""}`}
+            onClick={() => handleTagClick(null)}
+          >
+            All
+          </span>
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className={`tag${selectedTag === tag ? " active-tag" : ""}`}
+              onClick={() => handleTagClick(tag)}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
       <h2 className="sub-title"></h2>
       {/* <div className="underline"></div> */}
       {isLoading ? (
@@ -135,7 +166,6 @@ function CSSDesigns() {
               onClick={() => setSelectedDesign(design)}
             >
               <div className="Design-image">
-                
                 <div className="copy-code-btn">
                   <div className="codePrinter">
                     <button
@@ -143,7 +173,8 @@ function CSSDesigns() {
                       onClick={() => handleCodeButtonClick(design)}
                     >
                       <i>
-                        <FontAwesomeIcon icon={faCode} /><span>Code</span>
+                        <FontAwesomeIcon icon={faCode} />
+                        <span>Code</span>
                       </i>
                     </button>
                     {showModal && selectedDesign === design && (
@@ -213,7 +244,10 @@ function CSSDesigns() {
                   />
                 </div>
                 <div className="design-view">
-                <i><FontAwesomeIcon icon={faEye} />1.1k</i>
+                  <i>
+                    <FontAwesomeIcon icon={faEye} />
+                    1.1k
+                  </i>
                 </div>
               </div>
             </div>

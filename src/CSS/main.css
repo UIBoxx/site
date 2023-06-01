@@ -485,6 +485,34 @@ nav {
 
 /* Designs */
 
+.tags-container{
+  width: 96vw;
+  overflow-x: scroll;
+}
+
+.tags{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+}
+.tag.active-tag{
+  background-color: teal;
+  color: #fff;
+}
+
+.tags #all{
+  background-color: teal;
+  color: #fff;
+}
+
+.tags span{
+  background-color: #54555439;
+  padding: 5px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
 .Design-body {
   min-height: 90vh;
   display: flex;
