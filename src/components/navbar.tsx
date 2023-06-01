@@ -4,10 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered, faTimes } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/transparent.png";
 import "../CSS/main.css";
+import LoginModal from "./login";
 
 function Navbar() {
   let navItems = ["Home", "UI-Library", "Tools", "Contact"];
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -15,6 +18,14 @@ function Navbar() {
     if (navRef.current) {
       navRef.current.classList.toggle("responsive_nav");
     }
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -40,9 +51,14 @@ function Navbar() {
           <FontAwesomeIcon icon={faTimes} />
         </button>
       </nav>
+      <div className="user">
+        <img src="https://www.clipartmax.com/png/middle/364-3643767_about-brent-kovacs-user-profile-placeholder.png" alt="" />
+        <a href="#" onClick={openModal}><span>Login</span></a>
+      </div>
       <button className="nav-btn" onClick={showNavBar}>
         <FontAwesomeIcon icon={faBarsStaggered} />
       </button>
+      {isModalOpen && <LoginModal onClose={closeModal} />}
     </header>
   );
 }

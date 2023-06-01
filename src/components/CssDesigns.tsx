@@ -166,8 +166,7 @@ function CSSDesigns() {
       <div className="tags-container">
         <div className="tags">
           <span
-          id="all"
-            className={`tag${selectedTag === null ? " active" : ""}`}
+            className={`tag${selectedTag === null ? " active-tag" : ""}`}
             onClick={() => handleTagClick(null)}
           >
             All
