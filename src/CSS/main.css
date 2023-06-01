@@ -582,14 +582,15 @@ nav {
 
 .design-view{
   height: 25px;
-  width: 170px;
+  width: 120px;
   position: relative;
   bottom: 30px;
-  left: 150px;
+  left: 200px;
   cursor: pointer;
   display: flex;
   justify-content: end;
   border-radius: 0 0 10px 0;
+  /* background-color: #cde0d1; */
 }
 
 .design-view i{
@@ -602,6 +603,31 @@ nav {
   border-radius: 2px;
   border: none;
   background-color: transparent;
+}
+
+.design-author{
+  height: 25px;
+  width: 200px;
+  position: relative;
+  bottom: 55px;
+  left: 10px;
+  padding: 0 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  border-radius: 0 0 10px 0;
+  /* background-color: #0eb132; */
+}
+
+.design-author #follow{
+  color: var(--headcolor);
+  text-decoration: none;
+  font-size: 10px;
+  background-color: var(--mainColor);
+}
+
+#follow:hover{
+  background-color: var(--mainColor);
 }
 
 .Design-card a {

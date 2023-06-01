@@ -16,6 +16,7 @@ interface Design {
   csscode: string;
   jscode: string;
   tags: string[];
+  authorname: string
 }
 
 function CSSDesigns() {
@@ -97,32 +98,40 @@ function CSSDesigns() {
   // };
 
   const handleCodeButtonClick = async (design: Design) => {
-    // Increment the views count in the local state
-    const updatedDesign = {views: String(parseInt(design.views) + 1) };
-    setSelectedDesign(design);
-    setShowModal(true);
-  
     try {
-      // Make an HTTP request to update the views count in the database
       const response = await fetch(
-        `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${design._id}`, // Replace with your actual API endpoint
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(updatedDesign),
-        }
+        `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${design._id}`
       );
   
       if (response.ok) {
-        console.log('updated successfully');
+        const data = await response.json();
+        const currentViews = parseInt(data.views);
+        const updatedDesign = { views: String(currentViews + 1) };
+        setSelectedDesign(design);
+        setShowModal(true);
+  
+        // Make a separate request to update the views count
+        await fetch(
+          `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${design._id}`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedDesign),
+          }
+        );
+  
+        console.log('Updated successfully');
+      } else {
+        console.error('Failed to fetch views count');
       }
     } catch (error) {
       console.error(error);
       // Handle the error if the request fails
     }
   };
+  
   
 
   return (
@@ -278,6 +287,10 @@ function CSSDesigns() {
                     <FontAwesomeIcon icon={faEye} />
                     {design.views}
                   </i>
+                </div>
+                <div className="design-author">
+                  <p>#{design.authorname?design.authorname:"Anonymous"}</p>
+                  {/* <a href="" id="follow">Follow</a> */}
                 </div>
               </div>
             </div>

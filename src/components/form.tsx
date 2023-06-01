@@ -7,6 +7,7 @@ function SubForm() {
   const [textarea2, setTextarea2] = useState("");
   const [textarea3, setTextarea3] = useState("");
   const [authorname, setAuthorname] = useState("");
+  const [tags, setTag] = useState("");
 
   const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
@@ -36,6 +37,11 @@ function SubForm() {
     setAuthorname(event.target.value);
   };
 
+  const handleTagChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setAuthorname(event.target.value);
+  };
  
   const handleFormClick = async (
     event: React.MouseEvent<HTMLButtonElement>
@@ -47,12 +53,14 @@ function SubForm() {
       textarea2,
       textarea3,
       authorname,
+      tags,
     );
     setTitle("");
     setTextarea1("");
     setTextarea2("");
     setTextarea3("");
     setAuthorname("");
+    setTag("");
   };
 
   const Designs = async (
@@ -61,6 +69,7 @@ function SubForm() {
     textarea2: string,
     textarea3: string,
     authorname: string,
+    tags: string,
   ) => {
     try {
       const response = await fetch(
@@ -74,6 +83,7 @@ function SubForm() {
             textarea2: textarea2,
             textarea3: textarea3,
             authorname: authorname,
+            tag: tags
           }),
         }
       );
@@ -148,6 +158,15 @@ function SubForm() {
             required
             value={authorname}
             onChange={handleauthorNameChange}
+          />
+          <label htmlFor="tags">Tag:</label>
+          <input
+            type="text"
+            id="tags"
+            name="tags"
+            required
+            value={tags}
+            onChange={handleTagChange}
           />
         </div>
         <button type="submit" onClick={handleFormClick}>
