@@ -40,7 +40,7 @@ function SubForm() {
   const handleTagChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    setAuthorname(event.target.value);
+    setTag(event.target.value);
   };
  
   const handleFormClick = async (
