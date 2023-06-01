@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Design {
   title: string;
+  _id: string;
   views: string;
   htmlcode: string;
   csscode: string;
@@ -90,10 +91,39 @@ function CSSDesigns() {
     (currentPage - 1) * itemsPerPage + itemsPerPage
   );
 
-  const handleCodeButtonClick = (design: Design) => {
+  // const handleCodeButtonClick = (design: Design) => {
+  //   setSelectedDesign(design);
+  //   setShowModal(true);
+  // };
+
+  const handleCodeButtonClick = async (design: Design) => {
+    // Increment the views count in the local state
+    const updatedDesign = {views: String(parseInt(design.views) + 1) };
     setSelectedDesign(design);
     setShowModal(true);
+  
+    try {
+      // Make an HTTP request to update the views count in the database
+      const response = await fetch(
+        `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${design._id}`, // Replace with your actual API endpoint
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(updatedDesign),
+        }
+      );
+  
+      if (response.ok) {
+        console.log('updated successfully');
+      }
+    } catch (error) {
+      console.error(error);
+      // Handle the error if the request fails
+    }
   };
+  
 
   return (
     <div
@@ -145,7 +175,7 @@ function CSSDesigns() {
         </div>
       </div>
 
-      <h2 className="sub-title"></h2>
+      <h2 className="sub-title"> </h2>
       {/* <div className="underline"></div> */}
       {isLoading ? (
         <div className="loading-icon">
@@ -219,21 +249,21 @@ function CSSDesigns() {
                           ${design.csscode}
                           </style>
                             <link
-                      rel="stylesheet"
-                      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-                      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-                      crossorigin="anonymous"
-                      referrerpolicy="no-referrer"
-                    />
-                        </head>
-                        <body>
-                          <script>
-                            // Prevent navigation
-                            document.addEventListener('click', (event) => {
-                              if (event.target.tagName === 'A') {
-                                event.preventDefault();
-                              }
-                            });
+                              rel="stylesheet"
+                              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+                              integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+                              crossorigin="anonymous"
+                              referrerpolicy="no-referrer"
+                            />
+                            </head>
+                            <body>
+                              <script>
+                                // Prevent navigation
+                                document.addEventListener('click', (event) => {
+                                  if (event.target.tagName === 'A') {
+                                    event.preventDefault();
+                                  }
+                                });
                           </script>
                           ${design.htmlcode}
                           <script>${design.jscode}</script>
@@ -246,7 +276,7 @@ function CSSDesigns() {
                 <div className="design-view">
                   <i>
                     <FontAwesomeIcon icon={faEye} />
-                    1.1k
+                    {design.views}
                   </i>
                 </div>
               </div>
