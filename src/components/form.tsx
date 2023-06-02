@@ -293,11 +293,11 @@ function SubForm() {
               <option value="backgrounds">backgrounds</option>
             </select>
           </div>
+          {isValid ? null : <p style={{color:"red"}}>Please enter a valid content on form field.</p>}
+          {<p style={{color:"green"}}>{successMessage}</p>}
           <button type="submit" onClick={handleFormClick}>
           {sending ? "Submitting..." : sent ? "submitted" : "Subimit to review"}
           </button>
-          {isValid ? null : <p>Please enter a valid content on form field.</p>}
-          {<p>{successMessage}</p>}
         </form>
       </div>
     </div>
