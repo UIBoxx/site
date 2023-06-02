@@ -183,10 +183,10 @@ function LoginModal({ onClose, onLoginSuccess }: LoginModalProps) {
     }
 
     // Clear form fields
-    setEmail("");
-    setPassword("");
-    setName("");
-    setConfirmPassword("");
+    // setEmail("");
+    // setPassword("");
+    // setName("");
+    // setConfirmPassword("");
   };
 
   const toggleSignUp = () => {
