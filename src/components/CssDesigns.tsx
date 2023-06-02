@@ -288,7 +288,8 @@ function CSSDesigns() {
                   </i>
                 </div>
                 <div className="design-author">
-                  <p>#{design.authorname?design.authorname:"Anonymous"}</p>
+                <p>{}</p>
+                  <p>@{design.authorname?design.authorname.substring(0, design.authorname.indexOf("@")):"Anonymous"}</p>
                   {/* <a href="" id="follow">Follow</a> */}
                 </div>
               </div>

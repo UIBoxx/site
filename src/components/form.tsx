@@ -1,7 +1,6 @@
 import "../CSS/main.css";
 import { useEffect, useState } from "react";
 
-
 function SubForm() {
   const [title, setTitle] = useState("");
   const [textarea1, setTextarea1] = useState("");
@@ -19,7 +18,6 @@ function SubForm() {
     setUsername(storedUsername || "");
     setAuthorname(storedUsername || "");
   }, []);
-
 
   const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
@@ -49,9 +47,7 @@ function SubForm() {
     setAuthorname(event.target.value);
   };
 
-  const handleTagChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleTagChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setTag(event.target.value);
   };
 
@@ -63,14 +59,7 @@ function SubForm() {
     if (!isLoggedIn) {
       return;
     }
-    await Designs(
-      title,
-      textarea1,
-      textarea2,
-      textarea3,
-      authorname,
-      tags
-    );
+    await Designs(title, textarea1, textarea2, textarea3, authorname, tags);
     setTitle("");
     setTextarea1("");
     setTextarea2("");
@@ -119,7 +108,9 @@ function SubForm() {
   if (!isLoggedIn) {
     return (
       <>
-        <div style={{color:"red",margin: "20vh 40px"}}>You need to login first!</div>
+        <div style={{ color: "red", margin: "20vh 40px" }}>
+          You need to login first!
+        </div>
       </>
     );
   }
@@ -145,30 +136,36 @@ function SubForm() {
           <div>
             <div className="htmlForm-content">
               <label htmlFor="textarea1">HTML:</label>
+              <label id="hint-start">{"<body>"}</label>
               <textarea
                 id="textarea1"
                 name="textarea1"
                 value={textarea1}
                 onChange={handletextarea1Change}
               ></textarea>
+              <label id="hint-end">{"</body>"}</label>
             </div>
             <div className="htmlForm-content">
               <label htmlFor="textarea2">CSS:</label>
+              <label id="hint-start">{"<style>"}</label>
               <textarea
                 id="textarea2"
                 name="textarea2"
                 value={textarea2}
                 onChange={handletextarea2Change}
               ></textarea>
+              <label id="hint-end">{"</style>"}</label>
             </div>
             <div className="htmlForm-content">
               <label htmlFor="textarea3">JavaScript:</label>
+              <label id="hint-start">{"<script>"}</label>
               <textarea
                 id="textarea3"
                 name="textarea3"
                 value={textarea3}
                 onChange={handletextarea3Change}
               ></textarea>
+              <label id="hint-end">{"</script>"}</label>
             </div>
           </div>
           <div className="form-content">
@@ -177,19 +174,32 @@ function SubForm() {
               type="text"
               id="authorname"
               name="authorname"
-              required
+              readOnly
               value={authorname.substring(0, authorname.indexOf("@"))}
               onChange={handleauthorNameChange}
             />
             <label htmlFor="tags">Tag:</label>
-            <input
-              type="text"
+            <select
               id="tags"
               name="tags"
               required
               value={tags}
               onChange={handleTagChange}
-            />
+            >
+                  <option value="">Select a tag</option>
+              <option value="others">others</option>
+              <option value="input">input</option>
+              <option value="button">button</option>
+              <option value="card">card</option>
+              <option value="navbar">navbar</option>
+              <option value="form">form</option>
+              <option value="icon">icon</option>
+              <option value="loader">loader</option>
+              <option value="box">box</option>
+              <option value="switch">switch</option>
+              <option value="spinner">spinner</option>
+              <option value="backgrounds">backgrounds</option>
+            </select>
           </div>
           <button type="submit" onClick={handleFormClick}>
             {"Upload"}

@@ -1168,7 +1168,24 @@ nav {
 .upload-form label {
   display: block;
   margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 900;
 }
+
+#hint-start{
+  font-size: 10px;
+  color: red;
+  position: relative;
+  top: 22px
+}
+
+#hint-end{
+  font-size: 10px;
+  color: red;
+  position: relative;
+  bottom: 35px
+}
+
 #type-select{
   color: var(--secondaryColor);
 }
@@ -1187,14 +1204,14 @@ nav {
 
 .upload-form textarea{
   width: 300px;
-  height: 100px;
+  height: 200px;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
   color: var(--textColor);
   font-size: 16px;
   line-height: 1.5;
-  /* resize: none; */
+  resize: none;
   outline: none;
   border: none;
 
