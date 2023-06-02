@@ -156,6 +156,7 @@ function LoginModal({ onClose, onLoginSuccess }: LoginModalProps) {
         console.log("Login successful!");
         setLoginSuccess(true);
         onLoginSuccess(email);
+        window.location.reload();
       } else {
         const data = await response.json();
         setLoginError(data.error || "Invalid credentials");

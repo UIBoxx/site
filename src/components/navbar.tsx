@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBarsStaggered, faTimes, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBarsStaggered, faTimes, faUpload, faUser } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/transparent.png";
 import "../CSS/main.css";
 import LoginModal from "./login";
@@ -11,6 +11,7 @@ function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
+
 
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -58,9 +59,11 @@ function Navbar() {
       .then((data) => {
         console.log(data.message); // Optional: Handle the response data
         console.log('logout successfully.')
+        window.location.reload();
       })
       .catch((error) => {
         console.error("Logout error:", error); // Optional: Handle the error
+        window.location.reload();
       });
   };
   
@@ -89,6 +92,8 @@ function Navbar() {
         <button className="nav-btn nav-close-btn" onClick={showNavBar}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
+        <a href="/uploadDesign" id="uploadDesign"><i><FontAwesomeIcon icon={faUpload} /></i></a>
+
       </nav>
       <div className="user">
       <i><FontAwesomeIcon icon={faUser} style={{color: "#fcfcfc",}} /></i>

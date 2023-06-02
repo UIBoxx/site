@@ -10,6 +10,13 @@ function SubForm() {
   const [tags, setTag] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
+  const [generatedHTML, setGeneratedHTML] = useState("");
+
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
+
 
   useEffect(() => {
     // Check if the user is already logged in
@@ -19,27 +26,27 @@ function SubForm() {
     setAuthorname(storedUsername || "");
   }, []);
 
+  
+
   const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
   };
 
-  const handletextarea1Change = (
-    event: React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  const handletextarea1Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextarea1(event.target.value);
+    generateHTML(event.target.value, textarea2, textarea3);
   };
-
-  const handletextarea2Change = (
-    event: React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  
+  const handletextarea2Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextarea2(event.target.value);
+    generateHTML(textarea1, event.target.value, textarea3);
   };
-
-  const handletextarea3Change = (
-    event: React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  
+  const handletextarea3Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextarea3(event.target.value);
+    generateHTML(textarea1, textarea2, event.target.value);
   };
+  
 
   const handleauthorNameChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -51,6 +58,54 @@ function SubForm() {
     setTag(event.target.value);
   };
 
+  const generateHTML = (html: string, css: string, js: string) => {
+    const generatedHTML = `
+    <html>
+    <head>
+      <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+      } 
+      ::-webkit-scrollbar {
+        display: none
+      }
+      ${css}
+      </style>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        </head>
+        <body>
+          <script>
+            // Prevent navigation
+            document.addEventListener('click', (event) => {
+              if (event.target.tagName === 'A') {
+                event.preventDefault();
+              }
+            });
+      </script>
+      ${html}
+      <script>${js}</script>
+    </body>
+  </html>
+    `;
+    setGeneratedHTML(generatedHTML);
+  };
+  
+
+
   const handleFormClick = async (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
@@ -59,13 +114,19 @@ function SubForm() {
     if (!isLoggedIn) {
       return;
     }
+    setSending(true);
     await Designs(title, textarea1, textarea2, textarea3, authorname, tags);
+    setSent(true);
     setTitle("");
     setTextarea1("");
     setTextarea2("");
     setTextarea3("");
-    setAuthorname("");
     setTag("");
+    setSuccessMessage("Your design submitted for review successfully");
+    setTimeout(() => {
+      setSuccessMessage("");
+      setSent(false);
+    }, 3000);
   };
 
   const Designs = async (
@@ -102,6 +163,7 @@ function SubForm() {
     } catch (error) {
       console.error(error);
     }
+    setSending(false);
   };
 
   // Render the form only if the user is logged in
@@ -118,7 +180,17 @@ function SubForm() {
   return (
     <div className="form-body">
       <div className="form-container">
-        <h1></h1>
+        <div className="preview-head">
+        <h1>Preview</h1>
+        
+        <div className="design-preview">
+        <iframe
+            title="HTML/CSS/JS Demo"
+            srcDoc={generatedHTML}
+            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+          />
+        </div>
+        </div>
         <form className="upload-form">
           <div className="form-head-container">
             <div className="form-content">
@@ -141,6 +213,7 @@ function SubForm() {
                 id="textarea1"
                 name="textarea1"
                 value={textarea1}
+                placeholder="<p>Hello World!</p>"
                 onChange={handletextarea1Change}
               ></textarea>
               <label id="hint-end">{"</body>"}</label>
@@ -152,6 +225,7 @@ function SubForm() {
                 id="textarea2"
                 name="textarea2"
                 value={textarea2}
+                placeholder="*{margin: 0; }"
                 onChange={handletextarea2Change}
               ></textarea>
               <label id="hint-end">{"</style>"}</label>
@@ -163,6 +237,7 @@ function SubForm() {
                 id="textarea3"
                 name="textarea3"
                 value={textarea3}
+                placeholder="function(){}"
                 onChange={handletextarea3Change}
               ></textarea>
               <label id="hint-end">{"</script>"}</label>
@@ -202,8 +277,9 @@ function SubForm() {
             </select>
           </div>
           <button type="submit" onClick={handleFormClick}>
-            {"Upload"}
+          {sending ? "Submitting..." : sent ? "submitted" : "Subimit to review"}
           </button>
+          {<p>{successMessage}</p>}
         </form>
       </div>
     </div>
