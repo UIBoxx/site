@@ -67,7 +67,7 @@ function SubForm() {
 
   const validateInputs = () => {
     const nameRegex = /^[a-zA-Z ]+$/;
-    return nameRegex.test(title.trim()) && textarea1.trim() === "" &&  textarea2.trim() === "" &&  textarea3.trim() === "";
+    return nameRegex.test(title.trim());
   };
 
   const generateHTML = (html: string, css: string, js: string) => {
