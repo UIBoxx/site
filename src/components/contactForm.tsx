@@ -34,14 +34,6 @@ function contactForm() {
       setIsValid(false);
       return;
     }
-    console.log(
-      "Submitting form with name:",
-      name,
-      "email:",
-      email,
-      "and message:",
-      message
-    );
     setSending(true);
     await subscribeUser(name, email, message);
     setSent(true);

@@ -57,15 +57,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: center; 
-  display: none;
 }
 
-.user img{
-  height: 40px;
-  width: 40px;
-  background-color: #0eb132;
-  border-radius: 50%;
-  object-fit: cover;
+.user i{
+ font-size: 2rem;
 }
 .user a{
   text-decoration: none;
@@ -703,14 +698,14 @@ nav {
   /* background-color: #0eb132; */
 }
 
-.design-author #follow{
+ #save{
   color: var(--headcolor);
   text-decoration: none;
-  font-size: 10px;
-  background-color: var(--mainColor);
+  font-size: 16px;
+  margin-left: 10px;
 }
 
-#follow:hover{
+#save:hover{
   background-color: var(--mainColor);
 }
 

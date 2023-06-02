@@ -75,7 +75,7 @@ function CSSDesigns() {
     setCurrentPage(1); // Reset to first page when tag is selected
   };
 
-  const itemsPerPage = 9;
+  const itemsPerPage = 12;
 
   const filteredDesigns = designs.filter(
     (design) =>

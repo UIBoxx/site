@@ -101,7 +101,7 @@ function App() {
             <Route path="/neubox" element={<NeumorphismCardGenerator />} />
             <Route path="/glassbox" element={<GlassmorphismGenerator />} />
             <Route path="/Color-Gradient" element={<GradientBackgroundGenerator />} />
-            <Route path="/unknown/upload" element={<SubForm />} />
+            <Route path="/uploadDesign" element={<SubForm />} />
           </Routes>
         </body>
         <Footer/>
