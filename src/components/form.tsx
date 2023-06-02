@@ -11,6 +11,8 @@ function SubForm() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [generatedHTML, setGeneratedHTML] = useState("");
+  const [isValid, setIsValid] = useState(true);
+
 
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -30,20 +32,24 @@ function SubForm() {
 
   const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
+    setIsValid(true);
   };
 
   const handletextarea1Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextarea1(event.target.value);
+    setIsValid(true);
     generateHTML(event.target.value, textarea2, textarea3);
   };
   
   const handletextarea2Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextarea2(event.target.value);
+    setIsValid(true);
     generateHTML(textarea1, event.target.value, textarea3);
   };
   
   const handletextarea3Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextarea3(event.target.value);
+    setIsValid(true);
     generateHTML(textarea1, textarea2, event.target.value);
   };
   
@@ -56,6 +62,12 @@ function SubForm() {
 
   const handleTagChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setTag(event.target.value);
+  };
+
+
+  const validateInputs = () => {
+    const nameRegex = /^[a-zA-Z ]+$/;
+    return nameRegex.test(title.trim()) && textarea1.trim() === "" &&  textarea2.trim() === "" &&  textarea3.trim() === "";
   };
 
   const generateHTML = (html: string, css: string, js: string) => {
@@ -111,6 +123,11 @@ function SubForm() {
   ) => {
     event.preventDefault();
     // Check if the user is logged in
+    if (!validateInputs()) {
+      setIsValid(false);
+      return;
+    }
+
     if (!isLoggedIn) {
       return;
     }
@@ -279,6 +296,7 @@ function SubForm() {
           <button type="submit" onClick={handleFormClick}>
           {sending ? "Submitting..." : sent ? "submitted" : "Subimit to review"}
           </button>
+          {isValid ? null : <p>Please enter a valid content on form field.</p>}
           {<p>{successMessage}</p>}
         </form>
       </div>
