@@ -234,16 +234,7 @@ function SubForm() {
             </div>
           </div>
           <div>
-          <div className="htmlForm-content">
-              <label htmlFor="textarea4">Head:(If required)</label>
-              <textarea
-                id="textarea4"
-                name="textarea4"
-                value={textarea4}
-                placeholder={"<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css\" integrity=\"sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"/>"}
-                onChange={handletextarea4Change}
-              ></textarea>
-            </div>
+          
             <div className="htmlForm-content">
               <label htmlFor="textarea1">HTML:</label>
               <label id="hint-start">{"<body>"}</label>
@@ -279,6 +270,17 @@ function SubForm() {
                 onChange={handletextarea3Change}
               ></textarea>
               <label id="hint-end">{"</script>"}</label>
+            </div>
+            <div className="htmlForm-content">
+              <label htmlFor="textarea4">CDN:(If required)</label>
+              <textarea
+                id="textarea4"
+                style={{height:"100px"}}
+                name="textarea4"
+                value={textarea4}
+                placeholder={"eg: <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css\" integrity=\"sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"/>"}
+                onChange={handletextarea4Change}
+              ></textarea>
             </div>
           </div>
           <div className="form-content">
