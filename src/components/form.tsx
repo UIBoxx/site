@@ -6,6 +6,7 @@ function SubForm() {
   const [textarea1, setTextarea1] = useState("");
   const [textarea2, setTextarea2] = useState("");
   const [textarea3, setTextarea3] = useState("");
+  const [textarea4, setTextarea4] = useState("");
   const [authorname, setAuthorname] = useState("");
   const [tags, setTag] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,19 +39,25 @@ function SubForm() {
   const handletextarea1Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextarea1(event.target.value);
     setIsValid(true);
-    generateHTML(event.target.value, textarea2, textarea3);
+    generateHTML(event.target.value, textarea2, textarea3,textarea4);
   };
   
   const handletextarea2Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextarea2(event.target.value);
     setIsValid(true);
-    generateHTML(textarea1, event.target.value, textarea3);
+    generateHTML(textarea1, event.target.value, textarea3, textarea4);
   };
   
   const handletextarea3Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setTextarea3(event.target.value);
     setIsValid(true);
-    generateHTML(textarea1, textarea2, event.target.value);
+    generateHTML(textarea1, textarea2, event.target.value, textarea4);
+  };
+
+  const handletextarea4Change = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setTextarea4(event.target.value);
+    setIsValid(true);
+    generateHTML(textarea1, textarea2,textarea3, event.target.value);
   };
   
 
@@ -70,7 +77,7 @@ function SubForm() {
     return nameRegex.test(title.trim());
   };
 
-  const generateHTML = (html: string, css: string, js: string) => {
+  const generateHTML = (html: string, css: string, js: string, head: string) => {
     const generatedHTML = `
     <html>
     <head>
@@ -98,6 +105,7 @@ function SubForm() {
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
+        ${head}
         </head>
         <body>
           <script>
@@ -132,12 +140,13 @@ function SubForm() {
       return;
     }
     setSending(true);
-    await Designs(title, textarea1, textarea2, textarea3, authorname, tags);
+    await Designs(title, textarea1, textarea2, textarea3,textarea4, authorname, tags);
     setSent(true);
     setTitle("");
     setTextarea1("");
     setTextarea2("");
     setTextarea3("");
+    setTextarea4("");
     setTag("");
     setSuccessMessage("Your design submitted for review successfully");
     setTimeout(() => {
@@ -151,6 +160,7 @@ function SubForm() {
     textarea1: string,
     textarea2: string,
     textarea3: string,
+    textarea4: string,
     authorname: string,
     tags: string
   ) => {
@@ -165,6 +175,7 @@ function SubForm() {
             textarea1: textarea1,
             textarea2: textarea2,
             textarea3: textarea3,
+            textarea4: textarea4,
             authorname: authorname,
             tags: tags,
           }),
@@ -223,6 +234,16 @@ function SubForm() {
             </div>
           </div>
           <div>
+          <div className="htmlForm-content">
+              <label htmlFor="textarea4">Head:(If required)</label>
+              <textarea
+                id="textarea4"
+                name="textarea4"
+                value={textarea4}
+                placeholder={"<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css\" integrity=\"sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"/>"}
+                onChange={handletextarea4Change}
+              ></textarea>
+            </div>
             <div className="htmlForm-content">
               <label htmlFor="textarea1">HTML:</label>
               <label id="hint-start">{"<body>"}</label>
