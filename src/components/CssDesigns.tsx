@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-
 import "../CSS/main.css";
 import DesignDetails from "./designDetails";
-
-import ExampleComponent from "../components/copyCode";
 import Loading from "../assets/loading.gif";
 import { faAngleLeft, faCode, faEye, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
