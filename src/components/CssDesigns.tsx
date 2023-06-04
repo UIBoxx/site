@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 import "../CSS/main.css";
+import DesignDetails from "./designDetails";
 
 import ExampleComponent from "../components/copyCode";
 import Loading from "../assets/loading.gif";
-import { faCode, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faCode, faEye, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Design {
@@ -16,7 +17,8 @@ interface Design {
   csscode: string;
   jscode: string;
   tags: string[];
-  authorname: string
+  authorname: string;
+  head: string;
 }
 
 function CSSDesigns() {
@@ -66,9 +68,9 @@ function CSSDesigns() {
     setCurrentPage(1); // Reset to first page on search query change
   };
 
-  const tags = Array.from(new Set(designs.flatMap(design => design.tags)))
-  .filter(tag => tag && tag.trim() !== "");
-
+  const tags = Array.from(
+    new Set(designs.flatMap((design) => design.tags))
+  ).filter((tag) => tag && tag.trim() !== "");
 
   const handleTagClick = (tag: string | null) => {
     setSelectedTag(tag);
@@ -102,37 +104,35 @@ function CSSDesigns() {
       const response = await fetch(
         `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${design._id}`
       );
-  
+
       if (response.ok) {
         const data = await response.json();
         const currentViews = parseInt(data.views);
         const updatedDesign = { views: String(currentViews + 1) };
         setSelectedDesign(design);
         setShowModal(true);
-  
+
         // Make a separate request to update the views count
         await fetch(
           `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${design._id}`,
           {
-            method: 'POST',
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
             },
             body: JSON.stringify(updatedDesign),
           }
         );
-  
-        console.log('Updated successfully');
+
+        console.log("Updated successfully");
       } else {
-        console.error('Failed to fetch views count');
+        console.error("Failed to fetch views count");
       }
     } catch (error) {
       console.error(error);
       // Handle the error if the request fails
     }
   };
-  
-  
 
   return (
     <div
@@ -219,15 +219,17 @@ function CSSDesigns() {
                       <div className="modal">
                         <div className="modal-content">
                           <div className="modal-header">
-                            <h2>{design.title}</h2>
+                          <h2>{design.title}</h2>
                             <span
                               className="modal-close"
                               onClick={() => setShowModal(false)}
                             >
-                              x
+                              <i><FontAwesomeIcon icon={faXmark} /></i>
                             </span>
+                           
                           </div>
-                          <ExampleComponent selectedDesign={selectedDesign} />
+                          <DesignDetails selectedDesign={selectedDesign} />
+                        
                         </div>
                       </div>
                     )}
@@ -288,8 +290,16 @@ function CSSDesigns() {
                   </i>
                 </div>
                 <div className="design-author">
-                <p>{}</p>
-                  <p>@{design.authorname?design.authorname.substring(0, design.authorname.indexOf("@")):"Anonymous"}</p>
+                  <p>{}</p>
+                  <p>
+                    @
+                    {design.authorname
+                      ? design.authorname.substring(
+                          0,
+                          design.authorname.indexOf("@")
+                        )
+                      : "Anonymous"}
+                  </p>
                   {/* <a href="" id="follow">Follow</a> */}
                 </div>
               </div>

@@ -832,16 +832,16 @@ nav {
   background-color: rgba(81, 72, 72, 0.895);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   z-index: 999;
 }
 
 .Design-body .codePrinter .modal-content {
   background-color: var(--mainColor);
   padding: 20px;
-  border-radius: 5px;
-  width: 90vw;
-  height: 90vh;
+  border-radius: 0px;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -866,13 +866,21 @@ nav {
   margin-bottom: 10px;
 }
 
+#Printer-span{
+  color: var(--headcolor);
+  font-size: 2rem;
+  position: relative;
+  margin-left: 10px;
+}
 
 
 .Design-body .codePrinter h2{
-  color: var(--secondaryColor);
+  color: var(--headcolor);
   margin: 5px 0;
   position: relative;
   top: 3px;
+  font-size: 2rem;
+  font-weight: 900;
 }
 
 .Design-body .codePrinter .button{
@@ -890,15 +898,15 @@ nav {
 }
 
 .Design-body .codePrinter .modal-close{
-  color: var(--textColor);
+  color: var(--subcolor);
   font-size: 1.5rem;
-  background-color: var(--secondaryColor);
+  background-color: red;
   padding: 0 8px;
   border-radius: 2px;
 }
 
 .Design-body .codePrinter .modal-close:hover{
-  background-color: var(--textColor);
+  background-color: var(--headcolor);
   color: var(--mainColor);
 }
 
@@ -911,24 +919,21 @@ nav {
   overflow: scroll;
 }
 
-.code-block .copy-btn{
-  background-color: var(--secondaryColor);
-  padding: 3px 20px;
-  border-radius: 5px;
-  color: 
-  var(--subcolor);
-  position: relative;
-  top: 20px;
-  border: none;
-}
-
-.code-block .copy-btn:hover{
-  background-color: green;
-}
-
-.code-block .copy-btn-container{
+#copy-button{
+  height: 30px;
+  width: 80px;
+  background-color: #767371;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  bottom: 30px;
+}
+
+#copy-button:hover{
+  color: #fff;
+  background-color: var(--headcolor);
 }
 
 .code-block{
@@ -1322,6 +1327,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   .upload-form .form-content {
     width: calc(50% - 10px);
   }
@@ -1336,6 +1342,8 @@ nav {
   color: #ad9a2a;;
 }
 }
+
+
 
 .landingPage{
   min-height: 80vh;
