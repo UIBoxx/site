@@ -2,11 +2,21 @@ import { useState } from 'react';
 import "../CSS/main.css";
 
 interface DesignDetailsProps {
-    selectedDesign: { htmlcode: string; csscode: string,jscode: string, head: string, authorname: string, tags: string[], };
-  }
-
+  selectedDesign: {
+    htmlcode: string;
+    csscode: string;
+    jscode: string;
+    head: string;
+    authorname: string;
+    tags: string[];
+  };
+}
 
 function DesignDetails({ selectedDesign }: DesignDetailsProps) {
+  const [htmlCode, setHtmlCode] = useState(selectedDesign.htmlcode);
+  const [cssCode, setCssCode] = useState(selectedDesign.csscode);
+  const [jsCode, setJsCode] = useState(selectedDesign.jscode);
+  const [headCode, setHeadCode] = useState(selectedDesign.head);
 
   const [copyStatus, setCopyStatus] = useState({
     textarea1: false,
@@ -34,7 +44,6 @@ function DesignDetails({ selectedDesign }: DesignDetailsProps) {
       }, 1500);
     }
   };
-      
 
   return (
     <>
@@ -63,7 +72,7 @@ function DesignDetails({ selectedDesign }: DesignDetailsProps) {
                   ::-webkit-scrollbar {
                     display: none
                   }
-                  ${selectedDesign.csscode}
+                  ${cssCode}
                   </style>
                     <link
                       rel="stylesheet"
@@ -72,7 +81,7 @@ function DesignDetails({ selectedDesign }: DesignDetailsProps) {
                       crossorigin="anonymous"
                       referrerpolicy="no-referrer"
                     />
-                    ${selectedDesign.head?selectedDesign.head: ""}
+                    ${headCode ? headCode : ""}
                     </head>
                     <body>
                       <script>
@@ -83,8 +92,8 @@ function DesignDetails({ selectedDesign }: DesignDetailsProps) {
                           }
                         });
                   </script>
-                  ${selectedDesign.htmlcode}
-                  <script>${selectedDesign.jscode}</script>
+                  ${htmlCode}
+                  <script>${jsCode}</script>
                 </body>
               </html>`}
                 sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
@@ -92,7 +101,7 @@ function DesignDetails({ selectedDesign }: DesignDetailsProps) {
             </div>
             <div className="form-content">
               <label htmlFor="authorname">Design By:</label>
-              <span id="Printer-span">{selectedDesign.authorname?selectedDesign.authorname.substring(0, selectedDesign.authorname.indexOf("@")):"Anonymous"}</span>
+              <span id="Printer-span">{selectedDesign.authorname ? selectedDesign.authorname.substring(0, selectedDesign.authorname.indexOf("@")) : "Anonymous"}</span>
             </div>
           </div>
           <form className="upload-form">
@@ -102,62 +111,65 @@ function DesignDetails({ selectedDesign }: DesignDetailsProps) {
                 <textarea
                   id="textarea1"
                   name="textarea1"
-                  value={selectedDesign.htmlcode}
-                  readOnly
+                  value={htmlCode}
+                  onChange={(event) => setHtmlCode(event.target.value)}
                 ></textarea>
                 <button
-                id="copy-button"
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleCopy(event, 'textarea1')}              >
-                {copyStatus.textarea1 ? 'Copied!' : 'Copy'}
-              </button>
-                
+                  id="copy-button"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleCopy(event, 'textarea1')}
+                >
+                  {copyStatus.textarea1 ? 'Copied!' : 'Copy'}
+                </button>
               </div>
               <div className="htmlForm-content">
                 <label htmlFor="textarea2">CSS:</label>
                 <textarea
                   id="textarea2"
                   name="textarea2"
-                  value={selectedDesign.csscode}
-                  readOnly
+                  value={cssCode}
+                  onChange={(event) => setCssCode(event.target.value)}
                 ></textarea>
                 <button
-                id="copy-button"
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleCopy(event, 'textarea2')}              >
-                {copyStatus.textarea2 ? 'Copied!' : 'Copy'}
-              </button>
+                  id="copy-button"
+                  onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleCopy(event, 'textarea2')}
+                >
+                  {copyStatus.textarea2 ? 'Copied!' : 'Copy'}
+                </button>
               </div>
-              {selectedDesign.jscode?
+              {selectedDesign.jscode ?
                 <div className="htmlForm-content">
-                <label htmlFor="textarea3">JavaScript:</label>
-                <textarea
-                  id="textarea3"
-                  name="textarea3"
-                  value={selectedDesign.jscode}
-                  readOnly
-                ></textarea>
-                <button
-                id="copy-button"
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleCopy(event, 'textarea3')}              >
-                {copyStatus.textarea3 ? 'Copied!' : 'Copy'}
-              </button>
-              </div>:null
+                  <label htmlFor="textarea3">JavaScript:</label>
+                  <textarea
+                    id="textarea3"
+                    name="textarea3"
+                    value={jsCode}
+                    onChange={(event) => setJsCode(event.target.value)}
+                  ></textarea>
+                  <button
+                    id="copy-button"
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleCopy(event, 'textarea3')}
+                  >
+                    {copyStatus.textarea3 ? 'Copied!' : 'Copy'}
+                  </button>
+                </div> : null
               }
-              {selectedDesign.head?
+              {selectedDesign.head ?
                 <div className="htmlForm-content">
-                <label htmlFor="textarea4">CDN:</label>
-                <textarea
-                  id="textarea4"
-                  style={{ height: "100px" }}
-                  name="textarea4"
-                  value={selectedDesign.head}
-                  readOnly
-                ></textarea>
-                <button
-                id="copy-button"
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleCopy(event, 'textarea4')}              >
-                {copyStatus.textarea4 ? 'Copied!' : 'Copy'}
-              </button>
-              </div>:null
+                  <label htmlFor="textarea4">CDN:</label>
+                  <textarea
+                    id="textarea4"
+                    style={{ height: "100px" }}
+                    name="textarea4"
+                    value={headCode}
+                    onChange={(event) => setHeadCode(event.target.value)}
+                  ></textarea>
+                  <button
+                    id="copy-button"
+                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleCopy(event, 'textarea4')}
+                  >
+                    {copyStatus.textarea4 ? 'Copied!' : 'Copy'}
+                  </button>
+                </div> : null
               }
             </div>
           </form>
