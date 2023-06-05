@@ -19,10 +19,9 @@ interface Design {
 }
 
 function CSSDesigns() {
-  const pageDescription =
-    "Generate Glassmorphism styles and Neumorphism cards easily with our generator tools. Get free high-quality, customizable designs and components for your app and web design projects. Save time and create beautiful designs with our website.";
-  const pageKeywords =
-    "Glassmorphism styles, Neumorphism cards, generator tools, free designs, components, app design, web design";
+  const pageDescription ="Discover a vast collection of free UI components for HTML, CSS, and JS. Elevate your web development projects by customizing these components to perfectly suit your specific needs."
+  const pageKeywords ="free UI components, HTML components, CSS components, JS components, web development, customization, responsive design, front-end development, user interface, user experience, web design, website templates, code snippets, interactive elements, UI libraries, web development resources"
+
 
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);

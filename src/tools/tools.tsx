@@ -1,8 +1,21 @@
 import "../CSS/tools.css";
+import { Helmet } from "react-helmet";
+
 
 function AllTools() {
+  const pageDescription ="Elevate your designs to new heights with our innovative Neumorphism tool. With just a few clicks, effortlessly create sleek and modern user interfaces that feature soft, realistic shadows and subtle gradients. Our intuitive interface puts customization at your fingertips, allowing you to fine-tune the size, depth, and color of your Neumorphic elements. Step into the future of UI design and captivate your users with this cutting-edge trend that will set your projects apart."
+  const pageKeywords ="Neumorphism tool, Glassmorphism tool, gradient design tool, UI design, user interfaces, shadows, gradients, customization, web projects, modern design, futuristic design, sleek interfaces, soft shadows, frosted glass effects, translucent elements, color schemes, visual interest, web design, UIBoxx.in"
+
+
   return (
     <div className="all-tools-body">
+       <Helmet>
+        <title>
+        All Tools - Free UI Components | UIBoxx.in
+        </title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+      </Helmet>
       <div className="desc">
         <div className="about-page">
           <p id="styledP">

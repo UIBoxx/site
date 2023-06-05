@@ -133,17 +133,11 @@ function NeumorphismCardGenerator() {
   return (
     <div className="generator-body" style={{ backgroundColor }}>
       <Helmet>
-        <meta
-          name="description"
-          content="Elevate your web designs with our free UI components, innovative Neumorphism and Glassmorphism tools. Create sleek and modern user interfaces effortlessly. Customize shadows, gradients, and colors. Experience the future of UI design and revolutionize your projects."
-        />
-        <meta
-          name="keywords"
-          content="UI components, free web designs, Neumorphism tool, Glassmorphism tool, gradient color generator, web design tools, HTML, CSS, JavaScript, user interface design, web development, front-end development, responsive design, SVG shapes, neumorphic effects, glassmorphic effects, color schemes, visual design, web design inspiration"
-        />
+      <meta name="description" content="Elevate your designs to new heights with our Neumorphism design tool. Effortlessly create sleek and modern user interfaces featuring soft shadows and subtle gradients. Customize the size, depth, and color of your Neumorphic elements with our intuitive interface. Step into the future of UI design and captivate your users with this cutting-edge trend that will set your projects apart."/>
+<meta name="keywords" content="Neumorphism design tool, sleek interfaces, modern design, soft shadows, subtle gradients, UI design, user interfaces, customization, web projects, future of design"/>
+
         <title>
-          UIboxx.in | Neumorphism Tool, Glassmorphism Tool, Gradient Color
-          Generator
+        Free Neumorphism Design Tool | UIboxx.in
         </title>
       </Helmet>
       <div className="generator-header" style={{ backgroundColor }}>

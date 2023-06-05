@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/tutorial.css";
+import { Helmet } from "react-helmet";
 
 function GlassmorphismGenerator() {
   const [buttonText, setButtonText] = useState("Copy CSS Code");
@@ -74,12 +75,28 @@ function GlassmorphismGenerator() {
   }
   return (
     <div className="generator-body">
+      <Helmet>
+        <title>
+          Free Glassmorphism Design Tool | UIBoxx.in
+        </title>
+        <meta
+          name="description"
+          content="Infuse your user interfaces with an elegant touch of depth using our Glassmorphism design tool. Create stunning glass-like buttons, cards, and overlays with customizable blur, transparency, and color settings. Elevate your designs with the captivating allure of Glassmorphism and leave a lasting impression on your users."
+        />
+        <meta
+          name="keywords"
+          content="Glassmorphism design tool, glass-like buttons, glass cards, glass overlays, translucent elements, frosted glass effects, depth in design, UI design, user interfaces, customization, web projects"
+        />
+      </Helmet>
       <div className="generator-header" id="glass-header">
-        <div className="glassmorphism-card" style={{borderRadius:`${borderRadius}%`}}>
+        <div
+          className="glassmorphism-card"
+          style={{ borderRadius: `${borderRadius}%` }}
+        >
           <div className="sqr"></div>
           <div className="sqr"></div>
-          <div className="glassmorphism-card-inner" style={glassStyle}> 
-          <h2>❤️</h2>
+          <div className="glassmorphism-card-inner" style={glassStyle}>
+            <h2>❤️</h2>
           </div>
         </div>
         <div className="generator-controls">
@@ -139,19 +156,17 @@ function GlassmorphismGenerator() {
             />
           </div>
         </div>
-
       </div>
-        <div className="code-container" id="code-container">
-          <div className="code-section">
-            <pre>{generateCSSCode()}</pre>
-          </div>
-        <div className="css-btn">
-        <button onClick={copyCssCode}>{buttonText}</button>
-      </div>
+      <div className="code-container" id="code-container">
+        <div className="code-section">
+          <pre>{generateCSSCode()}</pre>
         </div>
+        <div className="css-btn">
+          <button onClick={copyCssCode}>{buttonText}</button>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default GlassmorphismGenerator;
-    

@@ -15,7 +15,7 @@ function LandingPage() {
         />
         <meta
           name="keywords"
-          content="free UI components, UI component features, interactive elements, visualizations, demos, user experience, customizable UI components,DSA algorithms, algorithm tutorials, algorithm visualizations, algorithm demos, DSA visualization, DSA tutorial, algorithmic concepts, data structures and algorithms, free tutorials, interactive learning"
+          content="free UI components, UI component features, interactive elements, visualizations, demos, user experience, customizable UI components,DSA algorithms, algorithm tutorials, algorithm visualizations, algorithm demos, DSA visualization, DSA tutorial, algorithmic concepts, data structures and algorithms, free tutorials, interactive learning, svgshapes, free SVG shape generator, squarecle, uiboxx.in"
         />
         <title>Home | UIBoxx.in</title>
       </Helmet>

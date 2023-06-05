@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import "../CSS/tutorial.css";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Helmet } from "react-helmet";
+
 
 function GradientBackgroundGenerator() {
   const [buttonText, setButtonText] = useState("Copy CSS Code");
@@ -132,6 +134,14 @@ filter: blur(${blur}px);`;
 
   return (
     <div className="generator-body">
+      <Helmet>
+        <title>
+          Free Gradient Color Generator tool | UIBoxx.in
+        </title>
+        <meta name="description" content="Design breathtaking color schemes with our Gradient Color Generator tool. Create seamless transitions between hues, injecting depth and visual interest into your web projects. Experiment with different gradient styles, customize starting and ending colors, and explore diverse directions and intensities. Enhance the aesthetics and mood of your designs with the perfect blend of colors created using our powerful tool."/>
+<meta name="keywords" content="Gradient Color Generator tool, color schemes, seamless transitions, visual interest, gradient styles, starting color, ending color, gradient directions, gradient intensities, web design, web projects, UI design, customization, color blending, UIBoxx.in"/>
+
+      </Helmet>
       <div className="generator-header" id="gradient-header">
         <div className="gradient-preview-container">
           <div
