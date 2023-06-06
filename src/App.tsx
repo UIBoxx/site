@@ -24,6 +24,8 @@ import SVGShapeGenerator from "./tools/svgshape";
 import NewsSlider from "./components/BannerTutorialSlider";
 import AllTools from "./tools/tools";
 import SubForm from "./components/form";
+import PrivacyPolicy from "./components/privacyPolicy";
+import Disclaimer from "./components/disclaimer";
 
 function App() {
   return (
@@ -43,7 +45,7 @@ function App() {
               }
             />
             <Route
-              path="UI-Library"
+              path="/UI-Library"
               element={
                 <>
                   <CSSDesigns />
@@ -51,13 +53,13 @@ function App() {
               }
             />
             <Route
-              path="tools"
+              path="/tools"
               element={
                 <AllTools/>
               }
             />
             <Route
-              path="Contact"
+              path="/Contact"
               element={
                 <>
                   <MyProfile />
@@ -101,6 +103,13 @@ function App() {
             <Route path="/glassbox" element={<GlassmorphismGenerator />} />
             <Route path="/Color-Gradient" element={<GradientBackgroundGenerator />} />
             <Route path="/uploadDesign" element={<SubForm />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/about-us" element={<>
+              <MyProfile />
+                  <ContactForm />
+            </>} />
+            
           </Routes>
         </body>
         <Footer/>

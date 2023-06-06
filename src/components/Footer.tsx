@@ -18,11 +18,6 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="">
-                <h4>Policy</h4>
-              </a>
-            </li>
-            <li>
               <a href="/UI-Library">
                 <h4>Free UI Components</h4>
               </a>
@@ -33,10 +28,21 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="/contact">
-                <h4>Contact Us</h4>
+              <a href="/about-us">
+                <h4>About Us</h4>
               </a>
             </li>
+            <li>
+              <a href="/privacy-policy">
+                <h4>Our Privacy Policy</h4>
+              </a>
+            </li>
+            <li>
+              <a href="/disclaimer">
+                <h4>Disclaimer</h4>
+              </a>
+            </li>
+            
           </ul>
         
         </div>
