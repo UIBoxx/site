@@ -58,11 +58,11 @@ function Navbar() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data.message); // Optional: Handle the response data
-        console.log('logout successfully.')
+        // console.log('logout successfully.')
         window.location.reload();
       })
       .catch((error) => {
-        console.error("Logout error:", error); // Optional: Handle the error
+        // console.error("Logout error:", error); // Optional: Handle the error
         window.location.reload();
       });
   };

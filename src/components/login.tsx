@@ -117,7 +117,7 @@ function LoginModal({ onClose, onLoginSuccess }: LoginModalProps) {
       });
 
       if (response.ok) {
-        console.log("Signup successful!");
+        // console.log("Signup successful!");
         setSignUpSuccess(true);
       } else {
         const data = await response.json();
@@ -153,7 +153,7 @@ function LoginModal({ onClose, onLoginSuccess }: LoginModalProps) {
       });
 
       if (response.ok) {
-        console.log("Login successful!");
+        // console.log("Login successful!");
         setLoginSuccess(true);
         onLoginSuccess(email);
         window.location.reload();
