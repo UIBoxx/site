@@ -28,13 +28,13 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="/about-us">
-                <h4>About Us</h4>
+              <a href="/privacy-policy">
+                <h4>Our Privacy Policy</h4>
               </a>
             </li>
             <li>
-              <a href="/privacy-policy">
-                <h4>Our Privacy Policy</h4>
+              <a href="/terms-and-conditions">
+                <h4>Terms and Conditions</h4>
               </a>
             </li>
             <li>
@@ -42,7 +42,11 @@ function Footer() {
                 <h4>Disclaimer</h4>
               </a>
             </li>
-            
+            <li>
+              <a href="/about-us">
+                <h4>About Us</h4>
+              </a>
+            </li>
           </ul>
         
         </div>

@@ -26,6 +26,7 @@ import AllTools from "./tools/tools";
 import SubForm from "./components/form";
 import PrivacyPolicy from "./components/privacyPolicy";
 import Disclaimer from "./components/disclaimer";
+import TermsAndConditions from "./components/terms";
 
 function App() {
   return (
@@ -105,6 +106,7 @@ function App() {
             <Route path="/uploadDesign" element={<SubForm />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/about-us" element={<>
               <MyProfile />
                   <ContactForm />
